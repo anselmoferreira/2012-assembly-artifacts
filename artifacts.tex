@@ -1,0 +1,274 @@
+%% LyX 2.0.1 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english]{article}
+
+\usepackage{simplemargins}
+\usepackage[pdftex]{graphicx} \graphicspath{{figures/}}
+
+\setlength{\parindent}{0pt} \setlength{\parskip}{1.6ex}
+\setallmargins{1in} \linespread{1.6}
+
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{setspace}
+\doublespacing
+\usepackage{babel}
+\begin{document}
+\begin{doublespace}
+
+\title{\noindent Connectivity Analysis to Scalable Assembly of Next Generation
+Sequencing Metagenomic Data}
+\end{doublespace}
+
+
+\author{ACH, JP, AH, JMT, CTB}
+
+\maketitle
+\begin{onehalfspace}
+
+\section{Introduction}
+\end{onehalfspace}
+
+\begin{doublespace}
+We have developed a highly efficient in-memory graph representation
+based on a bloom filter which enables us to represent extremely large
+assembly graphs in memory, enabling the exploration of local and global
+graph properties. We have used this approach to analyze the graph
+structure of several metagenomic datasets to evaluate methods to improve
+and scale metagenomic sequence assembly. Here, we discuss the assembly
+graph properties of six metagenomics data sets of varying coverage
+and size: human gut-associated (Metahit, XX Gb), rumen-associated
+(rumen, XX Gb), switchgrass soil-associated (XX Gb), and three agricultural
+soil-associated microbial communities (XX Gb, XX Gb, XX Gb).
+\end{doublespace}
+
+
+\section{Results and Discussion}
+
+
+\subsection{Connectivity analysis of metagenome datasets}
+
+We selected datasets of 50 million reads each from three diverse,
+high complexity metagenomes from the human gut (Qin et al, 2010),
+cow rumen (Hess et al., 2010), and agricultural soil. For comparison,
+we also included one simulated metagenome (error-free) for a high
+complexity, high coverage (\textasciitilde{}10x) microbial community
+(Pignatelli et al., 2011). Additionally, to study the effects of increased
+sequencing and dataset sizes, we included two additional agricultural
+soil datasets containing 100 million and 500 million reads each. All
+agricultural datasets are subsets of the same sequencing library and
+henceforth are referred to as agricultural datasets 1, 2, and 3 in
+order of increasing size. 
+
+The connectivity of reads within datasets were evaluated within a
+de Brujin graph representation (see Methods). For every dataset, regardless
+of its source, we found that the assembly graph was dominated by a
+single, highly connected ``lump'' of sequencing reads (Figure X
+- showing proprotion of reads in each dataset that make up the lump
+- elminate genome). In the human gut dataset, over 81\% of the sequencing
+reads were associated with this lump. Likewise, from the rumen and
+agricultural dataset 3, a total of 21 and 39\% of all reads, respectively,
+were observed to be highly connected. Within the simulated dataset,
+the lump was smaller in size encompassing approximately 5\% of the
+reads. Interestingly, for the agricultural datasets, the increase
+in the size of the lump was not proportional to the increase in dataset
+size (Figure X).
+
+To better understand the properties of these observed lumps, we measured
+the local graph density of these reads within the de Brujin graph.
+The local graph density is defined here as the number of k-mers (or
+nodes) found within a distance of N (where N=100 32-mers). The local
+graph density of a linear sequence would thus be 2, and additional
+branches or repeats would increase this value. For each of the studied
+datasets, we compared the local graph densities of the nodes within
+a de Brujin graph. For 600 microbial genomes from NCBI, fewer than
+6\% of the nodes in the microbial genome graph had an average graph
+density greater than 20 (data not shown{*}). For the simulated dataset,
+we found that fewer than 17\% of the nodes in the simulated dataset
+graph had an average graph density greater than 20. <\textcompwordmark{}<Still
+need to fill in other info>\textcompwordmark{}> 
+
+The significant presence of these lumps and their associated high
+local graph density in environmental metagenome graphs compared to
+simulated and microbial genome graphs suggest the presence of substantial
+suprious connectivity within metagenomic sequences. A potential source
+of such spurious connectivity could be systematic biases in base calling
+and thus we proceeded to look for non-uniform properties of these
+spurrious sequences within sequencing reads.
+
+
+\subsection{Properties of highly connected sequences in sequencing reads}
+
+Using a systematic traversal algorithm to identify highly connected
+k-mers (HCKs) in the de Brujin graph, we identified the sequences
+that resulted in significant graph connectivity and density (see Methods).
+Mapping these HCKs back to sequencing reads from environmental samples,
+we found that the position of these HCKs with respect to read position
+showed systematic bias towards one end of the read. The HCKs in the
+human gut and rumen metagenome were preferentially biased towards
+the 5' end of the reads while the HCKs in the agricultural metagenome
+were biased towards the 3' end. The HCKs in the simulated dataset
+did not have any read position bias.
+
+The non-uniform position specific bias of the HCKs suggest the presence
+of systematic biases in base calling. As it is known that Illumina
+sequencing often results in lower quality reads closer to the 3' end
+of reads (need reference), the increased presence of HCKs at the 3'
+end of the reads in the agricultural datasets is not surprising. We
+also observed that as the dataset size increased and thus the size
+of the connected lump, the relative proportion of HCKs in the dataset
+decreased (Figure X). This result could be explained by the increased
+depth of sequencing drawing more non-HCKs into the lump, thus increasing
+the total number of k-mers more rapidly than the total HCKs. The 5'
+bias of the human gut and rumen datasets was unexpected but may also
+be explained by the dilution of total HCKs in the presence of increasingly
+more non-HCKs in the lump. The human gut and rumen datasets, though
+highly complex, are less diverse than soil datasets, and one would
+expect higher coverage of these metagenomes with the same number of
+sequencing reads. It is possible that the HCKs, like those proposed
+in the largest agricultural dataset, are causing increased connectivity
+of non-HCKs in the lump, so much so that it creates what appears to
+be a 3' bias. Although the reasons underlying the read position specific
+biases of the HCKs are unclear, such biases are not expected to be
+present in true biological sequences and thus support our hypothesis
+that these HCKs are the results of sequencing artifacts.
+
+
+\subsection{Effects of removing highly connected sequences in assemblies }
+
+Next, we evaluated the effects of HCKs on the final assembly of the
+highly connected lump by comparing assemblies with and without removal
+of HCKs (Table X - comparing assemblies of filtered and unfiltered
+lumps). For the simulated dataset, filtering HCKs resulted in a similar
+assembly compared to the unfiltered assembly supported by the assembliers
+sharing greater than 90\% of constituent 32-mers in contigs larger
+than 500 bp. The simulated unfiltered and filtered assemblies also
+shared similar assembly properties, specifically they contained similar
+final number of assembled contigs (greater than 500 bp), number of
+assembled base pairs, and maximum contig size. The human gut, rumen,
+and agricultural unfiltered and filtered assemblies had similar numbers
+of contigs but had significant differences in the number of basepairs
+and maximum contig sizes within the assemblies. For example, the Velvet-assembled
+rumen HCK-filtered assembly resulted in approximately 1,000 less contigs,
+over 1 million more assembled basepairs, a doubling of maximum contig
+size. The rumen unfiltered and filtered assemblies also shared about
+75\% of constituent k-mers. In general, most of the unfiltered and
+filtered assemblies were relatively similar, sharing greater than
+70\% of consituent k-mers, with the exception of agricultural dataset
+2. 
+
+Talk about breaking up lump here or conclusion? Maybe conclusion...
+
+
+\subsection{Effects of highly connected sequences in unfiltered assemblies}
+
+As the removal of HCKs from reads did not greatly change the assembly
+of the simulated dataset, we were interested in the presence of HCKs
+in the final assembled contigs of unfiltered reads. We found that
+in all the datasets, sequencing reads were significantly more enriched
+for HCKs compared to the final assembled contigs. In the simulated
+dataset, nearly 7 times more HCKs were present in sequencing reads
+than in assembled contigs. In sequencing reads from the environment,
+HCKs were 1.8 to 6.5 times more prevalent in reads than assembled
+contigs. (Table X - showing enrichment of stoptags in reads). To estimate
+the effect of these HCK-containing contigs, we counted the number
+of different constituent 32-mers in HCK-containing contigs and compared
+this to the total 32-mer differences for all contigs in the unfiltered
+and filtered assemblies. For the human gut assemblies, which were
+26\% different overall, the k-mers originating from unfiltered contigs
+containing HCKs accounted for 84\% of this difference. The HCK-containing
+contigs of the rumen, agricultural dataset 2, and agricultural dataset
+3 accounted for approximately 2\% of the difference in assemblies
+(Table X).
+
+The decreased presence of the HCKs in unfiltered contigs of all datasets
+suggest that although these sequences are highly connecting, the assemblers
+are not incorporating them into the final assemblies. Since there
+are no sequencing artifacts in the simulated dataset, the low incorporation
+of HCKs in the contigs (0.5\% HCKs in contigs compared to 3.3\% HCKs
+in reads) shows that regardless of the origin of HCKs, assemblers
+do not effectively use them. The relatively small differences (2\%)
+in unfiltered and filtered assemblies due to HCK-containing contigs
+(with the exception of the human gut datset) also suggest that HCK
+filtering does not greatly affect the assembly. Overall, these results
+supports our methods of identifying the HCKs and their subsequent
+filtering. I have no idea what is going on with the metahit dataset.
+Maybe the high coverage of the dataset is getting things wacky.
+
+
+\subsection{Properties of highly connected sequences in assembled contigs}
+
+Interestingly, regardless of the sequencing dataset, assembled contigs
+which incorporated HCKs placed them disproportionately on the ends
+of the contig. Figure X shows the high bias of HCKs on the end ``bins''
+of a contig if each assembled contig's length were divided into 100
+equal bins. (Figure X - the assembled contigs and stoptag posistion
+figure). 
+
+The presence of HCKs on the ends of contigs would contribute to differences
+in unfiltered and filtered assemblies because we use specific contig
+cutoff lengths (500 bp) to determine valid assembled contigs. For
+example, assuming that filtering HCKs did not change the source reads
+used for a specific contig assembly, the presence of a 32-bp HCK on
+the end of a 499 bp assembled sequence would result in a 531 bp contig
+in the unfiltered assembly and a 499 bp contig in the filtered assembly.
+When comparing constituent k-mers of these two assemblies, the k-mers
+contributed by this contig would be lost in the filtered assembly
+if the contig cutoff length were 500 bp. Furthermore, the difference
+in the number of contigs between the unfiltered and filtered assemblies
+would be one while the number of basepair differences would be 499
+bp. Further differences between assemblies would also occur from changes
+in the source reads due to HCK filtering used for assembly, though
+these changes are much more difficult to measure.
+
+Additionally, we analyzed the presence of HCKs in the open reading
+frames (ORFs) of unfiltered assembled contigs. For all datasets, we
+found that HCKs tended to be enriched at the ``edges'' of ORFs where
+the edge is defined as the beginning or ending 32-mer of an identified
+ORF (Table X). In the simulated dataset, 11\% more k-mers over background
+were identified as HCKs at ORF edges. Likewise, in the rumen, medium
+agricultrual, and large agricultural datasets, enrichments of HDKs
+in ORF edges were 4, 5, and 7\%, respecitively. (I actually need to
+rerun this - the edge of the ORF should be the +31 and -31 from the
+end.)
+
+I may be fried. I dont think this makes sense. Because we observe
+that in all datasets ORFs tend to begin or end with HCKs, this suggest
+that these are misassemblies? I dont think so. If the HCKs in contigs
+were more present outside the ORF, these would obviously be bad. Stoptags
+inside ORFs mean that these are most likely real: 1) in a gene calling
+region 2) assembled. At edge: 1) assembled 2) gene calling region...both
+support that these stoptags are not bad.?
+
+
+\subsection{Annotating contigs against reference genomes}
+
+In progress - I'll take the metahit contigs that contain stoptags
+and blast them against the filtered dataset to find the synonymous
+contigs. Blast each of those against the reference genomes from metahit
+and look at annotations and alignments.
+
+
+\section{Conclusions}
+
+partititioning is now possible, yay! scalability is now possible,
+yay!
+
+
+\section{Methods}
+
+
+\paragraph{Bloom filters are a standard probabilistic approach to storing sets.
+We implemented a simple exact (reversible) hash function for k-mers
+up to 32 in length that hashes into a 64-bit integer. This integer
+value was then used as an index in multiple hash tables, each of a
+different size, by taking the modulus of the value with the table
+size. To enter an element into the set, the corresponding entry in
+each hash table is set to true; to test true for set membership of
+an element, the corresponding entry in all hash tables must be true.
+Collisions are not detected. This storage scheme has two disadvantages:
+first, it admits false positives, in that an element may test as present
+through hash collisions; and second, it is essentially impossible
+to retrieve an element from the Bloom filter, because many elements
+may hash to the same value. }
+\end{document}
