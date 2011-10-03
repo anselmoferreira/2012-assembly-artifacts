@@ -3,69 +3,117 @@
 \documentclass[english]{article}
 
 \usepackage{simplemargins}
-\usepackage[pdftex]{graphicx} \graphicspath{{figures/}}
 
 \setlength{\parindent}{0pt} \setlength{\parskip}{1.6ex}
 \setallmargins{1in} \linespread{1.6}
 
 \usepackage[T1]{fontenc}
 \usepackage[latin9]{inputenc}
+\usepackage[active]{srcltx}
 \usepackage{setspace}
 \doublespacing
 \usepackage{babel}
 \begin{document}
 \begin{doublespace}
 
-\title{\noindent Connectivity Analysis to Scalable Assembly of Next Generation
-Sequencing Metagenomic Data}
+\title{\noindent Connectivity Analysis of Metagenomic Data}
 \end{doublespace}
 
 
-\author{ACH, JP, AH, JMT, CTB}
+\author{ACH, JP, RCK, RM, JJ, JMT, CTB}
 
 \maketitle
 \begin{onehalfspace}
 
-\section{Introduction}
+\section{Introduction - this was really hard!}
 \end{onehalfspace}
 
-\begin{doublespace}
-We have developed a highly efficient in-memory graph representation
-based on a bloom filter which enables us to represent extremely large
-assembly graphs in memory, enabling the exploration of local and global
-graph properties. We have used this approach to analyze the graph
-structure of several metagenomic datasets to evaluate methods to improve
-and scale metagenomic sequence assembly. Here, we discuss the assembly
-graph properties of six metagenomics data sets of varying coverage
-and size: human gut-associated (Metahit, XX Gb), rumen-associated
-(rumen, XX Gb), switchgrass soil-associated (XX Gb), and three agricultural
-soil-associated microbial communities (XX Gb, XX Gb, XX Gb).
-\end{doublespace}
+Sequencing technologies are only beginning to scale to the depth of
+sampling necessary to investigate metagenomic samples with a shotgun
+sequencing approach. With Sanger and Roche 454, low complexity communities
+can be investigated thoroughly and relatively cheaply (Tyson et al.
+2004). Medium complexity samples such as human gut and cow rumen can
+be sequenced to high coverage with shotgun sequencing today (Qin et
+al, Hess et al). To take advantage of the benefits afforded by large-scale
+sequencing of an entire microbial community, de novo metagenome approaches
+are often necessary. 
+
+De novo genome assembly approaches were initially developed with the
+goal of reconstructing genomes from single genome sequencing projects
+(Pop, Miller). It offers multiple advantages in that it does not rely
+on the availability of reference genomes, significantly reduces the
+data size by collapsing numerous short reads into relatively fewer
+contigs, and provides longer sequences containing multiple genes and
+operons (Llewellyn and Eisenberg, 2008{*}, Gibson et al, 2008{*},
+Hess et al, 2011 {*}=I haven't actually looked at these papers). Even
+though a number of computational approaches have been developed for
+de novo genome assembly (reviewed in Miller and Pop), challenges,
+such as repetitive sequences, sequencing errors, and sequencing biases,
+continue to confuse assemblers. 
+
+De novo metagenomic assembly has additional challenges associated
+it. The general strategy for metagenomic assembly has been to use
+de novo genome assemblers (Hess, Qin). However, many of the assumptions
+which genome assemblers use for assembly of whole genomes cannot be
+extended to metagenomic sequences. In particular, metagenomic data
+contains sequences from multiple organisms which may be very closely
+related and also sampled at unequal depths. Furthermore, many metagenomic
+sequencing projects involve high diversity environments which require
+deep sequencing and consequently produce massive datasets challenging
+the scalability of current assemblers. One example highlighting the
+complexities of de novo metagenome assembly is the assembly of sequences
+from microbial populations of the Sargasso Sea. In this study, the
+Celera assembler misinterpreted the presence of greater-than-average
+coverage sequences as repetitive elements rather than from highly
+abundant organisms (cite Venter). Surprisingly, despite its usage,
+there is not much known about the effects of using genomic assemblers
+with metagenomic data (cite Piganatelli, Charuvaka.) 
+
+With the development of a novel data structure which allows for the
+exploration of a de Bruijn assembly graph, we can now study the connectivity
+of metagenomic sequences.  In this study, we explore the assembly
+graph structure and connectivity of several metagenomic datasets to
+evaluate methods to improve de novo metagenomic sequence assembly.
+Here we present our findings of highly-connecting sequences which
+are observed in all metagenomes we studied. We also suggest explanations
+of their presence and examine the effects of their removal on metagenomic
+assembly.
 
 
-\section{Results and Discussion}
+\section{Results and Discussion - haven't touched this}
+
+Things to address from lab meeting feedback:
+
+{*} Idea of maximum specificity vs. sensitivity, false positives in
+traversal,
+
+{*} Sequencing errors breaking up lump (arend's idea)
+
+{*} Fix your communication of the position bias
+
+{*} Clarify contigs are combined..
 
 
 \subsection{Connectivity analysis of metagenome datasets}
 
-We selected datasets of 50 million reads each from three diverse,
-high complexity metagenomes from the human gut (Qin et al, 2010),
-cow rumen (Hess et al., 2010), and agricultural soil. For comparison,
-we also included one simulated metagenome (error-free) for a high
-complexity, high coverage (\textasciitilde{}10x) microbial community
-(Pignatelli et al., 2011). Additionally, to study the effects of increased
-sequencing and dataset sizes, we included two additional agricultural
-soil datasets containing 100 million and 500 million reads each. All
-agricultural datasets are subsets of the same sequencing library and
-henceforth are referred to as agricultural datasets 1, 2, and 3 in
-order of increasing size. 
+We selected datasets from three diverse, medium to high complexity
+metagenomes from the human gut (Qin et al, 2010), cow rumen (Hess
+et al., 2010), and agricultural soil. For comparison, we also included
+one simulated metagenome (error-free) for a high complexity, high
+coverage (\textasciitilde{}10x) microbial community (Pignatelli et
+al., 2011). Additionally, to study the effects of increased sequencing
+and dataset sizes, we included two additional agricultural soil datasets
+containing 100 million and 500 million reads each. All agricultural
+datasets are subsets of the same sequencing library and henceforth
+are referred to as agricultural datasets 1, 2, and 3 in order of increasing
+size. 
 
 The connectivity of reads within datasets were evaluated within a
-de Brujin graph representation (see Methods). For every dataset, regardless
+de Bruijn graph representation (see Methods). For every dataset, regardless
 of its source, we found that the assembly graph was dominated by a
 single, highly connected ``lump'' of sequencing reads (Figure X
-- showing proprotion of reads in each dataset that make up the lump
-- elminate genome). In the human gut dataset, over 81\% of the sequencing
+- showing proportion of reads in each dataset that make up the lump
+- eliminate genome). In the human gut dataset, over 81\% of the sequencing
 reads were associated with this lump. Likewise, from the rumen and
 agricultural dataset 3, a total of 21 and 39\% of all reads, respectively,
 were observed to be highly connected. Within the simulated dataset,
@@ -75,13 +123,13 @@ in the size of the lump was not proportional to the increase in dataset
 size (Figure X).
 
 To better understand the properties of these observed lumps, we measured
-the local graph density of these reads within the de Brujin graph.
+the local graph density of these reads within the de Bruijn graph.
 The local graph density is defined here as the number of k-mers (or
 nodes) found within a distance of N (where N=100 32-mers). The local
 graph density of a linear sequence would thus be 2, and additional
 branches or repeats would increase this value. For each of the studied
 datasets, we compared the local graph densities of the nodes within
-a de Brujin graph. For 600 microbial genomes from NCBI, fewer than
+a de Bruijn graph. For 600 microbial genomes from NCBI, fewer than
 6\% of the nodes in the microbial genome graph had an average graph
 density greater than 20 (data not shown{*}). For the simulated dataset,
 we found that fewer than 17\% of the nodes in the simulated dataset
@@ -91,16 +139,16 @@ need to fill in other info>\textcompwordmark{}>
 The significant presence of these lumps and their associated high
 local graph density in environmental metagenome graphs compared to
 simulated and microbial genome graphs suggest the presence of substantial
-suprious connectivity within metagenomic sequences. A potential source
+spurious connectivity within metagenomic sequences. A potential source
 of such spurious connectivity could be systematic biases in base calling
 and thus we proceeded to look for non-uniform properties of these
-spurrious sequences within sequencing reads.
+spurious sequences within sequencing reads.
 
 
 \subsection{Properties of highly connected sequences in sequencing reads}
 
 Using a systematic traversal algorithm to identify highly connected
-k-mers (HCKs) in the de Brujin graph, we identified the sequences
+k-mers (HCKs) in the de Bruijn graph, we identified the sequences
 that resulted in significant graph connectivity and density (see Methods).
 Mapping these HCKs back to sequencing reads from environmental samples,
 we found that the position of these HCKs with respect to read position
@@ -140,21 +188,21 @@ Next, we evaluated the effects of HCKs on the final assembly of the
 highly connected lump by comparing assemblies with and without removal
 of HCKs (Table X - comparing assemblies of filtered and unfiltered
 lumps). For the simulated dataset, filtering HCKs resulted in a similar
-assembly compared to the unfiltered assembly supported by the assembliers
+assembly compared to the unfiltered assembly supported by the assemblers
 sharing greater than 90\% of constituent 32-mers in contigs larger
 than 500 bp. The simulated unfiltered and filtered assemblies also
 shared similar assembly properties, specifically they contained similar
 final number of assembled contigs (greater than 500 bp), number of
 assembled base pairs, and maximum contig size. The human gut, rumen,
 and agricultural unfiltered and filtered assemblies had similar numbers
-of contigs but had significant differences in the number of basepairs
+of contigs but had significant differences in the number of base pairs
 and maximum contig sizes within the assemblies. For example, the Velvet-assembled
 rumen HCK-filtered assembly resulted in approximately 1,000 less contigs,
-over 1 million more assembled basepairs, a doubling of maximum contig
+over 1 million more assembled base pairs, a doubling of maximum contig
 size. The rumen unfiltered and filtered assemblies also shared about
 75\% of constituent k-mers. In general, most of the unfiltered and
 filtered assemblies were relatively similar, sharing greater than
-70\% of consituent k-mers, with the exception of agricultural dataset
+70\% of constituent k-mers, with the exception of agricultural dataset
 2. 
 
 Talk about breaking up lump here or conclusion? Maybe conclusion...
@@ -255,20 +303,134 @@ partititioning is now possible, yay! scalability is now possible,
 yay!
 
 
-\section{Methods}
+\section{Methods - stole a bunch of stuff from your writings}
 
 
-\paragraph{Bloom filters are a standard probabilistic approach to storing sets.
-We implemented a simple exact (reversible) hash function for k-mers
-up to 32 in length that hashes into a 64-bit integer. This integer
-value was then used as an index in multiple hash tables, each of a
-different size, by taking the modulus of the value with the table
-size. To enter an element into the set, the corresponding entry in
-each hash table is set to true; to test true for set membership of
-an element, the corresponding entry in all hash tables must be true.
-Collisions are not detected. This storage scheme has two disadvantages:
-first, it admits false positives, in that an element may test as present
-through hash collisions; and second, it is essentially impossible
-to retrieve an element from the Bloom filter, because many elements
-may hash to the same value. }
+\subsection{Metagenomic datasets}
+
+All datasets except for the agricultural soil metagenome were from
+previously published datasets. Rumen-associated sequences (Illumina)
+were randomly selected from the rumen metagenome available at ftp://ftp.jgi-psf.org/pub/rnd2/Cow\_Rumen.
+Human-gut associated sequences (Illumina) of sample MH0086 were obtained
+from ftp://public.genomics.org.cn/BGI/gutmeta/Raw\_Reads. This sample
+was selected because of the relatively high number of reads reported
+as assembled (53.7\%) (Qin et al, 2010). Sequencing reads from agricultural
+soil were from an unpublished study in which microbial populations
+from Iowa corn soils were sequenced (Illumina). All reads used in
+this study were quality-trimmed for Illumina's read segment quality
+control indicator, where a quality score of 2 indicates that all subsequent
+regions of the sequence should not be used. After quality-trimming,
+only reads with lengths greater than 30 bp were retained. All quality
+trimmed reads used in this study are available at X. After quality-trimming,
+the rumen dataset and human gut datasets contained a total of 50 and
+35 million reads, respectively. The agricultural soil dataset contained
+a total of 520 million reads from which 50 and 100 million reads were
+randomly sampled as subsets. The simulated high complexity, high coverage
+dataset was previously published (Pignatelli, 2011). It was randomly
+selected from a set of complete genomes in NCBI and contained a total
+of 9 million reads.
+
+
+\subsection{Lightweight, compressible de Bruijn graph representation}
+
+\begin{doublespace}
+We used a lightweight probabilistic de Bruijn graph representation
+to explore k-mer connectivity of the assembly graph (cite paper?).
+The de Bruijn graph stores k-mer nodes in Bloom filters and keeps
+edges between nodes implicitly, i.e. if two k-mer nodes exist with
+a k-1 overlap, then there is an edge between them. Bloom filters are
+a probabilistic set storage data structure with false positives but
+no false negatives, thus the size of the bloom filters were selected
+to be appropriate for the size of the dataset and the memory available.
+For analyzing the graph connectivity of the studied datasets, we used
+4 x 48e9 bit bloom filters for the agricultural corn and rumen datasets,
+and 4 x 1e9 bit bloom filters for the human-gut and simulated datasets
+(I'm not 100\% (=90\%) sure about this, they are minimum \#s). As
+metagenomic sequencing contains a mixture of multiple organisms, we
+could exploit the biological structure of the sequencing by partitioning
+the assembly graph into disconnected subgraphs that represent the
+original DNA sequence components. The set of the largest number of
+reads which were connected in the assembly graph is what we refer
+to as a single, highly-connected lump. 
+\end{doublespace}
+
+
+\subsection{Measuring local graph density }
+
+We implemented a systematic traversal algorithm to identify highly
+connected k-mers, that is k-mers that are reachable from many locations
+in the graph. Waypoints are labeled to cover the graph such that they
+are a minimum distance of L apart. Originating from a waypoint, all
+k-mers are systematically and exhaustively traversed within a region
+that is the distance L. Such excursions that cover more than N k-mers
+are identified as ``big excursions'', and k-mers that are present
+in more than five big excursions are labelled as knots. Local graph
+density (G) is defined as the number of k-mers within a specified
+region, or N/L. For this study, L = 40 k-mer nodes, N = 200 k-mer
+nodes, and G > 5 is considered a big excursion. To study the affects
+of knots on metagenomic assembly, these k-mers were filtered from
+reads by truncating the reads at the region the initial knot was identified.
+We examined the position of these knot-causing k-mers in reads contributing
+to the lump. Each sequence in the lump was broken up into its constituent
+k-mers. In order of its appearance in the read, k-mers were identified
+as either a knot-causing k-mer or a non-knot-causing k-mer. The total
+fraction of k-mers within each dataset lump which were identified
+as knot-causing are shown in Figure X. 
+
+
+\subsection{Identifying properties of highly-connecting k-mers}
+
+De novo metagenomic assembly of unfiltered and knot-filtered reads
+were completed with Velvet (v1.1.02, cite Zerbino) with the following
+parameters: velveth 33 -short -shortPaired (if applicable to the dataset)
+and velvetg -exp\_cov auto -cov\_cutoff 0 -scaffolding no -min\_contig\_lgth
+500. Assemblies were also performed with ABYSS (v1.2.0, cite) with
+the following parameters: ABYSS -k 33 (include these results/put in
+supplementary?). Only contigs longer than 500 bp were considered in
+further analyses. Assemblies were evaluated by comparing number of
+contigs, number of base pairs, longest contig size, and number of
+shared constitutive k-mers. To calculate the number of shared unique
+k-mers between assemblies, constituent k-mers of contigs from an assembly
+would be loaded into bloom filters (4 x 1e9 bits). Subsequently, the
+constituent k-mers from the other assembly would be queried against
+the original assembly k-mers. The number of shared unique k-mers is
+dependent on which assembly is initially loaded into the bloom filters.
+Thus, each comparison was completed twice, once with the unfiltered
+assembly and once with the filtered assembly loaded into the bloom
+filter. Assembly similarity was determined by the lowest fraction
+of shared unique k-mers between these two comparisons (Figure X). 
+
+The enrichment of knot-causing k-mers in unfiltered reads was studied
+by identifying the fraction of unique k-mers in unfiltered sequencing
+reads and in their resulting assembled contigs. The ratio of fraction
+of unique knot-causing k-mers in unfiltered reads and in assembled
+contigs is the fold amount for which the unfiltered reads are enriched
+for these sequences. To understand the contribution of the knot-containing
+contigs to unfiltered and filtered assembly differences, we calculated
+the difference in constituent unique k-mers between knot-containing
+contigs and the filtered contigs (assembly of knot-filtered reads)
+using Bloom filters as described above. The fraction of total knot-causing
+k-mers between the two assemblies was calculated by dividing the number
+of different k-mers in knot-containing contigs by the total number
+of different k-mers in unfiltered and filtered contigs. The location
+of knots in unfiltered contigs was also studied. Contigs containing
+knot-causing k-mers were divided into 100 equally-sized regions. For
+each contig, the total number of knot-causing k-mers and total number
+of k-mers was calculated. For each dataset, the total fraction of
+knot-causing k-mers in each region for all contigs was calculated
+and is shown in Figure X.
+
+The presence of knot-causing k-mers in ORFs was examined. Fraggenescan
+(v1.1.15, cite) with the following parameters: -complete=0 -training=454\_10
+was used to identify ORFs in unfiltered contigs. We defined the ``edge''
+of an ORF within a contig to be between 32 bp (k-mer size used in
+our de Bruijn graph representation) outside of of an ORF to within
+16 bp (k/2) inside the ORF. The remaining internal ORF bases were
+defined as inside the ORF, and external bases were defined as outside
+the ORF. For each base within a contig, we determined if it was the
+first base of a knot causing k-mer and if it was located inside, outside,
+or at the edge of an ORF. The distribution of knot-causing bases (k-mers)
+between the inside, outside, and edge were then compared to the total
+distribution of all bases. (These results are pretty nice, I've added
+them to the google doc but not to the draft text).
 \end{document}
