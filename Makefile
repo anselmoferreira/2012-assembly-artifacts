@@ -1,10 +1,10 @@
-all: artifacts.pdf
+all: artifacts_paper.pdf
 
 clean:
-	rm -fr *.log *.aux artifacts.pdf
+	rm -fr *.log *.aux artifacts_paper.pdf
 
-artifacts.pdf: artifacts.tex
-	pdflatex artifacts
-#	bibtex artifacts
-#	pdflatex artifacts
-#	pdflatex artifacts
+artifacts_paper.pdf: artifacts_paper.tex
+	pdflatex artifacts_paper
+#	bibtex artifacts_paper
+#	pdflatex artifacts_paper
+#	pdflatex artifacts_paper
