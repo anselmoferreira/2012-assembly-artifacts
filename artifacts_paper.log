@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.8.2)  14 NOV 2011 09:23
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.8.2)  17 NOV 2011 17:41
 entering extended mode
  %&-line parsing enabled.
 **artifacts_paper
@@ -120,8 +120,7 @@ File: babel.def 2008/07/06 v3.8l Babel common definitions
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
-))
-No file artifacts_paper.aux.
+)) (./artifacts_paper.aux)
 \openout1 = `artifacts_paper.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
@@ -136,6 +135,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 59.
 LaTeX Font Info:    ... okay on input line 59.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 59.
 LaTeX Font Info:    ... okay on input line 59.
+
 *geometry auto-detecting driver*
 *geometry detected driver: pdftex*
 -------------------- Geometry parameters
@@ -196,164 +196,59 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 63.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 63.
+ [1
 
-
-LaTeX Warning: Citation `Hess:2011p686' on page 1 undefined on input line 66.
-
-
-LaTeX Warning: Citation `Qin:2010p189' on page 1 undefined on input line 66.
-
-
-LaTeX Warning: Citation `Hoff:2009p913' on page 1 undefined on input line 66.
-
-
-LaTeX Warning: Citation `Kunin:2008p16' on page 1 undefined on input line 66.
-
-
-LaTeX Warning: Citation `Noguchi:2006p968' on page 1 undefined on input line 66
-.
-
-
-LaTeX Warning: Citation `Zhang:2012p959' on page 1 undefined on input line 66.
-
-
-LaTeX Warning: Citation `Miller:2010p226' on page 1 undefined on input line 66.
-
-
-
-LaTeX Warning: Citation `Pop:2009p798' on page 1 undefined on input line 66.
-
-
-LaTeX Warning: Citation `Li:2009p707' on page 1 undefined on input line 66.
-
-
-LaTeX Warning: Citation `Schloss:2008p2' on page 1 undefined on input line 66.
-
-
-LaTeX Warning: Citation `Hess:2011p686' on page 1 undefined on input line 66.
-
-
-LaTeX Warning: Citation `Hess:2011p686' on page 1 undefined on input line 68.
-
-
-LaTeX Warning: Citation `Qin:2010p189' on page 1 undefined on input line 68.
-
-
-LaTeX Warning: Citation `Miller:2010p226' on page 1 undefined on input line 68.
-
-
-
-LaTeX Warning: Citation `Pop:2009p798' on page 1 undefined on input line 68.
-
-
-LaTeX Warning: Citation `Peng:2011p898' on page 1 undefined on input line 68.
-
-
-LaTeX Warning: Citation `Peng:2011p898' on page 1 undefined on input line 68.
-
-
-LaTeX Warning: Citation `Venter:2004p727' on page 1 undefined on input line 68.
-
-
-
-LaTeX Warning: Citation `Harismendy:2009p228' on page 1 undefined on input line
- 68.
-
-
-LaTeX Warning: Citation `Hoffmann:2009p1027' on page 1 undefined on input line 
-68.
-
-
-LaTeX Warning: Citation `Nakamura:2011p741' on page 1 undefined on input line 6
-8.
-
-[1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-
-LaTeX Warning: Citation `Qin:2010p189' on page 2 undefined on input line 75.
-
-
-LaTeX Warning: Citation `Hess:2011p686' on page 2 undefined on input line 75.
-
-
-LaTeX Warning: Citation `Pignatelli:2011p742' on page 2 undefined on input line
- 75.
-
-[2]
-Overfull \hbox (8.20724pt too wide) in paragraph at lines 79--80
-[]\OT1/cmr/m/n/10.95 There are mul-ti-ple causes of the ob-served highly-connec
-ted lump within metage-nomic datasets.
- []
-
-<./figures/lumps.pdf, id=14, 794.97pt x 614.295pt>
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
+<./figures/lumps.pdf, id=16, 794.97pt x 614.295pt>
 File: ./figures/lumps.pdf Graphic file (type pdf)
  <use ./figures/lumps.pdf>
-<./figures/lump_table.pdf, id=15, 794.97pt x 614.295pt>
+<./figures/lump_table.pdf, id=17, 794.97pt x 614.295pt>
 File: ./figures/lump_table.pdf Graphic file (type pdf)
 
-<use ./figures/lump_table.pdf> [3] [4 <./figures/lumps.pdf> <./figures/lump_tab
-le.pdf>] <./figures/pos-spec-bias.png, id=72, 578.16pt x 433.62pt>
+<use ./figures/lump_table.pdf> [4 <./figures/lumps.pdf>] [5 <./figures/lump_tab
+le.pdf>] <./figures/pos-spec-bias.png, id=74, 578.16pt x 433.62pt>
 File: ./figures/pos-spec-bias.png Graphic file (type png)
 
-<use ./figures/pos-spec-bias.png>
-Overfull \hbox (6.08095pt too wide) in paragraph at lines 109--110
-\OT1/cmr/m/n/10.95 Next, we eval-u-ated the ef-fects of the knot-causing se-que
-nces on the as-sem-blies of each metagenome
- []
-
-[5] <./figures/assembly_comparison.pdf, id=77, 794.97pt x 614.295pt>
+<use ./figures/pos-spec-bias.png> [6 <./figures/pos-spec-bias.png>]
+<./figures/assembly_comparison.pdf, id=80, 794.97pt x 614.295pt>
 File: ./figures/assembly_comparison.pdf Graphic file (type pdf)
 
-<use ./figures/assembly_comparison.pdf> [6 <./figures/pos-spec-bias.png>]
-[7 <./figures/assembly_comparison.pdf>]
-<./figures/knot_enrichment_in_reads.pdf, id=103, 794.97pt x 614.295pt>
+<use ./figures/assembly_comparison.pdf>
+<./figures/knot_enrichment_in_reads.pdf, id=81, 794.97pt x 614.295pt>
 File: ./figures/knot_enrichment_in_reads.pdf Graphic file (type pdf)
 
-<use ./figures/knot_enrichment_in_reads.pdf> [8 <./figures/knot_enrichment_in_r
-eads.pdf>] <./figures/pos-spec-bias-contigs.png, id=124, 578.16pt x 433.62pt>
+<use ./figures/knot_enrichment_in_reads.pdf> [7] [8 <./figures/assembly_compari
+son.pdf> <./figures/knot_enrichment_in_reads.pdf>]
+<./figures/pos-spec-bias-contigs.png, id=123, 578.16pt x 433.62pt>
 File: ./figures/pos-spec-bias-contigs.png Graphic file (type png)
 
-<use ./figures/pos-spec-bias-contigs.png> [9 <./figures/pos-spec-bias-contigs.p
-ng>] <./figures/temp-orfs.png, id=129, 635.976pt x 107.4414pt>
+<use ./figures/pos-spec-bias-contigs.png> [9] [10 <./figures/pos-spec-bias-cont
+igs.png>] <./figures/temp-orfs.png, id=131, 635.976pt x 107.4414pt>
 File: ./figures/temp-orfs.png Graphic file (type png)
 
 <use ./figures/temp-orfs.png>
+<./figures/rumen_orf.png, id=132, 590.4459pt x 445.9059pt>
+File: ./figures/rumen_orf.png Graphic file (type png)
 
-LaTeX Warning: Citation `Peng:2011p898' on page 10 undefined on input line 153.
-
-
-[10 <./figures/temp-orfs.png>] [11]
-Overfull \hbox (96.66498pt too wide) in paragraph at lines 165--181
-\OT1/cmr/m/n/10.95 se-quences (Il-lu-mina) of sam-ple MH0086 were ob-tained fro
-m ftp://public.genomics.org.cn/BGI/gutmeta/Raw[]Reads.
- []
-
-[12] [13] [14] (./artifacts_paper.bbl [15]) [16] (./artifacts_paper.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+<use ./figures/rumen_orf.png> [11 <./figures/temp-orfs.png>] [12 <./figures/rum
+en_orf.png>] [13] [14] [15] (./artifacts_paper.bbl [16] [17]) [18]
+(./artifacts_paper.aux) ) 
 Here is how much of TeX's memory you used:
- 1931 strings out of 495061
- 25547 string characters out of 1182622
- 85962 words of memory out of 3000000
- 5108 multiletter control sequences out of 15000+50000
- 8541 words of font info for 30 fonts, out of 3000000 for 9000
+ 1936 strings out of 495061
+ 25687 string characters out of 1182622
+ 86962 words of memory out of 3000000
+ 5111 multiletter control sequences out of 15000+50000
+ 8233 words of font info for 29 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 25i,10n,43p,1546b,294s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/sha
-re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-te
-xlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-texlive/fonts/
-type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/public
-/amsfonts/cm/cmr17.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm
-/cmti10.pfb>
-Output written on artifacts_paper.pdf (16 pages, 3024490 bytes).
+ 25i,11n,43p,1656b,294s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texmf-texlive/fonts/type1/public/amsfonts/
+cm/cmbx12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pf
+b></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/shar
+e/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-texl
+ive/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on artifacts_paper.pdf (18 pages, 3041182 bytes).
 PDF statistics:
- 173 PDF objects out of 1000 (max. 8388607)
+ 177 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
