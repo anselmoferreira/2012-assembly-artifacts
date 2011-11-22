@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.8.2)  18 NOV 2011 14:03
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.8.2)  22 NOV 2011 17:31
 entering extended mode
  %&-line parsing enabled.
 **artifacts_paper
@@ -198,57 +198,59 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 63.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
-<./figures/lumps.pdf, id=16, 794.97pt x 614.295pt>
-File: ./figures/lumps.pdf Graphic file (type pdf)
- <use ./figures/lumps.pdf>
-<./figures/lump_table.pdf, id=17, 794.97pt x 614.295pt>
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (3.8606pt too wide) in paragraph at lines 76--79
+\OT1/cmr/m/n/10.95 metagenomes Par-tic-u-lary in high com-plex-ity datasets, we
+ need to un-der-stand the pres-ence/effects
+ []
+
+[2] [3] <./figures/lump_sizes.png, id=16, 578.16pt x 433.62pt>
+File: ./figures/lump_sizes.png Graphic file (type png)
+
+<use ./figures/lump_sizes.png>
+<./figures/lump_table.pdf, id=18, 794.97pt x 614.295pt>
 File: ./figures/lump_table.pdf Graphic file (type pdf)
 
-<use ./figures/lump_table.pdf> [4 <./figures/lumps.pdf>] [5 <./figures/lump_tab
-le.pdf>] <./figures/pos-spec-bias.png, id=74, 578.16pt x 433.62pt>
+<use ./figures/lump_table.pdf> [4] [5 <./figures/lump_sizes.png> <./figures/lum
+p_table.pdf>] <./figures/pos-spec-bias.png, id=46, 578.16pt x 433.62pt>
 File: ./figures/pos-spec-bias.png Graphic file (type png)
 
-<use ./figures/pos-spec-bias.png> [6 <./figures/pos-spec-bias.png>]
-<./figures/assembly_comparison.pdf, id=80, 794.97pt x 614.295pt>
+<use ./figures/pos-spec-bias.png> [6]
+<./figures/assembly_comparison.pdf, id=50, 794.97pt x 614.295pt>
 File: ./figures/assembly_comparison.pdf Graphic file (type pdf)
 
-<use ./figures/assembly_comparison.pdf>
-<./figures/knot_enrichment_in_reads.pdf, id=81, 794.97pt x 614.295pt>
+<use ./figures/assembly_comparison.pdf> [7 <./figures/pos-spec-bias.png>]
+<./figures/knot_enrichment_in_reads.pdf, id=56, 794.97pt x 614.295pt>
 File: ./figures/knot_enrichment_in_reads.pdf Graphic file (type pdf)
 
-<use ./figures/knot_enrichment_in_reads.pdf> [7] [8 <./figures/assembly_compari
-son.pdf> <./figures/knot_enrichment_in_reads.pdf>]
-<./figures/pos-spec-bias-contigs.png, id=123, 578.16pt x 433.62pt>
+<use ./figures/knot_enrichment_in_reads.pdf> [8 <./figures/assembly_comparison.
+pdf>] [9 <./figures/knot_enrichment_in_reads.pdf>]
+<./figures/pos-spec-bias-contigs.png, id=97, 578.16pt x 433.62pt>
 File: ./figures/pos-spec-bias-contigs.png Graphic file (type png)
 
-<use ./figures/pos-spec-bias-contigs.png> [9] [10 <./figures/pos-spec-bias-cont
-igs.png>] <./figures/temp-orfs.png, id=131, 635.976pt x 107.4414pt>
+<use ./figures/pos-spec-bias-contigs.png> [10 <./figures/pos-spec-bias-contigs.
+png>] [11] <./figures/temp-orfs.png, id=105, 635.976pt x 107.4414pt>
 File: ./figures/temp-orfs.png Graphic file (type png)
 
-<use ./figures/temp-orfs.png>
-<./figures/rumen_orf.png, id=132, 590.4459pt x 445.9059pt>
-File: ./figures/rumen_orf.png Graphic file (type png)
-
-<use ./figures/rumen_orf.png> [11 <./figures/temp-orfs.png>] [12 <./figures/rum
-en_orf.png>] [13] [14] [15] (./artifacts_paper.bbl [16] [17]) [18]
-(./artifacts_paper.aux) ) 
+<use ./figures/temp-orfs.png> [12 <./figures/temp-orfs.png>] [13] [14] [15]
+(./artifacts_paper.bbl [16] [17]) [18] (./artifacts_paper.aux) ) 
 Here is how much of TeX's memory you used:
- 1936 strings out of 495061
- 25687 string characters out of 1182622
- 86962 words of memory out of 3000000
- 5111 multiletter control sequences out of 15000+50000
+ 1931 strings out of 495061
+ 25588 string characters out of 1182622
+ 84962 words of memory out of 3000000
+ 5107 multiletter control sequences out of 15000+50000
  8233 words of font info for 29 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 25i,11n,43p,1656b,294s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texmf-texlive/fonts/type1/public/amsfonts/
-cm/cmbx12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pf
-b></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/shar
-e/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-texl
-ive/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on artifacts_paper.pdf (18 pages, 3041231 bytes).
+ 25i,11n,43p,1657b,294s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/tex
+mf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-texlive/
+fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-texlive/fonts/type1/
+public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfo
+nts/cm/cmr17.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti1
+0.pfb>
+Output written on artifacts_paper.pdf (18 pages, 634955 bytes).
 PDF statistics:
- 177 PDF objects out of 1000 (max. 8388607)
+ 146 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
