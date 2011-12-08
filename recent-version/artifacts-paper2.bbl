@@ -1,0 +1,106 @@
+\begin{thebibliography}{10}
+
+\bibitem{Barabasi:1999p1083}
+A.L Barab{\'a}si and R~Albert.
+\newblock Emergence of scaling in random networks.
+\newblock {\em Science}, 286(5439):509, 1999.
+
+\bibitem{Harismendy:2009p228}
+Olivier Harismendy, Pauline~C Ng, Robert~L Strausberg, Xiaoyun Wang, Timothy~B
+  Stockwell, Karen~Y Beeson, Nicholas~J Schork, Sarah~S Murray, Eric~J Topol,
+  Samuel Levy, and Kelly~A Frazer.
+\newblock Evaluation of next generation sequencing platforms for population
+  targeted sequencing studies.
+\newblock {\em Genome Biol}, 10(3):R32, Jan 2009.
+
+\bibitem{Hess:2011p686}
+M~Hess, A~Sczyrba, R~Egan, and T~Kim{\ldots}.
+\newblock Metagenomic discovery of biomass-degrading genes and genomes from cow
+  rumen.
+\newblock {\em Science}, Jan 2011.
+
+\bibitem{Hoff:2009p913}
+K~Hoff, T~Lingner, and P~Meinicke{\ldots}.
+\newblock Orphelia: predicting genes in metagenomic sequencing reads.
+\newblock {\em Nucleic Acids Research}, Jan 2009.
+
+\bibitem{Hoffmann:2009p1027}
+S~Hoffmann, C~Otto, S~Kurtz, and C~Sharma{\ldots}.
+\newblock Fast mapping of short sequences with mismatches, insertions and
+  deletions using index structures.
+\newblock {\em PLoS Computational {\ldots}}, Jan 2009.
+
+\bibitem{Kunin:2008p16}
+V~Kunin, A~Copeland, A~Lapidus, K~Mavromatis, and P~Hugenholtz.
+\newblock A bioinformatician's guide to metagenomics.
+\newblock {\em Microbiology and Molecular Biology Reviews}, 72(4):557--578, Dec
+  2008.
+
+\bibitem{Li:2009p707}
+W~Li.
+\newblock Analysis and comparison of very large metagenomes with fast
+  clustering and functional annotation.
+\newblock {\em Bmc Bioinformatics}, 10(1):359, 2009.
+
+\bibitem{Miller:2010p226}
+Jason~R Miller, Sergey Koren, and Granger Sutton.
+\newblock Assembly algorithms for next-generation sequencing data.
+\newblock {\em Genomics}, 95(6):315--27, Jun 2010.
+
+\bibitem{Nakamura:2011p741}
+K~Nakamura, T~Oshima, and T~Morimoto{\ldots}.
+\newblock Sequence-specific error profile of illumina sequencers.
+\newblock {\em Nucleic Acids {\ldots}}, Jan 2011.
+
+\bibitem{Noguchi:2006p968}
+H~Noguchi and J~Park{\ldots}.
+\newblock Metagene: prokaryotic gene finding from environmental genome shotgun
+  sequences.
+\newblock {\em Nucleic Acids Research}, Jan 2006.
+
+\bibitem{Peng:2011p898}
+Y~Peng, H~Leung, SM~Yiu, and F.Y.L Chin.
+\newblock Meta-idba: a de novo assembler for metagenomic data.
+\newblock {\em Bioinformatics}, 27(13):i94, 2011.
+
+\bibitem{Pignatelli:2011p742}
+M~Pignatelli{\ldots}.
+\newblock Evaluating the fidelity of de novo short read metagenomic assembly
+  using simulated data.
+\newblock {\em PLoS ONE}, Jan 2011.
+
+\bibitem{Pop:2009p798}
+M~Pop.
+\newblock Genome assembly reborn: recent computational challenges.
+\newblock {\em Briefings in bioinformatics}, 10(4):354, 2009.
+
+\bibitem{Qin:2010p189}
+Junjie Qin, Ruiqiang Li, Jeroen Raes, Manimozhiyan Arumugam,
+  Kristoffer~Solvsten Burgdorf, Chaysavanh Manichanh, Trine Nielsen, Nicolas
+  Pons, Florence Levenez, Takuji Yamada, Daniel~R Mende, Junhua Li, Junming Xu,
+  Shaochuan Li, Dongfang Li, Jianjun Cao, Bo~Wang, Huiqing Liang, Huisong
+  Zheng, Yinlong Xie, Julien Tap, Patricia Lepage, Marcelo Bertalan,
+  Jean-Michel Batto, Torben Hansen, Denis~Le Paslier, Allan Linneberg,
+  H~Bj{\o}rn Nielsen, Eric Pelletier, Pierre Renault, Thomas Sicheritz-Ponten,
+  Keith Turner, Hongmei Zhu, Chang Yu, Shengting Li, Min Jian, Yan Zhou,
+  Yingrui Li, Xiuqing Zhang, Songgang Li, Nan Qin, Huanming Yang, Jian Wang,
+  S{\o}ren Brunak, Joel Dor{\'e}, Francisco Guarner, Karsten Kristiansen, Oluf
+  Pedersen, Julian Parkhill, Jean Weissenbach, MetaHIT Consortium, Peer Bork,
+  S~Dusko Ehrlich, and Jun Wang.
+\newblock A human gut microbial gene catalogue established by metagenomic
+  sequencing.
+\newblock {\em Nature}, 464(7285):59--65, Mar 2010.
+
+\bibitem{Schloss:2008p2}
+PD~Schloss and J~Handelsman.
+\newblock A statistical toolbox for metagenomics: assessing functional
+  diversity in microbial communities.
+\newblock {\em Bmc Bioinformatics}, 9(1):34, 2008.
+
+\bibitem{Zhang:2012p959}
+Yuan Zhang and Yanni Sun.
+\newblock Metadomain: A profile hmm-based protein domain classification tool
+  for short sequence.
+\newblock {\em Pacific Symposium on Biocomputing}, 2012.
+
+\end{thebibliography}
