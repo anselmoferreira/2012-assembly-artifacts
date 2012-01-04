@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.8.2)  8 DEC 2011 16:27
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.8.2)  4 JAN 2012 16:59
 entering extended mode
  %&-line parsing enabled.
-**artifacts-paper2
+**artifacts-paper2.tex
 (./artifacts-paper2.tex
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
@@ -199,50 +199,50 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 62.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<./figures/lump_sizes.png, id=9, 578.16pt x 433.62pt>
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
+<./figures/lump_sizes.png, id=13, 578.16pt x 433.62pt>
 File: ./figures/lump_sizes.png Graphic file (type png)
 
-<use ./figures/lump_sizes.png> [2]
-<./figures/density_pos.png, id=15, 578.16pt x 433.62pt>
+<use ./figures/lump_sizes.png> [3 <./figures/lump_sizes.png>]
+<./figures/density_pos.png, id=19, 578.16pt x 433.62pt>
 File: ./figures/density_pos.png Graphic file (type png)
 
-<use ./figures/density_pos.png> [3 <./figures/lump_sizes.png>]
-<./figures/position_read.png, id=20, 578.16pt x 433.62pt>
+<use ./figures/density_pos.png> [4 <./figures/density_pos.png>]
+<./figures/position_read.png, id=24, 578.16pt x 433.62pt>
 File: ./figures/position_read.png Graphic file (type png)
 
-<use ./figures/position_read.png> [4 <./figures/density_pos.png>]
-<./figures/knot_enrichment_in_reads.pdf, id=25, 794.97pt x 614.295pt>
+<use ./figures/position_read.png> [5]
+<./figures/knot_enrichment_in_reads.pdf, id=28, 794.97pt x 614.295pt>
 File: ./figures/knot_enrichment_in_reads.pdf Graphic file (type pdf)
 
 <use ./figures/knot_enrichment_in_reads.pdf>
-<./figures/pos-spec-bias-contigs.png, id=26, 578.16pt x 433.62pt>
+<./figures/pos-spec-bias-contigs.png, id=29, 578.16pt x 433.62pt>
 File: ./figures/pos-spec-bias-contigs.png Graphic file (type png)
 
-<use ./figures/pos-spec-bias-contigs.png> [5 <./figures/position_read.png>]
-[6 <./figures/knot_enrichment_in_reads.pdf> <./figures/pos-spec-bias-contigs.pn
-g>] <./figures/orf_lengths.png, id=52, 745.1037pt x 542.7477pt>
+<use ./figures/pos-spec-bias-contigs.png> [6 <./figures/position_read.png>]
+[7 <./figures/knot_enrichment_in_reads.pdf> <./figures/pos-spec-bias-contigs.pn
+g>] <./figures/orf_lengths.png, id=56, 745.1037pt x 542.7477pt>
 File: ./figures/orf_lengths.png Graphic file (type png)
 
-<use ./figures/orf_lengths.png> [7] [8 <./figures/orf_lengths.png>] [9]
-(./artifacts-paper2.bbl [10] [11]) [12] (./artifacts-paper2.aux) ) 
+<use ./figures/orf_lengths.png> [8 <./figures/orf_lengths.png>] [9] [10]
+(./artifacts-paper2.bbl [11] [12]) [13] (./artifacts-paper2.aux) ) 
 Here is how much of TeX's memory you used:
  1928 strings out of 495061
  25457 string characters out of 1182622
- 84962 words of memory out of 3000000
+ 83962 words of memory out of 3000000
  5104 multiletter control sequences out of 15000+50000
  8541 words of font info for 30 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 25i,10n,43p,2168b,290s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 25i,11n,43p,2359b,290s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/t
 exmf-texlive/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-texliv
 e/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-texlive/fonts/typ
 e1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-texlive/fonts/type1/public/am
 sfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cm
 r17.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on artifacts-paper2.pdf (12 pages, 400969 bytes).
+Output written on artifacts-paper2.pdf (13 pages, 402427 bytes).
 PDF statistics:
- 94 PDF objects out of 1000 (max. 8388607)
+ 98 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
