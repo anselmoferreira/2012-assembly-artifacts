@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.8.2)  13 JAN 2012 15:17
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.8.2)  19 JAN 2012 15:54
 entering extended mode
  %&-line parsing enabled.
 **artifacts-paper2
@@ -264,35 +264,35 @@ pdfTeX warning: pdflatex (file ./figures/orf_lengths.pdf): PDF inclusion: found
 File: ./figures/orf_lengths.pdf Graphic file (type pdf)
 
 <use ./figures/orf_lengths.pdf>
-Overfull \hbox (2.67435pt too wide) in paragraph at lines 164--165
+Overfull \hbox (2.67435pt too wide) in paragraph at lines 161--162
 \OT1/cmr/m/n/10.95 Comparing the un-fil-tered and fil-tered as-sem-blies of the
  ru-men, hu-man gut, and soil metagenomes,
  []
 
-[8 <./figures/pos-spec-bias-contigs.pdf> <./figures/assemblies.pdf>] [9 <./figu
-res/orf_lengths.pdf>] [10] [11] [12]
-Overfull \hbox (183.74802pt too wide) in paragraph at lines 198--207
+[8 <./figures/pos-spec-bias-contigs.pdf>] [9 <./figures/assemblies.pdf> <./figu
+res/orf_lengths.pdf>] [10] [11] [12] [13]
+Overfull \hbox (183.74802pt too wide) in paragraph at lines 195--204
 \OT1/cmr/m/n/10.95 se-quences (Il-lu-mina) of sam-ples MH0001 through MH0010 we
 re ob-tained from ftp://public.genomics.org.cn/BGI/gutmeta/Raw[]Reads.
  []
 
-[13] [14] [15] (./artifacts-paper2.bbl [16] [17]) [18] (./artifacts-paper2.aux)
- ) 
+[14] [15] [16] (./artifacts-paper2.bbl [17]) [18] (./artifacts-paper2.aux) ) 
 Here is how much of TeX's memory you used:
  1943 strings out of 495061
  25798 string characters out of 1182622
- 84962 words of memory out of 3000000
+ 85962 words of memory out of 3000000
  5117 multiletter control sequences out of 15000+50000
  8541 words of font info for 30 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 25i,11n,43p,1983b,294s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/sha
-re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-te
-xlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-texlive/fonts/
-type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/public
-/amsfonts/cm/cmr17.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm
-/cmti10.pfb>
-Output written on artifacts-paper2.pdf (18 pages, 1209457 bytes).
+ 25i,11n,43p,1983b,292s stack positions out of 5000i,500n,10000p,200000b,50000s
+</u
+sr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/te
+xmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-texlive
+/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-texlive/fonts/type1
+/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsf
+onts/cm/cmr17.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti
+10.pfb>
+Output written on artifacts-paper2.pdf (18 pages, 1209570 bytes).
 PDF statistics:
  268 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
