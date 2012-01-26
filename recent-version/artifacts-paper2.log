@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.8.2)  19 JAN 2012 15:54
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.8.2)  26 JAN 2012 16:37
 entering extended mode
  %&-line parsing enabled.
 **artifacts-paper2
@@ -280,11 +280,11 @@ re ob-tained from ftp://public.genomics.org.cn/BGI/gutmeta/Raw[]Reads.
 Here is how much of TeX's memory you used:
  1943 strings out of 495061
  25798 string characters out of 1182622
- 85962 words of memory out of 3000000
+ 83962 words of memory out of 3000000
  5117 multiletter control sequences out of 15000+50000
  8541 words of font info for 30 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 25i,11n,43p,1983b,292s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 25i,11n,43p,1997b,292s stack positions out of 5000i,500n,10000p,200000b,50000s
 </u
 sr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/te
 xmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-texlive
@@ -292,7 +292,7 @@ xmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-texlive
 /public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsf
 onts/cm/cmr17.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti
 10.pfb>
-Output written on artifacts-paper2.pdf (18 pages, 1209570 bytes).
+Output written on artifacts-paper2.pdf (18 pages, 1209615 bytes).
 PDF statistics:
  268 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
