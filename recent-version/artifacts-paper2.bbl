@@ -91,11 +91,27 @@ Junjie Qin, Ruiqiang Li, Jeroen Raes, Manimozhiyan Arumugam,
   sequencing.
 \newblock {\em Nature}, 464(7285):59--65, Mar 2010.
 
+\bibitem{Rho:2010p397}
+M~Rho, H~Tang, and Y~Ye.
+\newblock Fraggenescan: predicting genes in short and error-prone reads.
+\newblock {\em Nucleic Acids Research}, 2010.
+
 \bibitem{Schloss:2008p2}
 PD~Schloss and J~Handelsman.
 \newblock A statistical toolbox for metagenomics: assessing functional
   diversity in microbial communities.
 \newblock {\em Bmc Bioinformatics}, 9(1):34, 2008.
+
+\bibitem{Sommer:2007p1253}
+Daniel~D Sommer, Arthur~L Delcher, Steven~L Salzberg, and Mihai Pop.
+\newblock Minimus: a fast, lightweight genome assembler.
+\newblock {\em Bmc Bioinformatics}, 8:64, Jan 2007.
+
+\bibitem{Zerbino:2008p665}
+Daniel~R Zerbino and Ewan Birney.
+\newblock Velvet: algorithms for de novo short read assembly using de bruijn
+  graphs.
+\newblock {\em Genome Res}, 18(5):821--9, May 2008.
 
 \bibitem{Zhang:2012p959}
 Yuan Zhang and Yanni Sun.

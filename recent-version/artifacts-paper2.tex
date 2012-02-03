@@ -192,65 +192,35 @@ As datasets from NGS technologies continue to increase in size, our ability to a
 \section{Methods}
 
 \subsection{Metagenomic datasets}
-All datasets, with the exception of the agricultural soil metagenome, were from
-previously published datasets. Rumen-associated sequences (Illumina)
-were randomly selected from the rumen metagenome available at ftp://ftp.jgi-psf.org/pub/rnd2/Cow\_Rumen. Human-gut associated sequences (Illumina) of samples MH0001 through MH0010 were obtained from ftp://public.genomics.org.cn/BGI/gutmeta/Raw\_Reads. The agricultural
-soil metagenome was from the sequencing (Illumina) of Iowa corn soil and is currently unpublished. All reads used in this study were quality-trimmed for Illumina's read segment quality control indicator, where a quality score of 2 indicates that all subsequent
-regions of the sequence should not be used. After quality-trimming,
-only reads with lengths greater than 30 bp were retained. All quality
-trimmed reads used in this study are available at X.  The number of reads after quality-trimming is shown in Table 1 for each metagenome. The simulated high complexity, high coverage
-dataset was previously published (Pignatelli, 2011).  
-	Coverage of each metagenome was estimated by aligning trimmed sequencing reads to assembled contigs with lengths greater than 500 bp.  For coverage estimates, the assembly of each metagenome was performed using Velvet (v1.1.05) with the following parameters:  K=33, exp cov=auto, cov cutoff=0, no scaffolding.  For datasets larger than 50 million reads, metagenomes were partitioned with the methods described in (cite PNAS paper) prior to assembly to overcome computational memory limitations for assembly.  Reads were aligned to assembled contigs with Bowtie (v0.12.7), allowing for a maximum of two mismatches.  
+All datasets, with the exception of the agricultural soil metagenome, were from previously published datasets. Rumen-associated sequences (Illumina) were randomly selected from the rumen metagenome available at ftp://ftp.jgi-psf.org/pub/rnd2/Cow\_Rumen \cite{Hess:2011p686}. Human-gut associated sequences (Illumina) of samples MH0001 through MH0010 were obtained from ftp://public.genomics.org.cn/BGI/gutmeta/Raw\_Reads \cite{Qin:2010p189}. The agricultural soil metagenome was from an Iowa corn soil metagenome and is currently unpublished. All reads used in this study were quality-trimmed for Illumina's read segment quality control indicator, where a quality score of 2 indicates that all subsequent regions of the sequence should not be used. After quality-trimming, only reads with lengths greater than 30 bp were retained. All quality trimmed reads used in this study are available at X.  The number of reads after quality-trimming is shown in Table 1 for each metagenome. The simulated high complexity, high coverage dataset was previously published (Pignatelli, 2011).  
+
+Coverage of each metagenome was estimated by aligning trimmed sequencing reads to assembled contigs with lengths greater than 500 bp.  For coverage estimates, the assembly of each metagenome was performed using Velvet (v1.1.05) with the following parameters:  K=33, exp cov=auto, cov cutoff=0, no scaffolding.  For datasets larger than 50 million reads, metagenomes were partitioned with the methods described in (cite PNAS paper) prior to assembly to overcome computational memory limitations for assembly.  Reads were aligned to assembled contigs with Bowtie (v0.12.7), allowing for a maximum of two mismatches.  
 
 \subsection{Lightweight, compressible de Bruijn graph representation}
-We used a lightweight probabilistic de Bruijn graph representation
-to explore k-mer connectivity of the assembly graph (cite PNAS paper).
-The de Bruijn graph stores k-mer nodes in Bloom filters and keeps
-edges between nodes implicitly, i.e. if two k-mer nodes exist with
-a k-1 overlap, then there is an edge between them. Bloom filters are
-a probabilistic set storage data structure with false positives but
-no false negatives, thus the size of the bloom filters were selected
-to be appropriate for the size of the dataset and the memory available.
-	For analyzing the graph connectivity of the studied datasets, we used
-4 x 48e9 bit bloom filters for soil, rumen, and human gut datasets,
-and 4 x 1e9 bit bloom filters for the simulated dataset. As metagenomic sequencing contains a mixture of multiple organisms, we
-could exploit the biological structure of the sequencing by partitioning
-the assembly graph into disconnected subgraphs that represent the
-original DNA sequence components. The set of the largest number of
-reads which were connected in the assembly graph is referre to above as a single, highly-connected lump. 
+We used a lightweight probabilistic de Bruijn graph representation to explore k-mer connectivity of the assembly graph (cite PNAS paper). The de Bruijn graph stores k-mer nodes in Bloom filters and keeps edges between nodes implicitly, i.e. if two k-mer nodes exist with a k-1 overlap, then there is an edge between them. Bloom filters are a probabilistic set storage data structure with false positives but no false negatives, thus the size of the bloom filters were selected to be appropriate for each dataset and the memory available.
+	
+For analyzing the graph connectivity of the studied datasets, we used 4 x 48e9 bit bloom filters for soil, rumen, and human gut datasets, and 4 x 1e9 bit bloom filters for the simulated dataset. As metagenomic sequencing contains a mixture of multiple organisms, we could exploit the biological structure of the sequencing by partitioning the assembly graph into disconnected subgraphs that represent the original DNA sequence components. The set of the largest number of reads which were connected in the assembly graph is referre to above as a single, highly-connected lump. 
 
 \subsection{Local graph density and identifying highly-connected k-mers}
-We implemented a systematic traversal algorithm to identify highly
-connected components of the assembly graph.  Waypoints were labeled to cover the graph such that they
-are a minimum distance of L apart. Originating from a waypoint, all
-k-mers are systematically and exhaustively traversed within a region
-that is the distance N.   The local graph density was calculated as the number of X k-mers reachable within a distance N divided by the distance N.  Thus, the local graph density of a linear sequence would be 2, and additional branches or repeats would increase graph density.   To evaluate the extent of connectivity within each metagenomic lump, we calculated the number of nodes (K=32) with a local graph density of greater than 20 when N=100 and determined these nodes to be "highly dense" (Table X).  We also evaluated the degree to which graph density varied by position along a read.  For each k-mer in a read, the local graph density within N=10 nodes was calculated.  This average local graph density by k-mer position for all reads was subsequently calculated (Figure X).
+We implemented a systematic traversal algorithm to identify highly connected components of the assembly graph.  Waypoints were labeled to cover the graph such that they
+are a minimum distance of L apart. Originating from a waypoint, all k-mers were systematically and exhaustively traversed within a region that is the distance N.   The local graph density was calculated as the number of X k-mers reachable within a distance N divided by the distance N.  Thus, the local graph density of a linear sequence would be 2, and additional branches or repeats would increase graph density.   To evaluate the extent of connectivity within each metagenomic lump, we calculated the number of nodes (K=32) with a local graph density greater than 20 when N=100 and determined these nodes to be "highly dense" (Table 2).  We also evaluated the degree to which graph density varied by position along a read.  For each k-mer in a read, the local graph density within N=10 nodes was calculated, and the total average local graph density by k-mer position for all reads was subsequently calculated (Figure 2).
 @brain fart - fix highly dense - there's better phrases I'm sure
 
 \subsection{Identifying properties of highly-connecting k-mers}
-	The enrichment of knot-causing k-mers in unfiltered reads was estimated 
-by identifying the fraction of unique k-mers in unfiltered sequencing
-reads and in their resulting assembled contigs. The ratio of these k-mer fractions (unfiltered reads/assembled contigs) was used to estimate the enrichment of knot-causing k-mers in the reads. 
+The enrichment of knot-causing k-mers in unfiltered reads was estimated by identifying the fraction of unique k-mers in unfiltered sequencing reads and in their corresponding assembled contigs. The ratio of these k-mer fractions (unfiltered reads/assembled contigs) was used to estimate the enrichment of knot-causing k-mers in the reads. 
 	
-
 \subsection{De Novo Metagenomic Assembly}
-De novo metagenomic assembly of reads within each metagenomic lump
-was completed with Velvet (v1.1.02, cite Zerbino) with the following
-parameters: velveth -short -shortPaired (if applicable to the dataset)
-and velvetg -exp\_cov auto -cov\_cutoff 0 -scaffolding no.  For soil 1, soil 2, rumen, and simulated metagenomes, assemblies were performed at K=25, 27, 29, 31, and 33 and merged with Minimus (Amos v3.1.0, cite).  For soil 3 and human gut metagenomes, assemblies were performed at only K=33 due to the size of the datasets.  
-	To study the effects of removing highly connecting sequences on assembly, these k-mers were filtered from reads by truncating the reads at the location of these sequences and the remaining reads assembled as described above.  To compare unfiltered and filtered assemblies, we compared the total number of contigs, total assembly length, maximum contig size, and total number of predicted ORFs.  ORFs were predicted using Fraggenescan(v1.1.15, cite) with the following parameters: -complete=0 -training=454\_10.  The k-mers which constituted the unfiltered and filtered assemblies were compared.  To calculate the number of shared unique k-mers between assembly A and assembly B, constituent k-mers of contigs from assembly A were loaded into bloom filters. Subsequently, the constituent k-mers from the assembly B were queried against
-the assembly A k-mers. The number of shared unique k-mers is
-dependent on which assembly is initially loaded into the bloom filters. Thus, each comparison was completed twice, once with the unfiltered
-assembly and once with the filtered assembly initially loaded into the bloom
-filter. Assembly similarity was determined by the lowest fraction
-of shared unique k-mers between these two comparisons (Figure X). 
+De novo metagenomic assembly of reads within each metagenomic lump was completed with Velvet (v1.1.02) with the following parameters: velveth -short -shortPaired (if applicable to the dataset) and velvetg -exp\_cov auto -cov\_cutoff 0 -scaffolding no \cite{Zerbino:2008p665}.  For soil 1, soil 2, rumen, and simulated metagenomes, assemblies were performed at K=25, 27, 29, 31, and 33 and merged with Minimus (Amos v3.1.0, \cite{Sommer:2007p1253}).  For soil 3 and human gut metagenomes, assemblies were performed at only K=33 due to the size of the datasets and memory limitations.  
+
+To study the effects of removing highly connecting sequences on assembly, the identified highly connective k-mers were filtered from reads by truncating the reads at the location of these sequences and the remaining reads assembled as described above.  To compare unfiltered and filtered assemblies, we compared the total number of contigs, total assembly length, maximum contig size, and total number of predicted ORFs.  ORFs were predicted using Fraggenescan(v1.1.15) with the following parameters: -complete=0 -training=454\_10 \cite{Rho:2010p397}.  The k-mers which constituted the unfiltered and filtered assemblies were compared.  To calculate the number of shared unique k-mers between assembly A and assembly B, constituent k-mers of contigs from assembly A were loaded into bloom filters. Subsequently, the constituent k-mers from the assembly B were queried against the assembly A k-mers. The number of shared unique k-mers is dependent on which assembly was initially loaded into the bloom filters. Thus, each comparison was completed twice, once with the unfiltered assembly and once with the filtered assembly initially loaded into the bloom filter. Assembly similarity was determined by the lowest fraction of shared unique k-mers between these two comparisons (Figure X). 
 
 @Need to add in vector assembly comparisons - not sure how this is done well enough to write about it, vector blah blah
 
 @AC...Assemblies were also performed with ABYSS (v1.2.0, cite) with the following parameters: ABYSS -k 33  - do we want to anything with this?
 
-	The location of highly-connecting k-mers within assembled unfiltered contigs was examined by dividing each contig into 100 equally-sized regions.  The fraction of highly-connecting k-mers within each region was calculated for each metagenome and is shown in Figure X.
-	To evaluate assemblies of the simulated and rumen datasets, ORFs and contigs were aligned to the original 112 genomes used to generate the simulated metagenome and 15 draft rumen genomes  \cite{Hess:2011p686} using BLAST (v2.2.25).  For specific contig regions (the ORFs which were edge-enriched for knot-containing sequences), mismatches between assembled sequences and reference genomes were identified to evaluate the accuracy of assembly.  To determine the effects of removing highly-connecting sequences, the alignment lengths of contigs from unfiltered and knot-filtered assemblies which shared identical top blast alignments were compared.    
+The location of highly-connecting k-mers within assembled unfiltered contigs was examined by dividing each contig into 100 equally-sized regions.  The fraction of highly-connecting k-mers within each region was calculated for each metagenome and is shown in Figure 4.
+
+To evaluate assemblies of the simulated and rumen datasets, ORFs and contigs were aligned to the original 112 genomes used to generate the simulated metagenome or 15 draft rumen genomes  \cite{Hess:2011p686} using BLAST (v2.2.25).   Mismatches between assembled sequences and reference genomes were identified to evaluate the accuracy of assembly.  To determine the effects of removing highly-connecting sequences, the alignment lengths of contigs from unfiltered and knot-filtered assemblies which shared identical top blast alignments were compared.    
 
 
 \bibliography{artifacts-paper-bib}
