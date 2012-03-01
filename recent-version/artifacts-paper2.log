@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.8.2)  3 FEB 2012 09:25
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.8.2)  1 MAR 2012 16:51
 entering extended mode
  %&-line parsing enabled.
 **artifacts-paper2
@@ -230,71 +230,79 @@ File: ./figures/density_pos.pdf Graphic file (type pdf)
 
 <use ./figures/density_pos.pdf> [5 <./figures/density_pos.pdf>]
 
+pdfTeX warning: pdflatex (file ./figures/stoptag_id.pdf): PDF inclusion: found 
+PDF version <1.5>, but at most version <1.4> allowed
+<./figures/stoptag_id.pdf, id=94, 794.97pt x 319.1925pt>
+File: ./figures/stoptag_id.pdf Graphic file (type pdf)
+
+<use ./figures/stoptag_id.pdf>
+
 pdfTeX warning: pdflatex (file ./figures/position_read.pdf): PDF inclusion: fou
 nd PDF version <1.5>, but at most version <1.4> allowed
-<./figures/position_read.pdf, id=94, 578.16pt x 433.62pt>
+<./figures/position_read.pdf, id=95, 578.16pt x 433.62pt>
 File: ./figures/position_read.pdf Graphic file (type pdf)
 
-<use ./figures/position_read.pdf> [6 <./figures/position_read.pdf>]
+<use ./figures/position_read.pdf> [6 <./figures/stoptag_id.pdf>]
 
 pdfTeX warning: pdflatex (file ./figures/stoptag_table.pdf): PDF inclusion: fou
 nd PDF version <1.5>, but at most version <1.4> allowed
-<./figures/stoptag_table.pdf, id=111, 632.86438pt x 194.7275pt>
+<./figures/stoptag_table.pdf, id=116, 632.86438pt x 194.7275pt>
 File: ./figures/stoptag_table.pdf Graphic file (type pdf)
 
 <use ./figures/stoptag_table.pdf>
 
 pdfTeX warning: pdflatex (file ./figures/pos-spec-bias-contigs.pdf): PDF inclus
 ion: found PDF version <1.5>, but at most version <1.4> allowed
-<./figures/pos-spec-bias-contigs.pdf, id=112, 578.16pt x 433.62pt>
+<./figures/pos-spec-bias-contigs.pdf, id=117, 578.16pt x 433.62pt>
 File: ./figures/pos-spec-bias-contigs.pdf Graphic file (type pdf)
 
-<use ./figures/pos-spec-bias-contigs.pdf> [7 <./figures/stoptag_table.pdf>]
+<use ./figures/pos-spec-bias-contigs.pdf> [7 <./figures/position_read.pdf>]
+[8 <./figures/stoptag_table.pdf> <./figures/pos-spec-bias-contigs.pdf>]
 
 pdfTeX warning: pdflatex (file ./figures/assemblies.pdf): PDF inclusion: found 
 PDF version <1.5>, but at most version <1.4> allowed
-<./figures/assemblies.pdf, id=132, 3360.555pt x 737.75626pt>
+<./figures/assemblies.pdf, id=166, 3360.555pt x 737.75626pt>
 File: ./figures/assemblies.pdf Graphic file (type pdf)
 
 <use ./figures/assemblies.pdf>
 
 pdfTeX warning: pdflatex (file ./figures/orf_lengths.pdf): PDF inclusion: found
  PDF version <1.5>, but at most version <1.4> allowed
-<./figures/orf_lengths.pdf, id=133, 578.16pt x 433.62pt>
+<./figures/orf_lengths.pdf, id=167, 578.16pt x 433.62pt>
 File: ./figures/orf_lengths.pdf Graphic file (type pdf)
 
 <use ./figures/orf_lengths.pdf>
-Overfull \hbox (2.67435pt too wide) in paragraph at lines 161--162
+Overfull \hbox (2.67435pt too wide) in paragraph at lines 168--169
 \OT1/cmr/m/n/10.95 Comparing the un-fil-tered and fil-tered as-sem-blies of the
  ru-men, hu-man gut, and soil metagenomes,
  []
 
-[8 <./figures/pos-spec-bias-contigs.pdf>] [9 <./figures/assemblies.pdf> <./figu
-res/orf_lengths.pdf>] [10] [11] [12] [13]
-Overfull \hbox (180.70634pt too wide) in paragraph at lines 195--196
+[9] [10 <./figures/assemblies.pdf> <./figures/orf_lengths.pdf>] [11] [12]
+[13] [14]
+Overfull \hbox (180.70634pt too wide) in paragraph at lines 204--205
 \OT1/cmr/m/n/10.95 se-quences (Il-lu-mina) of sam-ples MH0001 through MH0010 we
 re ob-tained from ftp://public.genomics.org.cn/BGI/gutmeta/Raw[]Reads
  []
 
-[14] [15] [16] (./artifacts-paper2.bbl [17] [18]) [19] (./artifacts-paper2.aux)
+[15] [16] [17] (./artifacts-paper2.bbl [18] [19]) [20] (./artifacts-paper2.aux)
  ) 
 Here is how much of TeX's memory you used:
- 1946 strings out of 495061
- 25848 string characters out of 1182622
- 83962 words of memory out of 3000000
- 5120 multiletter control sequences out of 15000+50000
+ 1951 strings out of 495061
+ 25977 string characters out of 1182622
+ 84962 words of memory out of 3000000
+ 5124 multiletter control sequences out of 15000+50000
  8541 words of font info for 30 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 25i,11n,43p,1997b,294s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 25i,11n,43p,2179b,294s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/sha
 re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-te
 xlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-texlive/fonts/
 type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/public
 /amsfonts/cm/cmr17.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm
 /cmti10.pfb>
-Output written on artifacts-paper2.pdf (19 pages, 1210919 bytes).
+Output written on artifacts-paper2.pdf (20 pages, 1296478 bytes).
 PDF statistics:
- 272 PDF objects out of 1000 (max. 8388607)
+ 293 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
