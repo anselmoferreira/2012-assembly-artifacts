@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.8.2)  1 MAR 2012 16:51
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.8.2)  10 MAY 2012 18:56
 entering extended mode
  %&-line parsing enabled.
 **artifacts-paper2
@@ -197,112 +197,143 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 63.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 63.
- [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
 
-pdfTeX warning: pdflatex (file ./figures/table1.pdf): PDF inclusion: found PDF 
-version <1.5>, but at most version <1.4> allowed
-<./figures/table1.pdf, id=13, 519.9425pt x 175.15437pt>
-File: ./figures/table1.pdf Graphic file (type pdf)
+LaTeX Warning: Citation `Hess:2011p686' on page 1 undefined on input line 66.
 
-<use ./figures/table1.pdf>
 
-pdfTeX warning: pdflatex (file ./figures/lump_sizes.pdf): PDF inclusion: found 
-PDF version <1.5>, but at most version <1.4> allowed
-<./figures/lump_sizes.pdf, id=14, 578.16pt x 433.62pt>
-File: ./figures/lump_sizes.pdf Graphic file (type pdf)
+LaTeX Warning: Citation `Qin:2010p189' on page 1 undefined on input line 66.
 
-<use ./figures/lump_sizes.pdf>
 
-pdfTeX warning: pdflatex (file ./figures/density_table.pdf): PDF inclusion: fou
-nd PDF version <1.5>, but at most version <1.4> allowed
-<./figures/density_table.pdf, id=15, 547.54562pt x 178.6675pt>
-File: ./figures/density_table.pdf Graphic file (type pdf)
+LaTeX Warning: Citation `Hess' on page 1 undefined on input line 66.
 
-<use ./figures/density_table.pdf> [3 <./figures/table1.pdf>] [4 <./figures/lump
-_sizes.pdf> <./figures/density_table.pdf>]
 
-pdfTeX warning: pdflatex (file ./figures/density_pos.pdf): PDF inclusion: found
- PDF version <1.5>, but at most version <1.4> allowed
-<./figures/density_pos.pdf, id=78, 578.16pt x 433.62pt>
-File: ./figures/density_pos.pdf Graphic file (type pdf)
+LaTeX Warning: Citation `Qin' on page 1 undefined on input line 66.
 
-<use ./figures/density_pos.pdf> [5 <./figures/density_pos.pdf>]
 
-pdfTeX warning: pdflatex (file ./figures/stoptag_id.pdf): PDF inclusion: found 
-PDF version <1.5>, but at most version <1.4> allowed
-<./figures/stoptag_id.pdf, id=94, 794.97pt x 319.1925pt>
-File: ./figures/stoptag_id.pdf Graphic file (type pdf)
+LaTeX Warning: Citation `Iverson' on page 1 undefined on input line 66.
 
-<use ./figures/stoptag_id.pdf>
 
-pdfTeX warning: pdflatex (file ./figures/position_read.pdf): PDF inclusion: fou
-nd PDF version <1.5>, but at most version <1.4> allowed
-<./figures/position_read.pdf, id=95, 578.16pt x 433.62pt>
-File: ./figures/position_read.pdf Graphic file (type pdf)
+LaTeX Warning: Citation `Janet' on page 1 undefined on input line 66.
 
-<use ./figures/position_read.pdf> [6 <./figures/stoptag_id.pdf>]
 
-pdfTeX warning: pdflatex (file ./figures/stoptag_table.pdf): PDF inclusion: fou
-nd PDF version <1.5>, but at most version <1.4> allowed
-<./figures/stoptag_table.pdf, id=116, 632.86438pt x 194.7275pt>
-File: ./figures/stoptag_table.pdf Graphic file (type pdf)
+LaTeX Warning: Citation `Miller:2010p226' on page 1 undefined on input line 66.
 
-<use ./figures/stoptag_table.pdf>
 
-pdfTeX warning: pdflatex (file ./figures/pos-spec-bias-contigs.pdf): PDF inclus
-ion: found PDF version <1.5>, but at most version <1.4> allowed
-<./figures/pos-spec-bias-contigs.pdf, id=117, 578.16pt x 433.62pt>
-File: ./figures/pos-spec-bias-contigs.pdf Graphic file (type pdf)
 
-<use ./figures/pos-spec-bias-contigs.pdf> [7 <./figures/position_read.pdf>]
-[8 <./figures/stoptag_table.pdf> <./figures/pos-spec-bias-contigs.pdf>]
+LaTeX Warning: Citation `Pop:2009p798' on page 1 undefined on input line 66.
 
-pdfTeX warning: pdflatex (file ./figures/assemblies.pdf): PDF inclusion: found 
-PDF version <1.5>, but at most version <1.4> allowed
-<./figures/assemblies.pdf, id=166, 3360.555pt x 737.75626pt>
-File: ./figures/assemblies.pdf Graphic file (type pdf)
+[1
 
-<use ./figures/assemblies.pdf>
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 
-pdfTeX warning: pdflatex (file ./figures/orf_lengths.pdf): PDF inclusion: found
- PDF version <1.5>, but at most version <1.4> allowed
-<./figures/orf_lengths.pdf, id=167, 578.16pt x 433.62pt>
-File: ./figures/orf_lengths.pdf Graphic file (type pdf)
+LaTeX Warning: Citation `Qin:2010p189' on page 2 undefined on input line 77.
 
-<use ./figures/orf_lengths.pdf>
-Overfull \hbox (2.67435pt too wide) in paragraph at lines 168--169
-\OT1/cmr/m/n/10.95 Comparing the un-fil-tered and fil-tered as-sem-blies of the
- ru-men, hu-man gut, and soil metagenomes,
+
+LaTeX Warning: Citation `Hess:2011p686' on page 2 undefined on input line 77.
+
+
+LaTeX Warning: Citation `Pignatelli:2011p742' on page 2 undefined on input line
+ 77.
+
+[2] [3] [4] [5] [6]
+
+LaTeX Warning: Citation `Barabasi:1999p1083' on page 7 undefined on input line 
+121.
+
+[7]
+Overfull \hbox (10.06564pt too wide) in paragraph at lines 127--128
+\OT1/cmr/m/n/10.95 It was im-por-tant to con-sider that not all the ob-served c
+on-nec-tiv-ity within the stud-ied metagenomes
  []
 
-[9] [10 <./figures/assemblies.pdf> <./figures/orf_lengths.pdf>] [11] [12]
-[13] [14]
-Overfull \hbox (180.70634pt too wide) in paragraph at lines 204--205
-\OT1/cmr/m/n/10.95 se-quences (Il-lu-mina) of sam-ples MH0001 through MH0010 we
-re ob-tained from ftp://public.genomics.org.cn/BGI/gutmeta/Raw[]Reads
+[8] [9] [10] <./Figures/lump_data.pdf, id=38, 794.97pt x 614.295pt>
+File: ./Figures/lump_data.pdf Graphic file (type pdf)
+
+<use ./Figures/lump_data.pdf>
+<./Figures/density_pos.pdf, id=39, 578.16pt x 433.62pt>
+File: ./Figures/density_pos.pdf Graphic file (type pdf)
+
+<use ./Figures/density_pos.pdf>
+<./Figures/position_read_stoptags.pdf, id=40, 578.16pt x 433.62pt>
+File: ./Figures/position_read_stoptags.pdf Graphic file (type pdf)
+
+<use ./Figures/position_read_stoptags.pdf>
+<./Figures/assembly_comparison.pdf, id=41, 794.97pt x 614.295pt>
+File: ./Figures/assembly_comparison.pdf Graphic file (type pdf)
+
+<use ./Figures/assembly_comparison.pdf>
+<./Figures/simulated_stoptag_ids.pdf, id=42, 614.295pt x 794.97pt>
+File: ./Figures/simulated_stoptag_ids.pdf Graphic file (type pdf)
+
+<use ./Figures/simulated_stoptag_ids.pdf>
+<./Figures/overlap_stoptag_ids.pdf, id=43, 614.295pt x 794.97pt>
+File: ./Figures/overlap_stoptag_ids.pdf Graphic file (type pdf)
+
+<use ./Figures/overlap_stoptag_ids.pdf>
+<./Figures/contig_pos_stoptags.pdf, id=44, 578.16pt x 433.62pt>
+File: ./Figures/contig_pos_stoptags.pdf Graphic file (type pdf)
+
+<use ./Figures/contig_pos_stoptags.pdf>
+
+LaTeX Warning: Citation `Hess:2011p686' on page 11 undefined on input line 190.
+
+
+
+LaTeX Warning: Citation `Qin:2010p189' on page 11 undefined on input line 190.
+
+
+Overfull \hbox (203.82304pt too wide) in paragraph at lines 190--191
+\OT1/cmr/m/n/10.95 ated se-quences (Il-lu-mina) of sam-ples MH0001 through MH00
+10 were ob-tained from ftp://public.genomics.org.cn/BGI/gutmeta/Raw[]Reads
  []
 
-[15] [16] [17] (./artifacts-paper2.bbl [18] [19]) [20] (./artifacts-paper2.aux)
+[11] [12 <./Figures/lump_data.pdf> <./Figures/density_pos.pdf>] [13 <./Figures/
+position_read_stoptags.pdf> <./Figures/assembly_comparison.pdf>] [14 <./Figures
+/simulated_stoptag_ids.pdf>] [15 <./Figures/overlap_stoptag_ids.pdf>] [16 <./Fi
+gures/contig_pos_stoptags.pdf>] [17]
+
+LaTeX Warning: Citation `Zerbino:2008p665' on page 18 undefined on input line 2
+16.
+
+
+LaTeX Warning: Citation `Sommer:2007p1253' on page 18 undefined on input line 2
+16.
+
+
+LaTeX Warning: Citation `Rho:2010p397' on page 18 undefined on input line 220.
+
+
+Overfull \hbox (8.05516pt too wide) in paragraph at lines 220--221
+[]\OT1/cmr/m/n/10.95 ORFs were pre-dicted us-ing Fragge-nes-can(v1.1.15) with t
+he fol-low-ing pa-ram-e-ters: -complete=0
+ []
+
+(./artifacts-paper2.bbl [18]) [19] (./artifacts-paper2.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 1951 strings out of 495061
- 25977 string characters out of 1182622
- 84962 words of memory out of 3000000
- 5124 multiletter control sequences out of 15000+50000
+ 1930 strings out of 495061
+ 25609 string characters out of 1182622
+ 85962 words of memory out of 3000000
+ 5106 multiletter control sequences out of 15000+50000
  8541 words of font info for 30 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 25i,11n,43p,2179b,294s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 25i,11n,43p,1731b,294s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/sha
 re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-te
 xlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-texlive/fonts/
 type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/public
 /amsfonts/cm/cmr17.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm
 /cmti10.pfb>
-Output written on artifacts-paper2.pdf (20 pages, 1296478 bytes).
+Output written on artifacts-paper2.pdf (19 pages, 356240 bytes).
 PDF statistics:
- 293 PDF objects out of 1000 (max. 8388607)
+ 361 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
