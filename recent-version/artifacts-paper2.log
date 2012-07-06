@@ -1,14 +1,24 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.8.2)  10 MAY 2012 18:56
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  6 JUL 2012 14:38
 entering extended mode
+ restricted \write18 enabled.
  %&-line parsing enabled.
-**artifacts-paper2
+**artifacts-paper2.tex
 (./artifacts-paper2.tex
 LaTeX2e <2009/09/24>
-Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
-yphenation, loaded.
-(/usr/share/texmf-texlive/tex/latex/base/article.cls
+Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman-x-2009-06-19, ngerman-x-2009-06-19, afrikaans, ancientgreek, ibycus, arabi
+c, armenian, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danis
+h, dutch, ukenglish, usenglishmax, esperanto, estonian, ethiopic, farsi, finnis
+h, french, galician, german, ngerman, swissgerman, monogreek, greek, hungarian,
+ icelandic, assamese, bengali, gujarati, hindi, kannada, malayalam, marathi, or
+iya, panjabi, tamil, telugu, indonesian, interlingua, irish, italian, kurmanji,
+ lao, latin, latvian, lithuanian, mongolian, mongolianlmc, bokmal, nynorsk, pol
+ish, portuguese, romanian, russian, sanskrit, serbian, serbianc, slovak, sloven
+ian, spanish, swedish, turkish, turkmen, ukrainian, uppersorbian, welsh, loaded
+.
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-(/usr/share/texmf-texlive/tex/latex/base/size11.clo
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/size11.clo
 File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -23,20 +33,23 @@ File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(/usr/share/texmf-texlive/tex/latex/geometry/geometry.sty
-Package: geometry 2008/12/21 v4.2 Page Geometry
+(/usr/local/texlive/2011/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
 
-(/usr/share/texmf-texlive/tex/latex/graphics/keyval.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-(/usr/share/texmf-texlive/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2009/04/10 v2.0 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in pdf mode detected.
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
-(/usr/share/texmf-texlive/tex/generic/oberdiek/ifvtex.sty
-Package: ifvtex 2008/11/04 v1.4 Switches for detecting VTeX and its modes (HO)
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2010/03/01 v1.5 Switches for detecting VTeX and its modes (HO)
 Package ifvtex Info: VTeX not detected.
+)
+(/usr/local/texlive/2011/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count87
 \Gm@cntv=\count88
@@ -45,44 +58,55 @@ Package ifvtex Info: VTeX not detected.
 \Gm@wd@mp=\dimen104
 \Gm@odd@mp=\dimen105
 \Gm@even@mp=\dimen106
+\Gm@layoutwidth=\dimen107
+\Gm@layoutheight=\dimen108
+\Gm@layouthoffset=\dimen109
+\Gm@layoutvoffset=\dimen110
 \Gm@dimlist=\toks15
 )
-(/usr/share/texmf-texlive/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texmf-texlive/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texmf-texlive/tex/latex/graphics/trig.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/etc/texmf/tex/latex/config/graphics.cfg
-File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
+(/usr/local/texlive/2011/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(/usr/share/texmf-texlive/tex/latex/pdftex-def/pdftex.def
-File: pdftex.def 2010/03/12 v0.04p Graphics/color for pdfTeX
+(/usr/local/texlive/2011/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/message (HO)
+)
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
+)
 \Gread@gobject=\count90
 ))
-\Gin@req@height=\dimen107
-\Gin@req@width=\dimen108
+\Gin@req@height=\dimen111
+\Gin@req@width=\dimen112
 )
-(/usr/share/texmf-texlive/tex/latex/tools/array.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/tools/array.sty
 Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
-\col@sep=\dimen109
-\extrarowheight=\dimen110
+\col@sep=\dimen113
+\extrarowheight=\dimen114
 \NC@list=\toks16
 \extratabsurround=\skip43
 \backup@length=\skip44
 )
-(/usr/share/texmf-texlive/tex/latex/tools/verbatim.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks17
 \verbatim@line=\toks18
 \verbatim@in@stream=\read1
 )
-(/usr/share/texmf-texlive/tex/latex/fancyhdr/fancyhdr.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 \fancy@headwidth=\skip45
 \f@ncyO@elh=\skip46
 \f@ncyO@erh=\skip47
@@ -93,30 +117,29 @@ Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
 \f@ncyO@olf=\skip52
 \f@ncyO@orf=\skip53
 )
-(/usr/share/texmf-texlive/tex/latex/base/inputenc.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2008/03/30 v1.1d Input encoding file
 \inpenc@prehook=\toks19
 \inpenc@posthook=\toks20
 
-(/usr/share/texmf-texlive/tex/latex/base/latin9.def
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/latin9.def
 File: latin9.def 2008/03/30 v1.1d Input encoding file
-)) (./setspace.sty
+))
+(/usr/local/texlive/2011/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2000/12/01 6.7 Contributed and Supported LaTeX2e package
 
 Package: `setspace' 6.7 <2000/12/01>
-) (/usr/share/texmf-texlive/tex/generic/babel/babel.sty
+) (/usr/local/texlive/2011/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2008/07/06 v3.8l The Babel package
 
-(/usr/share/texmf-texlive/tex/generic/babel/english.ldf
+(/usr/local/texlive/2011/texmf-dist/tex/generic/babel/english.ldf
 Language: english 2005/03/30 v3.3o English support from the babel system
 
-(/usr/share/texmf-texlive/tex/generic/babel/babel.def
+(/usr/local/texlive/2011/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2008/07/06 v3.8l Babel common definitions
 \babel@savecnt=\count91
-\U@D=\dimen111
+\U@D=\dimen115
 )
-\l@british = a dialect from \language\l@english 
-\l@UKenglish = a dialect from \language\l@english 
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
@@ -137,60 +160,96 @@ LaTeX Font Info:    ... okay on input line 59.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 59.
 LaTeX Font Info:    ... okay on input line 59.
 
-*geometry auto-detecting driver*
-*geometry detected driver: pdftex*
--------------------- Geometry parameters
-paper: a4paper
-landscape: --
-twocolumn: --
-twoside: --
-asymmetric: --
-h-parts: 72.26999pt, 452.9679pt, 72.26999pt
-v-parts: 72.26999pt, 700.50687pt, 72.26999pt
-hmarginratio: --
-vmarginratio: --
-lines: --
-heightrounded: --
-bindingoffset: 0.0pt
-truedimen: --
-includehead: --
-includefoot: --
-includemp: --
-driver: pdftex
--------------------- Page layout dimensions and switches
-\paperwidth  597.50787pt
-\paperheight 845.04684pt
-\textwidth  452.9679pt
-\textheight 700.50687pt
-\oddsidemargin  0.0pt
-\evensidemargin 0.0pt
-\topmargin  -37.0pt
-\headheight 12.0pt
-\headsep    25.0pt
-\footskip   30.0pt
-\marginparwidth 59.0pt
-\marginparsep   10.0pt
-\columnsep  10.0pt
-\skip\footins  10.0pt plus 4.0pt minus 2.0pt
-\hoffset 0.0pt
-\voffset 0.0pt
-\mag 1000
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 452.9679pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 700.50687pt, 72.26999pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=452.9679pt
+* \textheight=700.50687pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-37.0pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=59.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(1in=72.27pt, 1cm=28.45pt)
------------------------
-(/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
+(/usr/local/texlive/2011/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count92
-\scratchdimen=\dimen112
+\scratchdimen=\dimen116
 \scratchbox=\box26
 \nofMPsegments=\count93
 \nofMParguments=\count94
 \everyMPshowfont=\toks21
 \MPscratchCnt=\count95
-\MPscratchDim=\dimen113
+\MPscratchDim=\dimen117
 \MPnumerator=\count96
+\makeMPintoPDFobject=\count97
 \everyMPtoPDFconversion=\toks22
+) (/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/04/22 v0.16 Utilities of pdfTeX for LuaTeX (HO)
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
 )
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Managing graphics extensions (HO)
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Defining keys (HO)
+))
+(/usr/local/texlive/2011/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2010/12/23 v3.10 Keyval support for LaTeX options (HO)
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2011/04/07 v1.13 Key value parser (HO)
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Prefix for e-TeX command names (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 63.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -198,142 +257,88 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 63.
 
-
-LaTeX Warning: Citation `Hess:2011p686' on page 1 undefined on input line 66.
-
-
-LaTeX Warning: Citation `Qin:2010p189' on page 1 undefined on input line 66.
-
-
-LaTeX Warning: Citation `Hess' on page 1 undefined on input line 66.
-
-
-LaTeX Warning: Citation `Qin' on page 1 undefined on input line 66.
-
-
-LaTeX Warning: Citation `Iverson' on page 1 undefined on input line 66.
-
-
-LaTeX Warning: Citation `Janet' on page 1 undefined on input line 66.
-
-
-LaTeX Warning: Citation `Miller:2010p226' on page 1 undefined on input line 66.
-
-
-
-LaTeX Warning: Citation `Pop:2009p798' on page 1 undefined on input line 66.
-
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-
-LaTeX Warning: Citation `Qin:2010p189' on page 2 undefined on input line 77.
-
-
-LaTeX Warning: Citation `Hess:2011p686' on page 2 undefined on input line 77.
-
-
-LaTeX Warning: Citation `Pignatelli:2011p742' on page 2 undefined on input line
- 77.
-
-[2] [3] [4] [5] [6]
-
-LaTeX Warning: Citation `Barabasi:1999p1083' on page 7 undefined on input line 
-121.
-
-[7]
-Overfull \hbox (10.06564pt too wide) in paragraph at lines 127--128
-\OT1/cmr/m/n/10.95 It was im-por-tant to con-sider that not all the ob-served c
-on-nec-tiv-ity within the stud-ied metagenomes
- []
-
-[8] [9] [10] <./Figures/lump_data.pdf, id=38, 794.97pt x 614.295pt>
+{/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+[2] [3] [4] [5] [6] [7] [8] [9] [10] [11] (./artifacts-paper2.bbl [12] [13])
+<./Figures/lump_data.pdf, id=51, 794.97pt x 614.295pt>
 File: ./Figures/lump_data.pdf Graphic file (type pdf)
 
 <use ./Figures/lump_data.pdf>
-<./Figures/density_pos.pdf, id=39, 578.16pt x 433.62pt>
-File: ./Figures/density_pos.pdf Graphic file (type pdf)
+Package pdftex.def Info: ./Figures/lump_data.pdf used on input line 164.
+(pdftex.def)             Requested size: 361.34999pt x 279.23282pt.
 
-<use ./Figures/density_pos.pdf>
-<./Figures/position_read_stoptags.pdf, id=40, 578.16pt x 433.62pt>
-File: ./Figures/position_read_stoptags.pdf Graphic file (type pdf)
-
-<use ./Figures/position_read_stoptags.pdf>
-<./Figures/assembly_comparison.pdf, id=41, 794.97pt x 614.295pt>
+<./Figures/assembly_comparison.pdf, id=52, 794.97pt x 614.295pt>
 File: ./Figures/assembly_comparison.pdf Graphic file (type pdf)
 
 <use ./Figures/assembly_comparison.pdf>
-<./Figures/simulated_stoptag_ids.pdf, id=42, 614.295pt x 794.97pt>
+Package pdftex.def Info: ./Figures/assembly_comparison.pdf used on input line 1
+69.
+(pdftex.def)             Requested size: 361.34999pt x 279.23282pt.
+
+<./Figures/simulated_stoptag_ids.pdf, id=53, 614.295pt x 794.97pt>
 File: ./Figures/simulated_stoptag_ids.pdf Graphic file (type pdf)
 
 <use ./Figures/simulated_stoptag_ids.pdf>
-<./Figures/overlap_stoptag_ids.pdf, id=43, 614.295pt x 794.97pt>
+Package pdftex.def Info: ./Figures/simulated_stoptag_ids.pdf used on input line
+ 174.
+(pdftex.def)             Requested size: 361.34999pt x 467.63326pt.
+
+<./Figures/overlap_stoptag_ids.pdf, id=54, 614.295pt x 794.97pt>
 File: ./Figures/overlap_stoptag_ids.pdf Graphic file (type pdf)
 
 <use ./Figures/overlap_stoptag_ids.pdf>
-<./Figures/contig_pos_stoptags.pdf, id=44, 578.16pt x 433.62pt>
+Package pdftex.def Info: ./Figures/overlap_stoptag_ids.pdf used on input line 1
+79.
+(pdftex.def)             Requested size: 361.34999pt x 467.63326pt.
+
+<./Figures/density_pos.pdf, id=55, 578.16pt x 433.62pt>
+File: ./Figures/density_pos.pdf Graphic file (type pdf)
+
+<use ./Figures/density_pos.pdf>
+Package pdftex.def Info: ./Figures/density_pos.pdf used on input line 184.
+(pdftex.def)             Requested size: 361.34999pt x 271.01183pt.
+
+<./Figures/position_read_stoptags.pdf, id=56, 578.16pt x 433.62pt>
+File: ./Figures/position_read_stoptags.pdf Graphic file (type pdf)
+
+<use ./Figures/position_read_stoptags.pdf>
+Package pdftex.def Info: ./Figures/position_read_stoptags.pdf used on input lin
+e 189.
+(pdftex.def)             Requested size: 361.34999pt x 271.01183pt.
+
+<./Figures/contig_pos_stoptags.pdf, id=57, 578.16pt x 433.62pt>
 File: ./Figures/contig_pos_stoptags.pdf Graphic file (type pdf)
 
 <use ./Figures/contig_pos_stoptags.pdf>
-
-LaTeX Warning: Citation `Hess:2011p686' on page 11 undefined on input line 190.
-
-
-
-LaTeX Warning: Citation `Qin:2010p189' on page 11 undefined on input line 190.
-
-
-Overfull \hbox (203.82304pt too wide) in paragraph at lines 190--191
-\OT1/cmr/m/n/10.95 ated se-quences (Il-lu-mina) of sam-ples MH0001 through MH00
-10 were ob-tained from ftp://public.genomics.org.cn/BGI/gutmeta/Raw[]Reads
- []
-
-[11] [12 <./Figures/lump_data.pdf> <./Figures/density_pos.pdf>] [13 <./Figures/
-position_read_stoptags.pdf> <./Figures/assembly_comparison.pdf>] [14 <./Figures
-/simulated_stoptag_ids.pdf>] [15 <./Figures/overlap_stoptag_ids.pdf>] [16 <./Fi
-gures/contig_pos_stoptags.pdf>] [17]
-
-LaTeX Warning: Citation `Zerbino:2008p665' on page 18 undefined on input line 2
-16.
-
-
-LaTeX Warning: Citation `Sommer:2007p1253' on page 18 undefined on input line 2
-16.
-
-
-LaTeX Warning: Citation `Rho:2010p397' on page 18 undefined on input line 220.
-
-
-Overfull \hbox (8.05516pt too wide) in paragraph at lines 220--221
-[]\OT1/cmr/m/n/10.95 ORFs were pre-dicted us-ing Fragge-nes-can(v1.1.15) with t
-he fol-low-ing pa-ram-e-ters: -complete=0
- []
-
-(./artifacts-paper2.bbl [18]) [19] (./artifacts-paper2.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+Package pdftex.def Info: ./Figures/contig_pos_stoptags.pdf used on input line 1
+95.
+(pdftex.def)             Requested size: 361.34999pt x 271.01183pt.
+ [14] [15 <./Figures/lump_data.pdf>]
+[16 <./Figures/assembly_comparison.pdf>] [17 <./Figures/simulated_stoptag_ids.p
+df>] [18 <./Figures/overlap_stoptag_ids.pdf>] [19 <./Figures/density_pos.pdf> <
+./Figures/position_read_stoptags.pdf>] [20 <./Figures/contig_pos_stoptags.pdf>]
+(./artifacts-paper2.aux) ) 
 Here is how much of TeX's memory you used:
- 1930 strings out of 495061
- 25609 string characters out of 1182622
- 85962 words of memory out of 3000000
- 5106 multiletter control sequences out of 15000+50000
- 8541 words of font info for 30 fonts, out of 3000000 for 9000
- 28 hyphenation exceptions out of 8191
- 25i,11n,43p,1731b,294s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/sha
-re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-te
-xlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-texlive/fonts/
-type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/public
-/amsfonts/cm/cmr17.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm
-/cmti10.pfb>
-Output written on artifacts-paper2.pdf (19 pages, 356240 bytes).
+ 2570 strings out of 493633
+ 36995 string characters out of 3143378
+ 103707 words of memory out of 3000000
+ 5830 multiletter control sequences out of 15000+200000
+ 8900 words of font info for 31 fonts, out of 3000000 for 9000
+ 831 hyphenation exceptions out of 8191
+ 38i,10n,43p,2136b,292s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/local/texlive/2011/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr12.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr17.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmti10.pfb>
+Output written on artifacts-paper2.pdf (20 pages, 352650 bytes).
 PDF statistics:
- 361 PDF objects out of 1000 (max. 8388607)
+ 370 PDF objects out of 1000 (max. 8388607)
+ 159 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

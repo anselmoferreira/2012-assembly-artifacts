@@ -1,9 +1,20 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{Altschul:1990p1335}
+S~F Altschul, W~Gish, W~Miller, E~W Myers, and D~J Lipman.
+\newblock Basic local alignment search tool.
+\newblock {\em J Mol Biol}, 215(3):403--10, Oct 1990.
 
 \bibitem{Barabasi:1999p1083}
 A.L Barab{\'a}si and R~Albert.
 \newblock Emergence of scaling in random networks.
 \newblock {\em Science}, 286(5439):509, 1999.
+
+\bibitem{GomezAlvarez:2009p1334}
+Vicente Gomez-Alvarez, Tracy~K Teal, and Thomas~M Schmidt.
+\newblock Systematic artifacts in metagenomes from complex microbial
+  communities.
+\newblock {\em The ISME Journal}, 3(11):1314--7, Nov 2009.
 
 \bibitem{Hess:2011p686}
 M~Hess, A~Sczyrba, R~Egan, and T~Kim{\ldots}.
@@ -11,10 +22,48 @@ M~Hess, A~Sczyrba, R~Egan, and T~Kim{\ldots}.
   rumen.
 \newblock {\em Science}, Jan 2011.
 
+\bibitem{Iverson:2012p1281}
+Vaughn Iverson, Robert~M Morris, Christian~D Frazar, Chris~T Berthiaume,
+  Rhonda~L Morales, and E~Virginia Armbrust.
+\newblock Untangling genomes from metagenomes: revealing an uncultured class of
+  marine euryarchaeota.
+\newblock {\em Science}, 335(6068):587--90, Feb 2012.
+
+\bibitem{Mackelprang:2011p1087}
+R~Mackelprang, M~Waldrop, and K~DeAngelis{\ldots}.
+\newblock Metagenomic analysis of a permafrost microbial community reveals a
+  rapid response to thaw.
+\newblock {\em Nature}, Jan 2011.
+
+\bibitem{Mavromatis:2006p894}
+K~Mavromatis, N~Ivanova, K~Barry, H~Shapiro, E~Goltsman, A.C McHardy,
+  I~Rigoutsos, A~Salamov, F~Korzeniewski, and M~Land.
+\newblock Use of simulated data sets to evaluate the fidelity of metagenomic
+  processing methods.
+\newblock {\em Nature Methods}, 4(6):495--500, 2006.
+
+\bibitem{Mende:2012p1262}
+Daniel~R Mende, Alison~S Waller, Shinichi Sunagawa, Aino~I J{\"a}rvelin,
+  Michelle~M Chan, Manimozhiyan Arumugam, Jeroen Raes, and Peer Bork.
+\newblock Assessment of metagenomic assembly using simulated next generation
+  sequencing data.
+\newblock {\em PLoS ONE}, 7(2):e31386, Jan 2012.
+
 \bibitem{Miller:2010p226}
 Jason~R Miller, Sergey Koren, and Granger Sutton.
 \newblock Assembly algorithms for next-generation sequencing data.
 \newblock {\em Genomics}, 95(6):315--27, Jun 2010.
+
+\bibitem{Niu:2010p1333}
+Beifang Niu, Limin Fu, Shulei Sun, and Weizhong Li.
+\newblock Artificial and natural duplicates in pyrosequencing reads of
+  metagenomic data.
+\newblock {\em BMC Bioinformatics}, 11:187, Jan 2010.
+
+\bibitem{Peng:2011p898}
+Y~Peng, H~Leung, SM~Yiu, and F.Y.L Chin.
+\newblock Meta-idba: a de novo assembler for metagenomic data.
+\newblock {\em Bioinformatics}, 27(13):i94, 2011.
 
 \bibitem{Pignatelli:2011p742}
 M~Pignatelli{\ldots}.
@@ -44,10 +93,11 @@ Junjie Qin, Ruiqiang Li, Jeroen Raes, Manimozhiyan Arumugam,
   sequencing.
 \newblock {\em Nature}, 464(7285):59--65, Mar 2010.
 
-\bibitem{Rho:2010p397}
-M~Rho, H~Tang, and Y~Ye.
-\newblock Fraggenescan: predicting genes in short and error-prone reads.
-\newblock {\em Nucleic Acids Research}, 2010.
+\bibitem{Simpson:2009p233}
+Jared~T Simpson, Kim Wong, Shaun~D Jackman, Jacqueline~E Schein, Steven J~M
+  Jones, and Inan{\c c} Birol.
+\newblock Abyss: a parallel assembler for short read sequence data.
+\newblock {\em Genome Res}, 19(6):1117--23, Jun 2009.
 
 \bibitem{Sommer:2007p1253}
 Daniel~D Sommer, Arthur~L Delcher, Steven~L Salzberg, and Mihai Pop.

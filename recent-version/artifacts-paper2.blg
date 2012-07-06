@@ -1,50 +1,46 @@
-This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2011)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: artifacts-paper2.aux
 The style file: plain.bst
-Database file #1: artifacts-paper-bib.bib
-Warning--I didn't find a database entry for "Hess"
-Warning--I didn't find a database entry for "Qin"
-Warning--I didn't find a database entry for "Iverson"
-Warning--I didn't find a database entry for "Janet"
-You've used 9 entries,
+Database file #1: artifacts-bib.bib
+You've used 17 entries,
             2118 wiz_defined-function locations,
-            574 strings with 6345 characters,
-and the built_in function-call counts, 4272 in all, are:
-= -- 359
-> -- 395
+            624 strings with 8083 characters,
+and the built_in function-call counts, 7730 in all, are:
+= -- 675
+> -- 649
 < -- 0
-+ -- 158
-- -- 148
-* -- 411
-:= -- 789
-add.period$ -- 27
-call.type$ -- 9
-change.case$ -- 101
++ -- 258
+- -- 240
+* -- 743
+:= -- 1396
+add.period$ -- 51
+call.type$ -- 17
+change.case$ -- 171
 chr.to.int$ -- 0
-cite$ -- 9
-duplicate$ -- 96
-empty$ -- 195
-format.name$ -- 148
-if$ -- 786
+cite$ -- 17
+duplicate$ -- 184
+empty$ -- 398
+format.name$ -- 240
+if$ -- 1449
 int.to.chr$ -- 0
-int.to.str$ -- 9
-missing$ -- 9
-newline$ -- 48
-num.names$ -- 18
-pop$ -- 89
+int.to.str$ -- 17
+missing$ -- 17
+newline$ -- 88
+num.names$ -- 34
+pop$ -- 143
 preamble$ -- 1
-purify$ -- 92
+purify$ -- 154
 quote$ -- 0
-skip$ -- 65
+skip$ -- 120
 stack$ -- 0
-substring$ -- 130
-swap$ -- 9
+substring$ -- 322
+swap$ -- 17
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 36
+type$ -- 68
 warning$ -- 0
-while$ -- 27
-width$ -- 10
-write$ -- 98
-(There were 4 warnings)
+while$ -- 56
+width$ -- 19
+write$ -- 186

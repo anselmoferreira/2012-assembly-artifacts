@@ -1,0 +1,791 @@
+%% This BibTeX bibliography file in UTF-8 format was created using Papers.
+%% http://mekentosj.com/papers/
+
+@article{Schloss:2008p2,
+author = {PD Schloss and J Handelsman}, 
+journal = {Bmc Bioinformatics},
+title = {A statistical toolbox for metagenomics: assessing functional diversity in microbial communities},
+annote = {1/22/10
+
+Tool:  MG-DOTUR
+
+Objective:  Compare richness, membership, and structure of microbial communities using peptide fragment sequences extracted from metagenomic sequence data
+
+Advancement:  Accounts for present but unsampled peptide fragments, independent of subjective annotation process and includes peptide fragments with no known function
+
+Define Operational Protein Families
+
+Use statistical tools used to analyze collections of 16S rRNA gene sequences to the analysis of protein coding genes
+
+With 16S, use DNA distance matrix obtained from an alignment of homologous genes.
+
+For protein coding famiies, use BSR to develop a distance matrix that represents the similarity of ORFs across homologous groups
+
+BSRs represent the fraction of identical amino acids between two peptide fragments (i.e. BSR of 0.30 means they are approximately 30% identical over their full length)
+
+Distance matrix of 16S based on DNA similarity...distance of OPF based on peptide similarity
+
+Working genome:  assembled Bacillus genome (have individual sequence reads and assembled genome)
+
+Step 1.  Identify peptide fragrments from individual sequence reads (92,220 peptide fragemetns longer than 100 aa)
+
+Step 2.  Pairwise alignment and dsitance calculation of these ORFs...too much.  Instead, used BLAST to identify those comparisons that had significant similarity and to calculate BSRs as a surrogate for distance values.  Instead of a 92220 x 92220 matrix, matrix which contained the row, column, and BSR value
+
+Step 3.  Use DOTUR (which is used to assign 16S to OTUs to estimate richness and diversity) -- MG DOTUR to estimate OPFs
+
+Question to test:  The method may not be amenable to metagenomic sequencing because the shot sequence reads produce peptide fragements less than 100 aa long, which could make meaningful ORF identification an analysis of functional diversity difficult...
+
+},
+number = {1},
+pages = {34},
+volume = {9},
+year = {2008},
+date-added = {2009-12-02 20:17:12 -0500},
+date-modified = {2010-01-23 15:41:47 -0500},
+pmid = {11101033541305251475related:kzYypTDLDpoJ},
+local-url = {file://localhost/Users/Adina/Documents/Papers/2008/Schloss/Bmc%20Bioinformatics%202008%20Schloss.pdf},
+uri = {papers://0BEFB9CC-B23E-4FA5-9CA8-3692A18C8C99/Paper/p2},
+read = {Yes},
+rating = {4}
+}
+
+@article{Charuvaka:2010p797,
+author = {A Charuvaka and H Rangwala}, 
+journal = {Bioinformatics and Biomedicine (BIBM), 2010 IEEE International Conference on},
+title = {Evaluation of short read metagenomic assembly},
+pages = {171--178},
+year = {2010},
+date-added = {2011-09-28 15:54:11 -0400},
+date-modified = {2011-09-28 15:54:38 -0400},
+pmid = {3614474154351292265related:aW_w0xcxKTIJ},
+local-url = {file://localhost/Users/Adina/Documents/Papers/2010/Charuvaka/Bioinformatics%20and%20Biomedicine%20(BIBM)%202010%20IEEE%20International%20Conference%20on%202010%20Charuvaka.pdf},
+uri = {papers://0BEFB9CC-B23E-4FA5-9CA8-3692A18C8C99/Paper/p797},
+read = {Yes},
+rating = {0}
+}
+
+@article{Henry:2011p799,
+author = {C Henry and R Overbeek and F Xia and A Best{\ldots}}, 
+journal = {{\ldots} et Biophysica Acta (BBA {\ldots}},
+title = {Connecting Genotype to Phenotype in the Era of High-throughput Sequencing},
+abstract = {... Biochimica et Biophysica Acta (BBA) - General Subjects Article in Press, Accepted Manuscript - Note to users. doi: 10.1016 / j . bbagen . 2011.03 . 010 | How to Cite or Link Using DOI Copyright {\copyright} 2010 Published by Elsevier BV. Permissions {\&} Reprints. ...},
+year = {2011},
+month = {Jan},
+keywords = {Genome-scale metabolic models, SEED, MG-RAST, RAST, Assembly, Metagenomics}, 
+date-added = {2011-09-28 16:31:32 -0400},
+date-modified = {2011-09-28 16:31:44 -0400},
+URL = {http://www.sciencedirect.com/science/article/pii/S0304416511000596},
+local-url = {file://localhost/Users/Adina/Documents/Papers/2011/Henry/%E2%80%A6%20et%20Biophysica%20Acta%20(BBA%20%E2%80%A6%202011%20Henry.pdf},
+uri = {papers://0BEFB9CC-B23E-4FA5-9CA8-3692A18C8C99/Paper/p799},
+read = {Yes},
+rating = {0}
+}
+
+@article{Peng:2011p898,
+author = {Y Peng and H Leung and SM Yiu and F.Y.L Chin}, 
+journal = {Bioinformatics},
+title = {Meta-IDBA: a de Novo assembler for metagenomic data},
+number = {13},
+pages = {i94},
+volume = {27},
+year = {2011},
+date-added = {2011-10-18 13:20:41 -0400},
+date-modified = {2011-10-18 13:20:49 -0400},
+pmid = {2859639104986261346related:YqeFbp16rycJ},
+local-url = {file://localhost/Users/Adina/Documents/Papers/2011/Peng/Bioinformatics%202011%20Peng.pdf},
+uri = {papers://0BEFB9CC-B23E-4FA5-9CA8-3692A18C8C99/Paper/p898},
+read = {Yes},
+rating = {0}
+}
+
+@article{Nakamura:2011p741,
+author = {K Nakamura and T Oshima and T Morimoto{\ldots}}, 
+journal = {Nucleic Acids {\ldots}},
+title = {Sequence-specific error profile of Illumina sequencers},
+abstract = {Skip Navigation. ...},
+year = {2011},
+month = {Jan},
+date-added = {2011-05-19 20:58:38 -0400},
+date-modified = {2011-05-31 09:45:00 -0400},
+URL = {http://nar.oxfordjournals.org/content/early/2011/05/14/nar.gkr344.abstract},
+local-url = {file://localhost/Users/Adina/Documents/Papers/2011/Nakamura/Nucleic%20Acids%20%E2%80%A6%202011%20Nakamura.pdf},
+uri = {papers://0BEFB9CC-B23E-4FA5-9CA8-3692A18C8C99/Paper/p741},
+rating = {0}
+}
+
+@article{Simpson:2009p233,
+author = {Jared T Simpson and Kim Wong and Shaun D Jackman and Jacqueline E Schein and Steven J M Jones and Inan{\c c} Birol}, 
+journal = {Genome Res},
+title = {ABySS: a parallel assembler for short read sequence data},
+abstract = {Widespread adoption of massively parallel deoxyribonucleic acid (DNA) sequencing instruments has prompted the recent development of de novo short read assembly algorithms. A common shortcoming of the available tools is their inability to efficiently assemble vast amounts of data generated from large-scale sequencing projects, such as the sequencing of individual human genomes to catalog natural genetic variation. To address this limitation, we developed ABySS (Assembly By Short Sequences), a parallelized sequence assembler. As a demonstration of the capability of our software, we assembled 3.5 billion paired-end reads from the genome of an African male publicly released by Illumina, Inc. Approximately 2.76 million contigs > or =100 base pairs (bp) in length were created with an N50 size of 1499 bp, representing 68% of the reference human genome. Analysis of these contigs identified polymorphic and novel sequences not present in the human reference assembly, which were validated by alignment to alternate human assemblies and to other primate genomes.},
+affiliation = {Genome Sciences Centre, British Columbia Cancer Agency, Vancouver, British Columbia V5Z 4E6, Canada.},
+number = {6},
+pages = {1117--23},
+volume = {19},
+year = {2009},
+month = {Jun},
+language = {eng},
+keywords = {Humans, Animals, Software, Algorithms, Reproducibility of Results, Genetic Variation, Escherichia coli K12, Contig Mapping, Genome: Human, Sequence Analysis: DNA, Computational Biology, Polymorphism: Genetic}, 
+date-added = {2010-06-10 10:28:36 -0400},
+date-modified = {2010-06-10 10:28:48 -0400},
+doi = {10.1101/gr.089532.108},
+pii = {gr.089532.108},
+pmid = {19251739},
+local-url = {file://localhost/Users/Adina/Documents/Papers/2009/Simpson/Genome%20Res%202009%20Simpson.pdf},
+uri = {papers://0BEFB9CC-B23E-4FA5-9CA8-3692A18C8C99/Paper/p233},
+rating = {0}
+}
+
+@article{Iverson:2012p1281,
+author = {Vaughn Iverson and Robert M Morris and Christian D Frazar and Chris T Berthiaume and Rhonda L Morales and E Virginia Armbrust}, 
+journal = {Science},
+title = {Untangling genomes from metagenomes: revealing an uncultured class of marine Euryarchaeota},
+abstract = {Ecosystems are shaped by complex communities of mostly unculturable microbes. Metagenomes provide a fragmented view of such communities, but the ecosystem functions of major groups of organisms remain mysterious. To better characterize members of these communities, we developed methods to reconstruct genomes directly from mate-paired short-read metagenomes. We closed a genome representing the as-yet uncultured marine group II Euryarchaeota, assembled de novo from 1.7% of a metagenome sequenced from surface seawater. The genome describes a motile, photo-heterotrophic cell focused on degradation of protein and lipids and clarifies the origin of proteorhodopsin. It also demonstrates that high-coverage mate-paired sequence can overcome assembly difficulties caused by interstrain variation in complex microbial communities, enabling inference of ecosystem functions for uncultured members.},
+affiliation = {School of Oceanography, University of Washington, Seattle, WA 98195, USA.},
+number = {6068},
+pages = {587--90},
+volume = {335},
+year = {2012},
+month = {Feb},
+language = {eng},
+date-added = {2012-04-25 09:50:06 -0400},
+date-modified = {2012-04-25 09:52:50 -0400},
+doi = {10.1126/science.1212665},
+pii = {335/6068/587},
+pmid = {22301318},
+local-url = {file://localhost/Users/Adina/Documents/Papers/2012/Iverson/Science%202012%20Iverson-1.pdf},
+uri = {papers://0BEFB9CC-B23E-4FA5-9CA8-3692A18C8C99/Paper/p1281},
+rating = {0}
+}
+
+@article{GomezAlvarez:2009p1334,
+author = {Vicente Gomez-Alvarez and Tracy K Teal and Thomas M Schmidt}, 
+journal = {The ISME Journal},
+title = {Systematic artifacts in metagenomes from complex microbial communities},
+abstract = {Metagenomics is providing an unprecedented view of the taxonomic diversity, metabolic potential and ecological role of microbial communities in biomes as diverse as the mammalian gastrointestinal tract, the marine water column and soils. However, we have found a systematic error in metagenomes generated by 454-based pyrosequencing that leads to an overestimation of gene and taxon abundance; between 11% and 35% of sequences in a typical metagenome are artificial replicates. Here we document the error in several published and original datasets and offer a web-based solution (http://microbiomes.msu.edu/replicates) for identifying and removing these artifacts.},
+affiliation = {Department of Microbiology and Molecular Genetics, Michigan State University, East Lansing, MI, USA.},
+number = {11},
+pages = {1314--7},
+volume = {3},
+year = {2009},
+month = {Nov},
+language = {eng},
+keywords = {Base Sequence, Soil Microbiology, Metagenome, Metagenomics, Molecular Sequence Data, Sequence Alignment, Sequence Analysis: DNA, Databases: Genetic}, 
+date-added = {2012-07-03 13:23:49 -0400},
+date-modified = {2012-07-03 13:23:55 -0400},
+doi = {10.1038/ismej.2009.72},
+pii = {ismej200972},
+pmid = {19587772},
+local-url = {file://localhost/Users/Adina/Documents/Papers/2009/Gomez-Alvarez/The%20ISME%20Journal%202009%20Gomez-Alvarez.pdf},
+uri = {papers://0BEFB9CC-B23E-4FA5-9CA8-3692A18C8C99/Paper/p1334},
+rating = {0}
+}
+
+@article{Medvedev:2011p1284,
+author = {Paul Medvedev and Eric Scott and Boyko Kakaradov and Pavel Pevzner}, 
+journal = {Bioinformatics},
+title = {Error correction of high-throughput sequencing datasets with non-uniform coverage},
+abstract = {pmedvedev@cs.ucsd.edu.},
+affiliation = {Department of Computer Science and Engineering, University of California, San Diego, CA, USA. pmedvedev@cs.ucsd.edu},
+number = {13},
+pages = {i137--41},
+volume = {27},
+year = {2011},
+month = {Jul},
+language = {eng},
+keywords = {Models: Statistical, Single-Cell Analysis, Algorithms, High-Throughput Nucleotide Sequencing, Escherichia coli}, 
+date-added = {2012-04-30 09:23:20 -0400},
+date-modified = {2012-04-30 09:23:28 -0400},
+doi = {10.1093/bioinformatics/btr208},
+pii = {btr208},
+pmid = {21685062},
+local-url = {file://localhost/Users/Adina/Documents/Papers/2011/Medvedev/Bioinformatics%202011%20Medvedev.pdf},
+uri = {papers://0BEFB9CC-B23E-4FA5-9CA8-3692A18C8C99/Paper/p1284},
+read = {Yes},
+rating = {0}
+}
+
+@article{Zerbino:2008p665,
+author = {Daniel R Zerbino and Ewan Birney}, 
+journal = {Genome Res},
+title = {Velvet: algorithms for de novo short read assembly using de Bruijn graphs},
+abstract = {We have developed a new set of algorithms, collectively called "Velvet," to manipulate de Bruijn graphs for genomic sequence assembly. A de Bruijn graph is a compact representation based on short words (k-mers) that is ideal for high coverage, very short read (25-50 bp) data sets. Applying Velvet to very short reads and paired-ends information only, one can produce contigs of significant length, up to 50-kb N50 length in simulations of prokaryotic data and 3-kb N50 on simulated mammalian BACs. When applied to real Solexa data sets without read pairs, Velvet generated contigs of approximately 8 kb in a prokaryote and 2 kb in a mammalian BAC, in close agreement with our simulated results without read-pair information. Velvet represents a new approach to assembly that can leverage very short reads in combination with read pairs to produce useful assemblies.},
+affiliation = {EMBL-European Bioinformatics Institute, Wellcome Trust Genome Campus, Hinxton, Cambridge CB10 1SD, United Kingdom.},
+number = {5},
+pages = {821--9},
+volume = {18},
+year = {2008},
+month = {May},
+language = {eng},
+keywords = {Animals, Computer Simulation, Computational Biology, Chromosomes: Artificial: Bacterial, Algorithms, Genome: Bacterial, Humans, Streptococcus, Genomics, Mammals, Sequence Analysis: DNA, Genome: Human}, 
+date-added = {2010-12-08 23:41:38 -0500},
+date-modified = {2010-12-08 23:42:16 -0500},
+doi = {10.1101/gr.074492.107},
+pii = {gr.074492.107},
+pmid = {18349386},
+local-url = {file://localhost/Users/Adina/Documents/Papers/2008/Zerbino/Genome%20Res%202008%20Zerbino.pdf},
+uri = {papers://0BEFB9CC-B23E-4FA5-9CA8-3692A18C8C99/Paper/p665},
+read = {Yes},
+rating = {0}
+}
+
+@article{Rho:2010p397,
+author = {M Rho and H Tang and Y Ye}, 
+journal = {Nucleic Acids Research},
+title = {FragGeneScan: predicting genes in short and error-prone reads},
+year = {2010},
+date-added = {2010-10-11 09:54:14 -0400},
+date-modified = {2010-10-11 09:54:24 -0400},
+pmid = {related:zhrADEIjVBQJ},
+local-url = {file://localhost/Users/Adina/Documents/Papers/2010/Rho/Nucleic%20Acids%20Research%202010%20Rho.pdf},
+uri = {papers://0BEFB9CC-B23E-4FA5-9CA8-3692A18C8C99/Paper/p397},
+read = {Yes},
+rating = {0}
+}
+
+@article{Schatz:2010p907,
+author = {M.C Schatz and A.L Delcher and S.L Salzberg}, 
+journal = {Genome research},
+title = {Assembly of large genomes using second-generation sequencing},
+number = {9},
+pages = {1165},
+volume = {20},
+year = {2010},
+date-added = {2011-10-25 09:39:53 -0400},
+date-modified = {2011-10-25 09:39:59 -0400},
+pmid = {14126114398614764247related:17r2wTMKCsQJ},
+local-url = {file://localhost/Users/Adina/Documents/Papers/2010/Schatz/Genome%20research%202010%20Schatz.pdf},
+uri = {papers://0BEFB9CC-B23E-4FA5-9CA8-3692A18C8C99/Paper/p907},
+rating = {0}
+}
+
+@article{Tyson:2004p92,
+author = {Gene W Tyson and Jarrod Chapman and Philip Hugenholtz and Eric E Allen and Rachna J Ram and Paul M Richardson and Victor V Solovyev and Edward M Rubin and Daniel S Rokhsar and Jillian F Banfield}, 
+journal = {Nature},
+title = {Community structure and metabolism through reconstruction of microbial genomes from the environment},
+abstract = {Microbial communities are vital in the functioning of all ecosystems; however, most microorganisms are uncultivated, and their roles in natural systems are unclear. Here, using random shotgun sequencing of DNA from a natural acidophilic biofilm, we report reconstruction of near-complete genomes of Leptospirillum group II and Ferroplasma type II, and partial recovery of three other genomes. This was possible because the biofilm was dominated by a small number of species populations and the frequency of genomic rearrangements and gene insertions or deletions was relatively low. Because each sequence read came from a different individual, we could determine that single-nucleotide polymorphisms are the predominant form of heterogeneity at the strain level. The Leptospirillum group II genome had remarkably few nucleotide polymorphisms, despite the existence of low-abundance variants. The Ferroplasma type II genome seems to be a composite from three ancestral strains that have undergone homologous recombination to form a large population of mosaic genomes. Analysis of the gene complement for each organism revealed the pathways for carbon and nitrogen fixation and energy generation, and provided insights into survival strategies in an extreme environment.},
+affiliation = {Department of Environmental Science, Policy and Management, University of California, Berkeley, California 94720, USA.},
+number = {6978},
+pages = {37--43},
+volume = {428},
+year = {2004},
+month = {Mar},
+language = {eng},
+keywords = {Base Composition, Sequence Analysis: DNA, RNA: Ribosomal: 16S, Genes: Archaeal, Recombination: Genetic, Phylogeny, Polymorphism: Single Nucleotide, Open Reading Frames, Molecular Sequence Data, Genomics, Archaea, Genome: Archaeal, Bacteria, Species Specificity, Genetic Complementation Test, Genome: Bacterial, Base Sequence, Nitrogen Fixation, Genes: Bacterial, Biofilms, Ecosystem, Environmental Microbiology, Carbon}, 
+date-added = {2009-12-04 15:14:08 -0500},
+date-modified = {2009-12-04 15:14:08 -0500},
+doi = {10.1038/nature02340},
+pii = {nature02340},
+pmid = {14961025},
+URL = {http://www.nature.com/nature/journal/v428/n6978/full/nature02340.html},
+local-url = {file://localhost/Users/Adina/Documents/Papers/2004/Tyson/Nature%202004%20Tyson.pdf},
+uri = {papers://0BEFB9CC-B23E-4FA5-9CA8-3692A18C8C99/Paper/p92},
+read = {Yes},
+rating = {0}
+}
+
+@article{Hess:2011p686,
+author = {M Hess and A Sczyrba and R Egan and T Kim{\ldots}}, 
+journal = {Science},
+title = {Metagenomic Discovery of Biomass-Degrading Genes and Genomes from Cow Rumen},
+abstract = {... Science 28 January 2011: Vol. 331 no. 6016 pp. 463-467 DOI: 10.1126 / science . 1200387 . Report. Metagenomic Discovery of Biomass-Degrading Genes and Genomes from Cow Rumen. ...},
+annote = {Notes 
+
+27,755 predicted carbohydrate-active enzymes (with at least one local catlytic domain to known carbohydrate-active enzymes (PFams)
+
+Targetted the CAZY;
+
+In the CAzy,  1075, 1199, and 251 annotated as endoglucasnases, glucosidases, cellobiohydrolases (total 2525) and 1086, 1477, 153 sequences identified as best Blast hit.  Only 1% of these > 95% similarity.  Cellobihydorlases category saw a 56% increase of cadidate sequences with <95% sequence idenity to sequences previously deposited. 
+
+Abundance and diversity/novelty:
+
+Compared to NCBI-nr and NCBI-env and to all 85,740 in CAZy, only 12% of the 27,755 were >75% identical to nr, 43% <50%.  
+
+24% of 27,755 most simliar to hypothetical proteins in nr.  Only 5% are more than 75% identical to sequences in NCBI-env.  
+
+Getting draft genomes:
+
+179,092 scaffold
+65 largest (.5 to 1.5 Mbp)
+(only 47 scaffolds in total >90% over > 1000 bp to anything in genbank) -- suggesting most uncharacterized genomes
+
+Identified 26,042 scaffolds > 10 kbp 
+binned scaffolds by TNFs and read coverage.
+Identified phylogenetic order from each bins was derived 
+
+* Identified core genes present in all members of order
+* compare each draft genome to the pangenome of responective phyla},
+year = {2011},
+month = {Jan},
+date-added = {2011-01-28 15:01:46 -0500},
+date-modified = {2012-03-05 23:35:17 -0500},
+URL = {http://www.sciencemag.org/content/331/6016/463.full},
+local-url = {file://localhost/Users/Adina/Documents/Papers/2011/Hess/Science%202011%20Hess.pdf},
+uri = {papers://0BEFB9CC-B23E-4FA5-9CA8-3692A18C8C99/Paper/p686},
+read = {Yes},
+rating = {0}
+}
+
+@article{Metzker:2009p245,
+author = {ML Metzker}, 
+journal = {Nature Reviews Genetics},
+title = {Sequencing technologies---the next generation},
+number = {1},
+pages = {31--46},
+volume = {11},
+year = {2009},
+date-added = {2010-09-17 11:01:57 -0400},
+date-modified = {2010-09-17 11:02:12 -0400},
+pmid = {9754351518737463225related:uXejiAZrXocJ},
+local-url = {file://localhost/Users/Adina/Documents/Papers/2009/Metzker/Nature%20Reviews%20Genetics%202009%20Metzker.pdf},
+uri = {papers://0BEFB9CC-B23E-4FA5-9CA8-3692A18C8C99/Paper/p245},
+read = {Yes},
+rating = {0}
+}
+
+@article{Sommer:2007p1253,
+author = {Daniel D Sommer and Arthur L Delcher and Steven L Salzberg and Mihai Pop}, 
+journal = {Bmc Bioinformatics},
+title = {Minimus: a fast, lightweight genome assembler},
+abstract = {We find that for small genomes and other small assembly tasks, Minimus is faster and far more flexible than existing tools. Due to its small size and modular design Minimus is perfectly suited to be a component of complex assembly pipelines. Minimus is released as an open-source software project and the code is available as part of the AMOS project at Sourceforge.},
+affiliation = {Center for Bioinformatics and Computational Biology, University of Maryland, College Park, MD 20742, USA. dsommer@umiacs.umd.edu <dsommer@umiacs.umd.edu>},
+pages = {64},
+volume = {8},
+year = {2007},
+month = {Jan},
+language = {eng},
+keywords = {Software, Chromosome Mapping, Molecular Sequence Data, Algorithms, DNA, Sequence Alignment, Base Sequence, Software Design, User-Computer Interface, Sequence Analysis: DNA}, 
+date-added = {2012-02-03 09:19:56 -0500},
+date-modified = {2012-02-03 09:20:03 -0500},
+doi = {10.1186/1471-2105-8-64},
+pii = {1471-2105-8-64},
+pmid = {17324286},
+URL = {http://www.biomedcentral.com/1471-2105/8/64},
+local-url = {file://localhost/Users/Adina/Documents/Papers/2007/Sommer/Bmc%20Bioinformatics%202007%20Sommer.pdf},
+uri = {papers://0BEFB9CC-B23E-4FA5-9CA8-3692A18C8C99/Paper/p1253},
+rating = {0}
+}
+
+@article{Pop:2009p798,
+author = {M Pop}, 
+journal = {Briefings in bioinformatics},
+title = {Genome assembly reborn: recent computational challenges},
+number = {4},
+pages = {354},
+volume = {10},
+year = {2009},
+date-added = {2011-09-28 16:00:28 -0400},
+date-modified = {2011-09-28 16:00:37 -0400},
+pmid = {16996095333380803978related:ik3WEqhC3usJ},
+local-url = {file://localhost/Users/Adina/Documents/Papers/2009/Pop/Briefings%20in%20bioinformatics%202009%20Pop.pdf},
+uri = {papers://0BEFB9CC-B23E-4FA5-9CA8-3692A18C8C99/Paper/p798},
+read = {Yes},
+rating = {0}
+}
+
+@article{Harismendy:2009p228,
+author = {Olivier Harismendy and Pauline C Ng and Robert L Strausberg and Xiaoyun Wang and Timothy B Stockwell and Karen Y Beeson and Nicholas J Schork and Sarah S Murray and Eric J Topol and Samuel Levy and Kelly A Frazer}, 
+journal = {Genome Biol},
+title = {Evaluation of next generation sequencing platforms for population targeted sequencing studies},
+abstract = {BACKGROUND: Next generation sequencing (NGS) platforms are currently being utilized for targeted sequencing of candidate genes or genomic intervals to perform sequence-based association studies. To evaluate these platforms for this application, we analyzed human sequence generated by the Roche 454, Illumina GA, and the ABI SOLiD technologies for the same 260 kb in four individuals. RESULTS: Local sequence characteristics contribute to systematic variability in sequence coverage (>100-fold difference in per-base coverage), resulting in patterns for each NGS technology that are highly correlated between samples. A comparison of the base calls to 88 kb of overlapping ABI 3730xL Sanger sequence generated for the same samples showed that the NGS platforms all have high sensitivity, identifying >95% of variant sites. At high coverage, depth base calling errors are systematic, resulting from local sequence contexts; as the coverage is lowered additional 'random sampling' errors in base calling occur. CONCLUSIONS: Our study provides important insights into systematic biases and data variability that need to be considered when utilizing NGS platforms for population targeted sequencing studies.},
+affiliation = {Scripps Genomic Medicine, Scripps Translational Science Institute, The Scripps Research Institute, La Jolla, CA 92037, USA. oharis@scripps.edu},
+number = {3},
+pages = {R32},
+volume = {10},
+year = {2009},
+month = {Jan},
+language = {eng},
+keywords = {Sequence Analysis: DNA, Sequence Alignment, Genetics: Population, Genotype, Base Sequence, Polymorphism: Single Nucleotide, Oligonucleotide Array Sequence Analysis, Computer Simulation, Humans, False Positive Reactions}, 
+date-added = {2010-06-07 13:23:35 -0400},
+date-modified = {2010-06-07 13:23:44 -0400},
+doi = {10.1186/gb-2009-10-3-r32},
+pii = {gb-2009-10-3-r32},
+pmid = {19327155},
+local-url = {file://localhost/Users/Adina/Documents/Papers/2009/Harismendy/Genome%20Biol%202009%20Harismendy.pdf},
+uri = {papers://0BEFB9CC-B23E-4FA5-9CA8-3692A18C8C99/Paper/p228},
+rating = {0}
+}
+
+@article{Pignatelli:2011p742,
+author = {M Pignatelli{\ldots}}, 
+journal = {PLoS ONE},
+title = {Evaluating the Fidelity of De Novo Short Read Metagenomic Assembly Using Simulated Data},
+abstract = {... PLoS ONE 6(5): e19984. doi: 10.1371 / journal . pone . 0019984 . Editor: Jonathan H. Badger, J. Craig Venter Institute, United States of America. Received: December 14, 2010; Accepted: April 22, 2011; Published: May 23, 2011. Copyright: {\copyright} 2011 Pignatelli , Moya. ...},
+year = {2011},
+month = {Jan},
+date-added = {2011-05-28 17:23:44 -0400},
+date-modified = {2011-05-28 17:32:51 -0400},
+URL = {http://dx.plos.org/10.1371/journal.pone.0019984},
+local-url = {file://localhost/Users/Adina/Documents/Papers/2011/Pignatelli%E2%80%A6/PLoS%20ONE%202011%20Pignatelli%E2%80%A6.pdf},
+uri = {papers://0BEFB9CC-B23E-4FA5-9CA8-3692A18C8C99/Paper/p742},
+read = {Yes},
+rating = {0}
+}
+
+@article{Miller:2010p226,
+author = {Jason R Miller and Sergey Koren and Granger Sutton}, 
+journal = {Genomics},
+title = {Assembly algorithms for next-generation sequencing data},
+abstract = {The emergence of next-generation sequencing platforms led to resurgence of research in whole-genome shotgun assembly algorithms and software. DNA sequencing data from the Roche 454, Illumina/Solexa, and ABI SOLiD platforms typically present shorter read lengths, higher coverage, and different error profiles compared with Sanger sequencing data. Since 2005, several assembly software packages have been created or revised specifically for de novo assembly of next-generation sequencing data. This review summarizes and compares the published descriptions of packages named SSAKE, SHARCGS, VCAKE, Newbler, Celera Assembler, Euler, Velvet, ABySS, AllPaths, and SOAPdenovo. More generally, it compares the two standard methods known as the de Bruijn graph approach and the overlap/layout/consensus approach to assembly.},
+affiliation = {J. Craig Venter Institute, Rockville, MD 20850-3343, USA. jmiller@jcvi.org},
+number = {6},
+pages = {315--27},
+volume = {95},
+year = {2010},
+month = {Jun},
+language = {eng},
+keywords = {Genome assembly algorithms, Next-generation sequencing}, 
+date-added = {2010-06-07 13:20:23 -0400},
+date-modified = {2010-06-07 13:22:56 -0400},
+doi = {10.1016/j.ygeno.2010.03.001},
+pii = {S0888-7543(10)00049-2},
+pmid = {20211242},
+local-url = {file://localhost/Users/Adina/Documents/Papers/2010/Miller/Genomics%202010%20Miller.pdf},
+uri = {papers://0BEFB9CC-B23E-4FA5-9CA8-3692A18C8C99/Paper/p226},
+read = {Yes},
+rating = {0}
+}
+
+@article{Niu:2010p1333,
+author = {Beifang Niu and Limin Fu and Shulei Sun and Weizhong Li}, 
+journal = {BMC Bioinformatics},
+title = {Artificial and natural duplicates in pyrosequencing reads of metagenomic data},
+abstract = {Our method is available from http://cd-hit.org as a downloadable program and a web server. It is important not only to identify the duplicates from metagenomic datasets but also to distinguish whether they are artificial or natural duplicates. We provide a tool to estimate the number of natural duplicates according to user-defined sample types, so users can decide whether to retain or remove duplicates in their projects.},
+affiliation = {California Institute for Telecommunications and Information Technology, University of California San Diego, La Jolla, California 92093, USA.},
+pages = {187},
+volume = {11},
+year = {2010},
+month = {Jan},
+language = {eng},
+keywords = {Algorithms, Genome, Databases: Genetic, Internet, Metagenomics, Sequence Analysis: DNA, Software}, 
+date-added = {2012-07-03 13:22:22 -0400},
+date-modified = {2012-07-03 13:22:40 -0400},
+doi = {10.1186/1471-2105-11-187},
+pii = {1471-2105-11-187},
+pmid = {20388221},
+local-url = {file://localhost/Users/Adina/Documents/Papers/2010/Niu/BMC%20Bioinformatics%202010%20Niu.pdf},
+uri = {papers://0BEFB9CC-B23E-4FA5-9CA8-3692A18C8C99/Paper/p1333},
+rating = {0}
+}
+
+@article{Hoff:2009p913,
+author = {K Hoff and T Lingner and P Meinicke{\ldots}}, 
+journal = {Nucleic Acids Research},
+title = {Orphelia: predicting genes in metagenomic sequencing reads},
+abstract = {Metagenomic sequencing projects yield numerous sequencing reads of a diverse range of uncultivated and mostly yet unknown microorganisms. In many cases, these sequencing reads cannot be assembled into longer contigs. Thus, gene prediction tools that were originally developed ...},
+year = {2009},
+month = {Jan},
+date-added = {2011-11-01 15:31:59 -0400},
+date-modified = {2011-11-01 15:32:22 -0400},
+pmid = {4710994699581097396related:tIVHJ7jQYEEJ},
+URL = {http://nar.oxfordjournals.org/content/37/suppl_2/W101.short},
+local-url = {file://localhost/Users/Adina/Documents/Papers/2009/Hoff/Nucleic%20Acids%20Research%202009%20Hoff.pdf},
+uri = {papers://0BEFB9CC-B23E-4FA5-9CA8-3692A18C8C99/Paper/p913},
+rating = {0}
+}
+
+@article{Li:2009p707,
+author = {W Li}, 
+journal = {Bmc Bioinformatics},
+title = {Analysis and comparison of very large metagenomes with fast clustering and functional annotation},
+number = {1},
+pages = {359},
+volume = {10},
+year = {2009},
+date-added = {2011-02-23 19:20:57 -0500},
+date-modified = {2011-02-23 19:21:20 -0500},
+pmid = {3662200402513204047related:T5MX6Ny_0jIJ},
+local-url = {file://localhost/Users/Adina/Documents/Papers/2009/Li/Bmc%20Bioinformatics%202009%20Li.pdf},
+uri = {papers://0BEFB9CC-B23E-4FA5-9CA8-3692A18C8C99/Paper/p707},
+read = {Yes},
+rating = {0}
+}
+
+@article{Kelley:2010p1260,
+author = {David R Kelley and Michael C Schatz and Steven L Salzberg}, 
+journal = {Genome Biology},
+title = {Quake: quality-aware detection and correction of sequencing errors},
+abstract = {We introduce Quake, a program to detect and correct errors in DNA sequencing reads. Using a maximum likelihood approach incorporating quality values and nucleotide specific miscall rates, Quake achieves the highest accuracy on realistically simulated reads. We further demonstrate substantial improvements in de novo assembly and SNP detection after using Quake. Quake can be used for any size project, including more than one billion human reads, and is freely available as open source software from http://www.cbcb.umd.edu/software/quake.},
+affiliation = {Center for Bioinformatics and Computational Biology, Institute for Advanced Computer Studies, and Department of Computer Science, University of Maryland, College Park, MD 20742, USA. dakelley@umiacs.umd.edu},
+number = {11},
+pages = {R116},
+volume = {11},
+year = {2010},
+month = {Jan},
+language = {eng},
+keywords = {Algorithms, Likelihood Functions, Models: Biological, Polymorphism: Single Nucleotide, Software, Sequence Alignment, Humans, Escherichia coli, Genome: Human, Sequence Analysis: DNA, Computational Biology, DNA: Bacterial}, 
+date-added = {2012-03-03 20:42:52 -0500},
+date-modified = {2012-03-05 23:34:47 -0500},
+doi = {10.1186/gb-2010-11-11-r116},
+pii = {gb-2010-11-11-r116},
+pmid = {21114842},
+local-url = {file://localhost/Users/Adina/Documents/Papers/2010/Kelley/Genome%20Biology%202010%20Kelley.pdf},
+uri = {papers://0BEFB9CC-B23E-4FA5-9CA8-3692A18C8C99/Paper/p1260},
+read = {Yes},
+rating = {0}
+}
+
+@article{Venter:2004p727,
+author = {J.C Venter and K Remington and J.F Heidelberg and A.L Halpern and D Rusch and J.A Eisen and D Wu and I Paulsen and K.E Nelson and W Nelson}, 
+journal = {Science},
+title = {Environmental genome shotgun sequencing of the Sargasso Sea},
+number = {5667},
+pages = {66},
+volume = {304},
+year = {2004},
+date-added = {2011-04-12 21:18:52 -0400},
+date-modified = {2011-04-12 21:19:09 -0400},
+pmid = {4884189229460492625related:URHIBTogyEMJ},
+local-url = {file://localhost/Users/Adina/Documents/Papers/2004/Venter/Science%202004%20Venter-1.pdf},
+uri = {papers://0BEFB9CC-B23E-4FA5-9CA8-3692A18C8C99/Paper/p727},
+read = {Yes},
+rating = {0}
+}
+
+@article{Qin:2010p189,
+author = {Junjie Qin and Ruiqiang Li and Jeroen Raes and Manimozhiyan Arumugam and Kristoffer Solvsten Burgdorf and Chaysavanh Manichanh and Trine Nielsen and Nicolas Pons and Florence Levenez and Takuji Yamada and Daniel R Mende and Junhua Li and Junming Xu and Shaochuan Li and Dongfang Li and Jianjun Cao and Bo Wang and Huiqing Liang and Huisong Zheng and Yinlong Xie and Julien Tap and Patricia Lepage and Marcelo Bertalan and Jean-Michel Batto and Torben Hansen and Denis Le Paslier and Allan Linneberg and H Bj{\o}rn Nielsen and Eric Pelletier and Pierre Renault and Thomas Sicheritz-Ponten and Keith Turner and Hongmei Zhu and Chang Yu and Shengting Li and Min Jian and Yan Zhou and Yingrui Li and Xiuqing Zhang and Songgang Li and Nan Qin and Huanming Yang and Jian Wang and S{\o}ren Brunak and Joel Dor{\'e} and Francisco Guarner and Karsten Kristiansen and Oluf Pedersen and Julian Parkhill and Jean Weissenbach and MetaHIT Consortium and Peer Bork and S Dusko Ehrlich and Jun Wang}, 
+journal = {Nature},
+title = {A human gut microbial gene catalogue established by metagenomic sequencing},
+abstract = {To understand the impact of gut microbes on human health and well-being it is crucial to assess their genetic potential. Here we describe the Illumina-based metagenomic sequencing, assembly and characterization of 3.3 million non-redundant microbial genes, derived from 576.7 gigabases of sequence, from faecal samples of 124 European individuals. The gene set, approximately 150 times larger than the human gene complement, contains an overwhelming majority of the prevalent (more frequent) microbial genes of the cohort and probably includes a large proportion of the prevalent human intestinal microbial genes. The genes are largely shared among individuals of the cohort. Over 99% of the genes are bacterial, indicating that the entire cohort harbours between 1,000 and 1,150 prevalent bacterial species and each individual at least 160 such species, which are also largely shared. We define and describe the minimal gut metagenome and the minimal gut bacterial genome in terms of functions present in all individuals and most bacteria, respectively.},
+affiliation = {BGI-Shenzhen, Shenzhen 518083, China.},
+number = {7285},
+pages = {59--65},
+volume = {464},
+year = {2010},
+month = {Mar},
+language = {eng},
+date-added = {2010-03-29 15:40:26 -0400},
+date-modified = {2012-03-05 23:35:03 -0500},
+doi = {10.1038/nature08821},
+pii = {nature08821},
+pmid = {20203603},
+local-url = {file://localhost/Users/Adina/Documents/Papers/2010/Qin/Nature%202010%20Qin.pdf},
+uri = {papers://0BEFB9CC-B23E-4FA5-9CA8-3692A18C8C99/Paper/p189},
+read = {Yes},
+rating = {0}
+}
+
+@article{Zhang:2012p959,
+author = {Yuan Zhang and Yanni Sun}, 
+journal = {Pacific Symposium on Biocomputing},
+title = {Metadomain: A profile HMM-based protein domain classification tool for short sequence},
+abstract = {... YUAN ZHANG and YANNI  SUN Dept ... the genetic diversity and composition of a plasmid metagenome from a wastewater treatment plant ... a basis for functional profiling, profile HMM-based homology search was also used for phylogenetic complexity analysis in metagenomic data ...},
+year = {2012},
+date-added = {2011-11-01 15:33:22 -0400},
+date-modified = {2011-11-01 15:39:54 -0400},
+URL = {http://psb.stanford.edu/psb-online/proceedings/psb12/zhang-y.pdf},
+local-url = {file://localhost/Users/Adina/Documents/Papers/2012/Zhang/Pacific%20Symposium%20on%20Biocomputing%202012%20Zhang.pdf},
+uri = {papers://0BEFB9CC-B23E-4FA5-9CA8-3692A18C8C99/Paper/p959},
+rating = {0}
+}
+
+@article{Noguchi:2006p968,
+author = {H Noguchi and J Park{\ldots}}, 
+journal = {Nucleic Acids Research},
+title = {MetaGene: prokaryotic gene finding from environmental genome shotgun sequences},
+abstract = {Exhaustive gene identification is a fundamental goal in all metagenomics projects. However, most metagenomic sequences are unassembled anonymous fragments, and conventional gene-finding methods cannot be applied. We have developed a prokaryotic gene-finding ...},
+year = {2006},
+month = {Jan},
+date-added = {2011-11-01 15:34:26 -0400},
+date-modified = {2011-11-01 15:34:26 -0400},
+pmid = {3438749465663739100related:3JRzdGvkuC8J},
+URL = {http://nar.oxfordjournals.org/content/34/19/5623.short},
+local-url = {file://localhost/Users/Adina/Documents/Papers/2006/Noguchi/Nucleic%20Acids%20Research%202006%20Noguchi.pdf},
+uri = {papers://0BEFB9CC-B23E-4FA5-9CA8-3692A18C8C99/Paper/p968},
+rating = {0}
+}
+
+@article{Morgan:2010p740,
+author = {J.L Morgan and A.E Darling and J.A Eisen}, 
+journal = {PLoS ONE},
+title = {Metagenomic sequencing of an in vitro-simulated microbial community},
+number = {4},
+pages = {e10209},
+volume = {5},
+year = {2010},
+date-added = {2011-05-19 20:58:12 -0400},
+date-modified = {2011-05-31 09:45:21 -0400},
+pmid = {17759976494534016177related:sbz8f4YcePYJ},
+local-url = {file://localhost/Users/Adina/Documents/Papers/2010/Morgan/PLoS%20ONE%202010%20Morgan-1.pdf},
+uri = {papers://0BEFB9CC-B23E-4FA5-9CA8-3692A18C8C99/Paper/p740},
+read = {Yes},
+rating = {0}
+}
+
+@article{Altschul:1990p1335,
+author = {S F Altschul and W Gish and W Miller and E W Myers and D J Lipman}, 
+journal = {J Mol Biol},
+title = {Basic local alignment search tool},
+abstract = {A new approach to rapid sequence comparison, basic local alignment search tool (BLAST), directly approximates alignments that optimize a measure of local similarity, the maximal segment pair (MSP) score. Recent mathematical results on the stochastic properties of MSP scores allow an analysis of the performance of this method as well as the statistical significance of alignments it generates. The basic algorithm is simple and robust; it can be implemented in a number of ways and applied in a variety of contexts including straightforward DNA and protein sequence database searches, motif searches, gene identification searches, and in the analysis of multiple regions of similarity in long DNA sequences. In addition to its flexibility and tractability to mathematical analysis, BLAST is an order of magnitude faster than existing sequence comparison tools of comparable sensitivity.},
+affiliation = {National Center for Biotechnology Information, National Library of Medicine, National Institutes of Health, Bethesda, MD 20894.},
+number = {3},
+pages = {403--10},
+volume = {215},
+year = {1990},
+month = {Oct},
+language = {eng},
+keywords = {Mutation, Algorithms, Sensitivity and Specificity, Base Sequence, Sequence Homology: Nucleic Acid, Databases: Factual, Software, Amino Acid Sequence}, 
+date-added = {2012-07-03 15:16:00 -0400},
+date-modified = {2012-07-03 15:16:54 -0400},
+doi = {10.1016/S0022-2836(05)80360-2},
+pii = {S0022-2836(05)80360-2},
+pmid = {2231712},
+local-url = {file://localhost/Users/Adina/Documents/Papers/1990/Altschul/J%20Mol%20Biol%201990%20Altschul.pdf},
+uri = {papers://0BEFB9CC-B23E-4FA5-9CA8-3692A18C8C99/Paper/p1335},
+rating = {0}
+}
+
+@article{Chaisson:2004p1285,
+author = {Mark Chaisson and Pavel Pevzner and Haixu Tang}, 
+journal = {Bioinformatics},
+title = {Fragment assembly with short reads},
+abstract = {Available from the web at http://www.cse.ucsd.edu/groups/bioinformatics/software.html},
+affiliation = {Bioinformatics Program, University of California San Diego, La Jolla, CA 92093, USA. mchaisso@bioinf.ucsd.edu},
+number = {13},
+pages = {2067--74},
+volume = {20},
+year = {2004},
+month = {Sep},
+language = {eng},
+keywords = {Sequence Alignment, Base Sequence, Algorithms, Gene Expression Profiling, Molecular Sequence Data, Contig Mapping, Feasibility Studies, Sequence Analysis: DNA}, 
+date-added = {2012-04-30 09:25:24 -0400},
+date-modified = {2012-04-30 09:25:30 -0400},
+doi = {10.1093/bioinformatics/bth205},
+pii = {bth205},
+pmid = {15059830},
+local-url = {file://localhost/Users/Adina/Documents/Papers/2004/Chaisson/Bioinformatics%202004%20Chaisson.pdf},
+uri = {papers://0BEFB9CC-B23E-4FA5-9CA8-3692A18C8C99/Paper/p1285},
+read = {Yes},
+rating = {0}
+}
+
+@article{Mende:2012p1262,
+author = {Daniel R Mende and Alison S Waller and Shinichi Sunagawa and Aino I J{\"a}rvelin and Michelle M Chan and Manimozhiyan Arumugam and Jeroen Raes and Peer Bork}, 
+journal = {PLoS ONE},
+title = {Assessment of metagenomic assembly using simulated next generation sequencing data},
+abstract = {Due to the complexity of the protocols and a limited knowledge of the nature of microbial communities, simulating metagenomic sequences plays an important role in testing the performance of existing tools and data analysis methods with metagenomic data. We developed metagenomic read simulators with platform-specific (Sanger, pyrosequencing, Illumina) base-error models, and simulated metagenomes of differing community complexities. We first evaluated the effect of rigorous quality control on Illumina data. Although quality filtering removed a large proportion of the data, it greatly improved the accuracy and contig lengths of resulting assemblies. We then compared the quality-trimmed Illumina assemblies to those from Sanger and pyrosequencing. For the simple community (10 genomes) all sequencing technologies assembled a similar amount and accurately represented the expected functional composition. For the more complex community (100 genomes) Illumina produced the best assemblies and more correctly resembled the expected functional composition. For the most complex community (400 genomes) there was very little assembly of reads from any sequencing technology. However, due to the longer read length the Sanger reads still represented the overall functional composition reasonably well. We further examined the effect of scaffolding of contigs using paired-end Illumina reads. It dramatically increased contig lengths of the simple community and yielded minor improvements to the more complex communities. Although the increase in contig length was accompanied by increased chimericity, it resulted in more complete genes and a better characterization of the functional repertoire. The metagenomic simulators developed for this research are freely available.},
+affiliation = {European Molecular Biology Laboratory, Heidelberg, Germany.},
+number = {2},
+pages = {e31386},
+volume = {7},
+year = {2012},
+month = {Jan},
+language = {eng},
+date-added = {2012-03-20 11:19:51 -0400},
+date-modified = {2012-03-20 11:20:01 -0400},
+doi = {10.1371/journal.pone.0031386},
+pii = {PONE-D-11-20074},
+pmid = {22384016},
+local-url = {file://localhost/Users/Adina/Documents/Papers/2012/Mende/PLoS%20ONE%202012%20Mende.pdf},
+uri = {papers://0BEFB9CC-B23E-4FA5-9CA8-3692A18C8C99/Paper/p1262},
+read = {Yes},
+rating = {0}
+}
+
+@article{Mavromatis:2006p894,
+author = {K Mavromatis and N Ivanova and K Barry and H Shapiro and E Goltsman and A.C McHardy and I Rigoutsos and A Salamov and F Korzeniewski and M Land}, 
+journal = {Nature Methods},
+title = {Use of simulated data sets to evaluate the fidelity of metagenomic processing methods},
+number = {6},
+pages = {495--500},
+volume = {4},
+year = {2006},
+date-added = {2011-10-04 09:44:07 -0400},
+date-modified = {2011-11-01 15:31:47 -0400},
+pmid = {13897449040596065161related:iVvSREWo3cAJ},
+local-url = {file://localhost/Users/Adina/Documents/Papers/2006/Mavromatis/Nature%20Methods%202006%20Mavromatis.pdf},
+uri = {papers://0BEFB9CC-B23E-4FA5-9CA8-3692A18C8C99/Paper/p894},
+read = {Yes},
+rating = {0}
+}
+
+@article{Li:2010p234,
+author = {Ruiqiang Li and Hongmei Zhu and Jue Ruan and Wubin Qian and Xiaodong Fang and Zhongbin Shi and Yingrui Li and Shengting Li and Gao Shan and Karsten Kristiansen and Songgang Li and Huanming Yang and Jian Wang and Jun Wang}, 
+journal = {Genome Res},
+title = {De novo assembly of human genomes with massively parallel short read sequencing},
+abstract = {Next-generation massively parallel DNA sequencing technologies provide ultrahigh throughput at a substantially lower unit data cost; however, the data are very short read length sequences, making de novo assembly extremely challenging. Here, we describe a novel method for de novo assembly of large genomes from short read sequences. We successfully assembled both the Asian and African human genome sequences, achieving an N50 contig size of 7.4 and 5.9 kilobases (kb) and scaffold of 446.3 and 61.9 kb, respectively. The development of this de novo short read assembly method creates new opportunities for building reference sequences and carrying out accurate analyses of unexplored genomes in a cost-effective way.},
+affiliation = {Beijing Genomics Institute at Shenzhen, Shenzhen 518083, China.},
+number = {2},
+pages = {265--72},
+volume = {20},
+year = {2010},
+month = {Feb},
+language = {eng},
+keywords = {Oligonucleotide Array Sequence Analysis, Sequence Alignment, Genome: Human, African Continental Ancestry Group, Asian Continental Ancestry Group, Sequence Analysis: DNA, Human Genome Project, Humans}, 
+date-added = {2010-06-15 11:18:52 -0400},
+date-modified = {2010-06-15 11:19:04 -0400},
+doi = {10.1101/gr.097261.109},
+pii = {gr.097261.109},
+pmid = {20019144},
+local-url = {file://localhost/Users/Adina/Documents/Papers/2010/Li/Genome%20Res%202010%20Li.pdf},
+uri = {papers://0BEFB9CC-B23E-4FA5-9CA8-3692A18C8C99/Paper/p234},
+read = {Yes},
+rating = {0}
+}
+
+@article{Kunin:2008p16,
+author = {V Kunin and A Copeland and A Lapidus and K Mavromatis and P Hugenholtz}, 
+journal = {Microbiology and Molecular Biology Reviews},
+title = {A Bioinformatician's Guide to Metagenomics},
+number = {4},
+pages = {557--578},
+volume = {72},
+year = {2008},
+month = {Dec},
+date-added = {2009-12-03 09:26:56 -0500},
+date-modified = {2009-12-03 09:27:13 -0500},
+doi = {10.1128/MMBR.00009-08},
+local-url = {file://localhost/Users/Adina/Documents/Papers/2008/Kunin/Microbiology%20and%20Molecular%20Biology%20Reviews%202008%20Kunin.pdf},
+uri = {papers://0BEFB9CC-B23E-4FA5-9CA8-3692A18C8C99/Paper/p16},
+read = {Yes},
+rating = {0}
+}
+
+@article{Mackelprang:2011p1087,
+author = {R Mackelprang and M Waldrop and K DeAngelis{\ldots}}, 
+journal = {Nature},
+title = {Metagenomic analysis of a permafrost microbial community reveals a rapid response to thaw},
+abstract = {... Journal name: Nature Year published: (2011) DOI: doi: 10.1038 / nature10576 Received 28 April 2011 Accepted 20 September 2011 Published online 06 November 2011 ...},
+year = {2011},
+month = {Jan},
+date-added = {2011-12-02 09:00:48 -0500},
+date-modified = {2011-12-02 09:01:05 -0500},
+URL = {http://www.nature.com/nature/journal/vaop/ncurrent/full/nature10576.html},
+local-url = {file://localhost/Users/Adina/Documents/Papers/2011/Mackelprang/Nature%202011%20Mackelprang.pdf},
+uri = {papers://0BEFB9CC-B23E-4FA5-9CA8-3692A18C8C99/Paper/p1087},
+read = {Yes},
+rating = {0}
+}
+
+@article{Barabasi:1999p1083,
+author = {A.L Barab{\'a}si and R Albert}, 
+journal = {Science},
+title = {Emergence of scaling in random networks},
+number = {5439},
+pages = {509},
+volume = {286},
+year = {1999},
+date-added = {2011-11-14 17:45:54 -0500},
+date-modified = {2011-11-14 17:47:55 -0500},
+pmid = {10638755925462666384related:kMxIzSV0pJMJ},
+local-url = {file://localhost/Users/Adina/Documents/Papers/1999/Barab%C3%A1si/Science%201999%20Barab%C3%A1si.pdf},
+uri = {papers://0BEFB9CC-B23E-4FA5-9CA8-3692A18C8C99/Paper/p1083},
+rating = {0}
+}
+
+@article{Hoffmann:2009p1027,
+author = {S Hoffmann and C Otto and S Kurtz and C Sharma{\ldots}}, 
+journal = {PLoS Computational {\ldots}},
+title = {Fast mapping of short sequences with mismatches, insertions and deletions using index structures},
+abstract = {The successful mapping of high-throughput sequencing (HTS) reads to reference genomes largely depends on the accuracy of both the sequencing technologies and reference genomes. Current mapping algorithms focus on mapping with mismatches but largely neglect insertions and ...},
+year = {2009},
+month = {Jan},
+date-added = {2011-11-01 15:58:13 -0400},
+date-modified = {2011-11-01 15:58:13 -0400},
+pmid = {10181910690437609481related:CThJrtNpTY0J},
+URL = {http://dx.plos.org/10.1371/journal.pcbi.1000502},
+local-url = {file://localhost/Users/Adina/Documents/Papers/2009/Hoffmann/PLoS%20Computational%20%E2%80%A6%202009%20Hoffmann.pdf},
+uri = {papers://0BEFB9CC-B23E-4FA5-9CA8-3692A18C8C99/Paper/p1027},
+rating = {0}
+}
+
