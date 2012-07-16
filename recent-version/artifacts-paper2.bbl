@@ -1,113 +1,126 @@
 \begin{thebibliography}{10}
-
-\bibitem{Altschul:1990p1335}
-S~F Altschul, W~Gish, W~Miller, E~W Myers, and D~J Lipman.
-\newblock Basic local alignment search tool.
-\newblock {\em J Mol Biol}, 215(3):403--10, Oct 1990.
-
-\bibitem{Barabasi:1999p1083}
-A.L Barab{\'a}si and R~Albert.
-\newblock Emergence of scaling in random networks.
-\newblock {\em Science}, 286(5439):509, 1999.
-
-\bibitem{GomezAlvarez:2009p1334}
-Vicente Gomez-Alvarez, Tracy~K Teal, and Thomas~M Schmidt.
-\newblock Systematic artifacts in metagenomes from complex microbial
-  communities.
-\newblock {\em The ISME Journal}, 3(11):1314--7, Nov 2009.
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+\providecommand{\bibAnnoteFile}[1]{%
+  \IfFileExists{#1}{\begin{quotation}\noindent\textsc{Key:} #1\\
+  \textsc{Annotation:}\ \input{#1}\end{quotation}}{}}
+\providecommand{\bibAnnote}[2]{%
+  \begin{quotation}\noindent\textsc{Key:} #1\\
+  \textsc{Annotation:}\ #2\end{quotation}}
+\providecommand{\eprint}[2][]{\url{#2}}
 
 \bibitem{Hess:2011p686}
-M~Hess, A~Sczyrba, R~Egan, and T~Kim{\ldots}.
-\newblock Metagenomic discovery of biomass-degrading genes and genomes from cow
-  rumen.
-\newblock {\em Science}, Jan 2011.
-
-\bibitem{Iverson:2012p1281}
-Vaughn Iverson, Robert~M Morris, Christian~D Frazar, Chris~T Berthiaume,
-  Rhonda~L Morales, and E~Virginia Armbrust.
-\newblock Untangling genomes from metagenomes: revealing an uncultured class of
-  marine euryarchaeota.
-\newblock {\em Science}, 335(6068):587--90, Feb 2012.
-
-\bibitem{Mackelprang:2011p1087}
-R~Mackelprang, M~Waldrop, and K~DeAngelis{\ldots}.
-\newblock Metagenomic analysis of a permafrost microbial community reveals a
-  rapid response to thaw.
-\newblock {\em Nature}, Jan 2011.
-
-\bibitem{Mavromatis:2006p894}
-K~Mavromatis, N~Ivanova, K~Barry, H~Shapiro, E~Goltsman, A.C McHardy,
-  I~Rigoutsos, A~Salamov, F~Korzeniewski, and M~Land.
-\newblock Use of simulated data sets to evaluate the fidelity of metagenomic
-  processing methods.
-\newblock {\em Nature Methods}, 4(6):495--500, 2006.
-
-\bibitem{Mende:2012p1262}
-Daniel~R Mende, Alison~S Waller, Shinichi Sunagawa, Aino~I J{\"a}rvelin,
-  Michelle~M Chan, Manimozhiyan Arumugam, Jeroen Raes, and Peer Bork.
-\newblock Assessment of metagenomic assembly using simulated next generation
-  sequencing data.
-\newblock {\em PLoS ONE}, 7(2):e31386, Jan 2012.
-
-\bibitem{Miller:2010p226}
-Jason~R Miller, Sergey Koren, and Granger Sutton.
-\newblock Assembly algorithms for next-generation sequencing data.
-\newblock {\em Genomics}, 95(6):315--27, Jun 2010.
-
-\bibitem{Niu:2010p1333}
-Beifang Niu, Limin Fu, Shulei Sun, and Weizhong Li.
-\newblock Artificial and natural duplicates in pyrosequencing reads of
-  metagenomic data.
-\newblock {\em BMC Bioinformatics}, 11:187, Jan 2010.
-
-\bibitem{Peng:2011p898}
-Y~Peng, H~Leung, SM~Yiu, and F.Y.L Chin.
-\newblock Meta-idba: a de novo assembler for metagenomic data.
-\newblock {\em Bioinformatics}, 27(13):i94, 2011.
-
-\bibitem{Pignatelli:2011p742}
-M~Pignatelli{\ldots}.
-\newblock Evaluating the fidelity of de novo short read metagenomic assembly
-  using simulated data.
-\newblock {\em PLoS ONE}, Jan 2011.
-
-\bibitem{Pop:2009p798}
-M~Pop.
-\newblock Genome assembly reborn: recent computational challenges.
-\newblock {\em Briefings in bioinformatics}, 10(4):354, 2009.
+Hess M, Sczyrba A, Egan R, Kim{\ldots} T (2011) Metagenomic discovery of
+  biomass-degrading genes and genomes from cow rumen.
+\newblock Science .
+\bibAnnoteFile{Hess:2011p686}
 
 \bibitem{Qin:2010p189}
-Junjie Qin, Ruiqiang Li, Jeroen Raes, Manimozhiyan Arumugam,
-  Kristoffer~Solvsten Burgdorf, Chaysavanh Manichanh, Trine Nielsen, Nicolas
-  Pons, Florence Levenez, Takuji Yamada, Daniel~R Mende, Junhua Li, Junming Xu,
-  Shaochuan Li, Dongfang Li, Jianjun Cao, Bo~Wang, Huiqing Liang, Huisong
-  Zheng, Yinlong Xie, Julien Tap, Patricia Lepage, Marcelo Bertalan,
-  Jean-Michel Batto, Torben Hansen, Denis~Le Paslier, Allan Linneberg,
-  H~Bj{\o}rn Nielsen, Eric Pelletier, Pierre Renault, Thomas Sicheritz-Ponten,
-  Keith Turner, Hongmei Zhu, Chang Yu, Shengting Li, Min Jian, Yan Zhou,
-  Yingrui Li, Xiuqing Zhang, Songgang Li, Nan Qin, Huanming Yang, Jian Wang,
-  S{\o}ren Brunak, Joel Dor{\'e}, Francisco Guarner, Karsten Kristiansen, Oluf
-  Pedersen, Julian Parkhill, Jean Weissenbach, MetaHIT Consortium, Peer Bork,
-  S~Dusko Ehrlich, and Jun Wang.
-\newblock A human gut microbial gene catalogue established by metagenomic
-  sequencing.
-\newblock {\em Nature}, 464(7285):59--65, Mar 2010.
+Qin J, Li R, Raes J, Arumugam M, Burgdorf KS, et~al. (2010) A human gut
+  microbial gene catalogue established by metagenomic sequencing.
+\newblock Nature 464: 59--65.
+\bibAnnoteFile{Qin:2010p189}
+
+\bibitem{Iverson:2012p1281}
+Iverson V, Morris RM, Frazar CD, Berthiaume CT, Morales RL, et~al. (2012)
+  Untangling genomes from metagenomes: revealing an uncultured class of marine
+  euryarchaeota.
+\newblock Science 335: 587--90.
+\bibAnnoteFile{Iverson:2012p1281}
+
+\bibitem{Mackelprang:2011p1087}
+Mackelprang R, Waldrop M, DeAngelis{\ldots} K (2011) Metagenomic analysis of a
+  permafrost microbial community reveals a rapid response to thaw.
+\newblock Nature .
+\bibAnnoteFile{Mackelprang:2011p1087}
+
+\bibitem{Miller:2010p226}
+Miller JR, Koren S, Sutton G (2010) Assembly algorithms for next-generation
+  sequencing data.
+\newblock Genomics 95: 315--27.
+\bibAnnoteFile{Miller:2010p226}
+
+\bibitem{Pop:2009p798}
+Pop M (2009) Genome assembly reborn: recent computational challenges.
+\newblock Briefings in bioinformatics 10: 354.
+\bibAnnoteFile{Pop:2009p798}
+
+\bibitem{Mende:2012p1262}
+Mende DR, Waller AS, Sunagawa S, J{\"a}rvelin AI, Chan MM, et~al. (2012)
+  Assessment of metagenomic assembly using simulated next generation sequencing
+  data.
+\newblock PLoS ONE 7: e31386.
+\bibAnnoteFile{Mende:2012p1262}
+
+\bibitem{Pignatelli:2011p742}
+Pignatelli{\ldots} M (2011) Evaluating the fidelity of de novo short read
+  metagenomic assembly using simulated data.
+\newblock PLoS ONE .
+\bibAnnoteFile{Pignatelli:2011p742}
+
+\bibitem{Peng:2011p898}
+Peng Y, Leung H, Yiu S, Chin F (2011) Meta-idba: a de novo assembler for
+  metagenomic data.
+\newblock Bioinformatics 27: i94.
+\bibAnnoteFile{Peng:2011p898}
+
+\bibitem{Mavromatis:2006p894}
+Mavromatis K, Ivanova N, Barry K, Shapiro H, Goltsman E, et~al. (2006) Use of
+  simulated data sets to evaluate the fidelity of metagenomic processing
+  methods.
+\newblock Nature Methods 4: 495--500.
+\bibAnnoteFile{Mavromatis:2006p894}
+
+\bibitem{GomezAlvarez:2009p1334}
+Gomez-Alvarez V, Teal TK, Schmidt TM (2009) Systematic artifacts in metagenomes
+  from complex microbial communities.
+\newblock The ISME Journal 3: 1314--7.
+\bibAnnoteFile{GomezAlvarez:2009p1334}
+
+\bibitem{Keegan:2012p1336}
+Keegan KP, Trimble WL, Wilkening J, Wilke A, Harrison T, et~al. (2012) A
+  platform-independent method for detecting errors in metagenomic sequencing
+  data: Drisee.
+\newblock PLoS Comput Biol 8: e1002541.
+\bibAnnoteFile{Keegan:2012p1336}
+
+\bibitem{Niu:2010p1333}
+Niu B, Fu L, Sun S, Li W (2010) Artificial and natural duplicates in
+  pyrosequencing reads of metagenomic data.
+\newblock BMC Bioinformatics 11: 187.
+\bibAnnoteFile{Niu:2010p1333}
 
 \bibitem{Simpson:2009p233}
-Jared~T Simpson, Kim Wong, Shaun~D Jackman, Jacqueline~E Schein, Steven J~M
-  Jones, and Inan{\c c} Birol.
-\newblock Abyss: a parallel assembler for short read sequence data.
-\newblock {\em Genome Res}, 19(6):1117--23, Jun 2009.
-
-\bibitem{Sommer:2007p1253}
-Daniel~D Sommer, Arthur~L Delcher, Steven~L Salzberg, and Mihai Pop.
-\newblock Minimus: a fast, lightweight genome assembler.
-\newblock {\em Bmc Bioinformatics}, 8:64, Jan 2007.
+Simpson JT, Wong K, Jackman SD, Schein JE, Jones SJM, et~al. (2009) Abyss: a
+  parallel assembler for short read sequence data.
+\newblock Genome Res 19: 1117--23.
+\bibAnnoteFile{Simpson:2009p233}
 
 \bibitem{Zerbino:2008p665}
-Daniel~R Zerbino and Ewan Birney.
-\newblock Velvet: algorithms for de novo short read assembly using de bruijn
-  graphs.
-\newblock {\em Genome Res}, 18(5):821--9, May 2008.
+Zerbino DR, Birney E (2008) Velvet: algorithms for de novo short read assembly
+  using de bruijn graphs.
+\newblock Genome Res 18: 821--9.
+\bibAnnoteFile{Zerbino:2008p665}
+
+\bibitem{Barabasi:1999p1083}
+Barab{\'a}si A, Albert R (1999) Emergence of scaling in random networks.
+\newblock Science 286: 509.
+\bibAnnoteFile{Barabasi:1999p1083}
+
+\bibitem{Altschul:1990p1335}
+Altschul SF, Gish W, Miller W, Myers EW, Lipman DJ (1990) Basic local alignment
+  search tool.
+\newblock J Mol Biol 215: 403--10.
+\bibAnnoteFile{Altschul:1990p1335}
+
+\bibitem{Sommer:2007p1253}
+Sommer DD, Delcher AL, Salzberg SL, Pop M (2007) Minimus: a fast, lightweight
+  genome assembler.
+\newblock Bmc Bioinformatics 8: 64.
+\bibAnnoteFile{Sommer:2007p1253}
 
 \end{thebibliography}
