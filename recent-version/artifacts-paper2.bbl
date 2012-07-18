@@ -14,9 +14,9 @@
 \providecommand{\eprint}[2][]{\url{#2}}
 
 \bibitem{Hess:2011p686}
-Hess M, Sczyrba A, Egan R, Kim{\ldots} T (2011) Metagenomic discovery of
-  biomass-degrading genes and genomes from cow rumen.
-\newblock Science .
+Hess M, Sczyrba A, Egan R, Kim TW, Chokhawala H, et~al. (2011) Metagenomic
+  discovery of biomass-degrading genes and genomes from cow rumen.
+\newblock Science 331: 463--7.
 \bibAnnoteFile{Hess:2011p686}
 
 \bibitem{Qin:2010p189}
@@ -33,9 +33,10 @@ Iverson V, Morris RM, Frazar CD, Berthiaume CT, Morales RL, et~al. (2012)
 \bibAnnoteFile{Iverson:2012p1281}
 
 \bibitem{Mackelprang:2011p1087}
-Mackelprang R, Waldrop M, DeAngelis{\ldots} K (2011) Metagenomic analysis of a
-  permafrost microbial community reveals a rapid response to thaw.
-\newblock Nature .
+Mackelprang R, Waldrop MP, DeAngelis KM, David MM, Chavarria KL, et~al. (2011)
+  Metagenomic analysis of a permafrost microbial community reveals a rapid
+  response to thaw.
+\newblock Nature 480: 368--71.
 \bibAnnoteFile{Mackelprang:2011p1087}
 
 \bibitem{Miller:2010p226}
@@ -46,7 +47,7 @@ Miller JR, Koren S, Sutton G (2010) Assembly algorithms for next-generation
 
 \bibitem{Pop:2009p798}
 Pop M (2009) Genome assembly reborn: recent computational challenges.
-\newblock Briefings in bioinformatics 10: 354.
+\newblock Briefings in bioinformatics 10: 354--66.
 \bibAnnoteFile{Pop:2009p798}
 
 \bibitem{Mende:2012p1262}
@@ -57,15 +58,15 @@ Mende DR, Waller AS, Sunagawa S, J{\"a}rvelin AI, Chan MM, et~al. (2012)
 \bibAnnoteFile{Mende:2012p1262}
 
 \bibitem{Pignatelli:2011p742}
-Pignatelli{\ldots} M (2011) Evaluating the fidelity of de novo short read
+Pignatelli M, Moya A (2011) Evaluating the fidelity of de novo short read
   metagenomic assembly using simulated data.
-\newblock PLoS ONE .
+\newblock PLoS ONE 6: e19984.
 \bibAnnoteFile{Pignatelli:2011p742}
 
 \bibitem{Peng:2011p898}
-Peng Y, Leung H, Yiu S, Chin F (2011) Meta-idba: a de novo assembler for
+Peng Y, Leung HCM, Yiu SM, Chin FYL (2011) Meta-idba: a de novo assembler for
   metagenomic data.
-\newblock Bioinformatics 27: i94.
+\newblock Bioinformatics 27: i94--101.
 \bibAnnoteFile{Peng:2011p898}
 
 \bibitem{Mavromatis:2006p894}
@@ -116,6 +117,12 @@ Altschul SF, Gish W, Miller W, Myers EW, Lipman DJ (1990) Basic local alignment
   search tool.
 \newblock J Mol Biol 215: 403--10.
 \bibAnnoteFile{Altschul:1990p1335}
+
+\bibitem{Li:2001p1337}
+Li W, Jaroszewski L, Godzik A (2001) Clustering of highly homologous sequences
+  to reduce the size of large protein databases.
+\newblock Bioinformatics 17: 282--3.
+\bibAnnoteFile{Li:2001p1337}
 
 \bibitem{Sommer:2007p1253}
 Sommer DD, Delcher AL, Salzberg SL, Pop M (2007) Minimus: a fast, lightweight

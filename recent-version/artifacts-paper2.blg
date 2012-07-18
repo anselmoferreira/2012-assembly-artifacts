@@ -4,44 +4,44 @@ The top-level auxiliary file: artifacts-paper2.aux
 The style file: plos2009.bst
 Database file #1: artifacts-bib.bib
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 18 entries,
+You've used 19 entries,
             2441 wiz_defined-function locations,
-            683 strings with 9205 characters,
-and the built_in function-call counts, 14424 in all, are:
-= -- 1302
-> -- 288
+            701 strings with 9757 characters,
+and the built_in function-call counts, 16111 in all, are:
+= -- 1464
+> -- 324
 < -- 0
-+ -- 144
-- -- 72
-* -- 1221
-:= -- 1763
-add.period$ -- 36
-call.type$ -- 18
-change.case$ -- 18
++ -- 162
+- -- 81
+* -- 1370
+:= -- 1957
+add.period$ -- 38
+call.type$ -- 19
+change.case$ -- 19
 chr.to.int$ -- 0
-cite$ -- 36
-duplicate$ -- 1432
-empty$ -- 1468
-format.name$ -- 88
-if$ -- 3176
+cite$ -- 38
+duplicate$ -- 1573
+empty$ -- 1636
+format.name$ -- 99
+if$ -- 3564
 int.to.chr$ -- 0
-int.to.str$ -- 18
-missing$ -- 192
-newline$ -- 105
-num.names$ -- 18
-pop$ -- 205
+int.to.str$ -- 19
+missing$ -- 214
+newline$ -- 110
+num.names$ -- 19
+pop$ -- 216
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 131
+skip$ -- 150
 stack$ -- 0
-substring$ -- 1962
-swap$ -- 378
+substring$ -- 2228
+swap$ -- 428
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 123
-width$ -- 20
-write$ -- 209
+while$ -- 138
+width$ -- 21
+write$ -- 223

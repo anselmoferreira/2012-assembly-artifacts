@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  16 JUL 2012 19:34
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  18 JUL 2012 15:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -264,111 +264,118 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 65.
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 ) [1{/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
-] [2] [3] [4] [5]
-Overfull \hbox (32.78749pt too wide) in paragraph at lines 158--159
-\OT1/cmr/m/n/10 of sam-ples MH0001 through MH0010 were ob-tained from ftp://pub
-lic.genomics.org.cn/BGI/gutmeta/Raw[]Reads
+] [2] [3] [4]
+Overfull \hbox (17.5101pt too wide) in paragraph at lines 146--146
+[]\OT1/cmr/bx/n/12 Assessing the va-lid-ity of re-mov-ing highly con-nec-tive s
+e-quences from metagenomes 
  []
 
-[6] [7] (./artifacts-paper2.bbl [8])
-<./Figures/table1.pdf, id=37, 734.745pt x 189.70876pt>
+[5] [6] [7] [8] (./artifacts-paper2.bbl [9]) [10]
+<./Figures/table1.pdf, id=43, 734.745pt x 189.70876pt>
 File: ./Figures/table1.pdf Graphic file (type pdf)
 
 <use ./Figures/table1.pdf>
-Package pdftex.def Info: ./Figures/table1.pdf used on input line 190.
-(pdftex.def)             Requested size: 361.34999pt x 93.29967pt.
- [9]
-<./Figures/table2-assemblies.pdf, id=41, 744.7825pt x 412.03937pt>
+Package pdftex.def Info: ./Figures/table1.pdf used on input line 198.
+(pdftex.def)             Requested size: 455.2569pt x 117.54584pt.
+
+<./Figures/table2-assemblies.pdf, id=44, 744.7825pt x 412.03937pt>
 File: ./Figures/table2-assemblies.pdf Graphic file (type pdf)
 
 <use ./Figures/table2-assemblies.pdf>
-Package pdftex.def Info: ./Figures/table2-assemblies.pdf used on input line 195
+Package pdftex.def Info: ./Figures/table2-assemblies.pdf used on input line 203
 .
 (pdftex.def)             Requested size: 361.34999pt x 199.91429pt.
 
-<./Figures/stoptag-table.pdf, id=42, 378.41376pt x 178.6675pt>
+<./Figures/stoptag-table.pdf, id=45, 614.295pt x 153.57375pt>
 File: ./Figures/stoptag-table.pdf Graphic file (type pdf)
 
 <use ./Figures/stoptag-table.pdf>
-Package pdftex.def Info: ./Figures/stoptag-table.pdf used on input line 200.
-(pdftex.def)             Requested size: 361.34999pt x 170.61372pt.
+Package pdftex.def Info: ./Figures/stoptag-table.pdf used on input line 208.
+(pdftex.def)             Requested size: 361.34999pt x 90.33823pt.
 
-<./Figures/table3-simulated-stoptags.pdf, id=43, 614.295pt x 372.89313pt>
+<./Figures/table3-simulated-stoptags.pdf, id=46, 614.295pt x 372.89313pt>
 File: ./Figures/table3-simulated-stoptags.pdf Graphic file (type pdf)
 
 <use ./Figures/table3-simulated-stoptags.pdf>
 Package pdftex.def Info: ./Figures/table3-simulated-stoptags.pdf used on input 
-line 205.
+line 213.
 (pdftex.def)             Requested size: 361.34999pt x 219.3507pt.
 
-<./Figures/table4-overlap.pdf, id=44, 614.295pt x 230.8625pt>
+<./Figures/table4-overlap.pdf, id=47, 614.295pt x 230.8625pt>
 File: ./Figures/table4-overlap.pdf Graphic file (type pdf)
 
 <use ./Figures/table4-overlap.pdf>
-Package pdftex.def Info: ./Figures/table4-overlap.pdf used on input line 210.
+Package pdftex.def Info: ./Figures/table4-overlap.pdf used on input line 218.
 (pdftex.def)             Requested size: 361.34999pt x 135.80258pt.
 
-<./Figures/figure1-density.pdf, id=45, 578.16pt x 433.62pt>
+<./Figures/figure1-density.pdf, id=48, 578.16pt x 433.62pt>
 File: ./Figures/figure1-density.pdf Graphic file (type pdf)
 
 <use ./Figures/figure1-density.pdf>
-Package pdftex.def Info: ./Figures/figure1-density.pdf used on input line 215.
+Package pdftex.def Info: ./Figures/figure1-density.pdf used on input line 223.
 (pdftex.def)             Requested size: 361.34999pt x 271.01183pt.
 
-<./Figures/figure2-hckmers.pdf, id=46, 578.16pt x 433.62pt>
+<./Figures/figure2-hckmers.pdf, id=49, 578.16pt x 433.62pt>
 File: ./Figures/figure2-hckmers.pdf Graphic file (type pdf)
 
 <use ./Figures/figure2-hckmers.pdf>
-Package pdftex.def Info: ./Figures/figure2-hckmers.pdf used on input line 220.
+Package pdftex.def Info: ./Figures/figure2-hckmers.pdf used on input line 228.
 (pdftex.def)             Requested size: 361.34999pt x 271.01183pt.
 
-<./Figures/figure3-contigs.pdf, id=47, 603.22667pt x 1307.61522pt>
+<./Figures/figure3-contigs.pdf, id=50, 603.22667pt x 1307.61522pt>
 File: ./Figures/figure3-contigs.pdf Graphic file (type pdf)
 
 <use ./Figures/figure3-contigs.pdf>
-Package pdftex.def Info: ./Figures/figure3-contigs.pdf used on input line 225.
+Package pdftex.def Info: ./Figures/figure3-contigs.pdf used on input line 233.
 (pdftex.def)             Requested size: 275.64673pt x 597.51979pt.
 
 
-LaTeX Warning: Float too large for page by 46.01192pt on input line 227.
+LaTeX Warning: Float too large for page by 46.01192pt on input line 235.
 
-<./Figures/figure4-contigs.pdf, id=48, 622.325pt x 1377.145pt>
+<./Figures/figure4-contigs.pdf, id=51, 622.325pt x 1377.145pt>
 File: ./Figures/figure4-contigs.pdf Graphic file (type pdf)
 
 <use ./Figures/figure4-contigs.pdf>
-Package pdftex.def Info: ./Figures/figure4-contigs.pdf used on input line 230.
+Package pdftex.def Info: ./Figures/figure4-contigs.pdf used on input line 238.
 (pdftex.def)             Requested size: 270.00648pt x 597.49825pt.
 
 
-LaTeX Warning: Float too large for page by 57.99037pt on input line 232.
+LaTeX Warning: Float too large for page by 57.99037pt on input line 240.
 
-[10 <./Figures/table1.pdf>] [11 <./Figures/table2-assemblies.pdf> <./Figures/st
-optag-table.pdf>] [12 <./Figures/table3-simulated-stoptags.pdf> <./Figures/tabl
-e4-overlap.pdf>] [13 <./Figures/figure1-density.pdf>] [14 <./Figures/figure2-hc
-kmers.pdf>] [15 <./Figures/figure3-contigs.pdf>] [16 <./Figures/figure4-contigs
-.pdf>] (./artifacts-paper2.aux) ) 
+<./Figures/figure5-5mers.pdf, id=52, 578.16pt x 433.62pt>
+File: ./Figures/figure5-5mers.pdf Graphic file (type pdf)
+
+<use ./Figures/figure5-5mers.pdf>
+Package pdftex.def Info: ./Figures/figure5-5mers.pdf used on input line 243.
+(pdftex.def)             Requested size: 455.24165pt x 341.43124pt.
+ [11 <./Figures/table1.pdf> <./Figures/table2-assemblies.pdf>] [12 <./Figures/s
+toptag-table.pdf> <./Figures/table3-simulated-stoptags.pdf> <./Figures/table4-o
+verlap.pdf>] [13 <./Figures/figure1-density.pdf>] [14 <./Figures/figure2-hckmer
+s.pdf>] [15 <./Figures/figure3-contigs.pdf>]
+[16 <./Figures/figure4-contigs.pdf>] [17 <./Figures/figure5-5mers.pdf>]
+(./artifacts-paper2.aux) ) 
 Here is how much of TeX's memory you used:
- 3800 strings out of 493633
- 55344 string characters out of 3143378
- 120175 words of memory out of 3000000
- 7025 multiletter control sequences out of 15000+200000
+ 3806 strings out of 493633
+ 55498 string characters out of 3143378
+ 123175 words of memory out of 3000000
+ 7029 multiletter control sequences out of 15000+200000
  7915 words of font info for 30 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 38i,6n,38p,2329b,316s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/local/texlive/2011/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr7.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmsy7.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmti10.pfb>
-Output written on artifacts-paper2.pdf (16 pages, 2265514 bytes).
+ 38i,6n,38p,2236b,312s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/local/texlive/2011/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr7.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmsy10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmsy7.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmti10.pfb>
+Output written on artifacts-paper2.pdf (17 pages, 2372563 bytes).
 PDF statistics:
- 258 PDF objects out of 1000 (max. 8388607)
- 144 compressed objects within 2 object streams
+ 275 PDF objects out of 1000 (max. 8388607)
+ 153 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
