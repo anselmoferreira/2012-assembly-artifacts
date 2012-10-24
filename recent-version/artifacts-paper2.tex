@@ -118,10 +118,8 @@ dataset size by collapsing the more numerous short reads into fewer contigs and
 enabling better annotation-based approaches by providing longer sequences.
 \cite{Miller:2010p226,Pop:2009p798}
 Furthermore, it does not rely on the a priori availability of
-reference genomes to enable identification of novel genetic features
-and construction of draft genomes \cite{Hess:2011p686,Iverson:2012p1281}.
-% @CTB what does ``enabling identification ... of draft genomes'' mean?
-% @ ACH added "construction of"
+reference genomes to enable identification of novel genetic features or
+operon structure \cite{Hess:2011p686,Iverson:2012p1281}.
 
 Although \emph{de novo} metagenomic assembly is a promising approach
 for metagenomic sequence analysis, it is complicated by the variable
@@ -175,24 +173,11 @@ reads.  We also included a previously published error-free simulated
 metagenome based on a mixture of 112 reference genomes
 \cite{Pignatelli:2011p742}.
 
-% @CTB refactor paragraph: using a DBG, cite Pell, etc.
-Initially, we evaluated the amount of connectivity between all
-sequences in each metagenome using an approach similar to the initial
-step of short read assemblers to identify overlaps of short sequences
-of length 'k', or k-mers
-\cite{Peng:2011p898,Simpson:2009p233,Zerbino:2008p665}.  For complex
-metagenomes, large amounts of memory are required to store reads and
-their associated sequencing errors in assembly graphs
-\cite{Hess:2011p686,Mackelprang:2011p1087,Qin:2010p189}.  To overcome
-this limitation, we constructed a probabilistic representation of the
-assembly graph using a bloom filter de Bruijn graph representation
-within fixed memory as previously described (Pell et al, how to cite
-this?).
-% @CTB cite
-
-Using this assembly graph representation, we separated reads
-contributing to disconnected portions of the metagenome assembly graph.
-For each metagenome, regardless of origin, we found a
+We evaluated read connectivity by partitioning reads into disconnected
+components with a de Bruijn graph (cite Pell).  This approach
+guarantees that reads in different partitions do not connect to each
+other and permits the separate assembly and analysis of each
+partition.  For each metagenome, regardless of origin, we found a
 single dominant, highly connected set of sequencing reads which we
 henceforth refer to as the ``lump'' of the dataset (Table 1, column
 3).  This lump contained the largest subset of connected sequencing
@@ -204,7 +189,7 @@ to 5.6\%, the lump size increased more dramatically from 7 to 15 to
 35\% of all reads, indicating increasingly larger connectivity between
 sequences with more sequencing.
 
-\subsubsection*{Characterizing the connectivity in the dominant lump}
+\subsubsection*{Characterizing connectivity in the dominant partition}
 
 % @CTB check scripts to see if this is an accurate characterization.
 % @CTB put scripts in scripts/!!
@@ -240,7 +225,7 @@ exception of these sequences in the simulated dataset (Figure 1, solid
 lines).  Similar to local density trends, position-specific trends in
 the location of these sequences also varied between metagenomes.  As
 sequencing coverage increased among metagenomes, the amount of 3'-end
-variation appeared to decrease (e.g., the soils) or inverse (e.g.,
+variation appeared to decrease (e.g., the soils) or increase (e.g.,
 rumen and human gut).
 
 \subsection*{Effects of removing highly connected sequences on assembly}
@@ -254,16 +239,18 @@ them and assessed the effect of their removal on assembly
 found that by removing these k-mers, we could effectively break apart
 metagenomic lumps, and the resulting largest partition of connected
 reads in each metagenome was reduced to less than 7\% of the total
-reads in the lump.  As a consequence of partitioning the metagenomic
-lump, we were able to greatly reduce assembly requirements.
-% @CTB refactor below
-Compared
-to unfiltered datasets which required greater than 100 GB and 100
-hours in the case of the largest soil metagenome (Table 2), all
-partitioned datasets could be assembled in less than 2 GB of memory
-and less than 1 hour using multiple nodes.
+reads in the lump.
+%@CTB refactor below
+%As a consequence of partitioning the metagenomic
+%lump, we were able to greatly reduce assembly requirements.
+%
+%Compared
+%to unfiltered datasets which required greater than 100 GB and 100
+%hours in the case of the largest soil metagenome (Table 2), all
+%partitioned datasets could be assembled in less than 2 GB of memory
+%and less than 1 hour using multiple nodes.
 
-\subsubsection*{Removal of highly connected sequences resulted in minimal losses of reference genes}
+\subsubsection*{Removing highly connected sequences resulted in minimal losses of reference genes}
 
 % @CTB probably need to indicate that since lump is separated from rest
 % we can assemble it separately w/o fear.
@@ -273,19 +260,19 @@ sequences impacted assembly by first evaluating the effects of the
 removing these sequences from the simulated lump.  The assembly of the reads in the original,
 unfiltered simulated lump and that of the reads remaining after
 removing highly connected sequences (the filtered assembly) were
-compared for three assemblers: Velvet, Meta-IDBA, and SOAPdenovo.
+compared for three assemblers: Velvet, Meta-IDBA, and SOAPdenovo (cite).
 Based on the total assembly length of contigs greater than 300 bp,
 filtered assemblies of the simulated metagenome resulted in a loss of
 between 4 - 16\% of total assembly length (Table 2).  In general, the
 filtered assemblies contained fewer total contigs than unfiltered
-assemblies, and the maximum contig size increased in the Velvet
+assemblies, while the maximum contig size increased in the Velvet
 assembly but decreased in the Meta-IDBA and SOAPdenovo assemblies.
 Direct comparisons of the unfiltered and filtered assemblies found
 that the filtered assemblies comprised on average 88\% of the
 unfiltered assemblies, and the unfiltered assemblies contained nearly
-all, 96\%, of the filtered assembled sequences.  Despite the removal
+all (96\%) of the filtered assembled sequences.  Despite the removal
 of over 3\% of the total unique 32-mers in the simulated metagenome,
-the resulting filtered assemblies resulted in only a loss of 0.1 -
+the resulting filtered assemblies resulted a loss of only 0.1 -
 0.6\% of annotated original reference genes (Tables 1 and 2).
 % @@CTB was normalized blast used here?
 %@ACH Yes, the coverage-blast script with slight modification to only take hits with evalue < 1e-5.
@@ -304,7 +291,7 @@ To aid in this evaluation, we used the previously published set of
 rumen draft genomes from \emph{de novo} assembly efforts of high
 abundance sequences in the rumen metagenome \cite{Hess:2011p686}.
 Overall, we found that removal of highly connected sequences from the
-rumen dataset resulted in 1-3\% loss of sequences which matched to
+rumen dataset resulted in 1-3\% loss of sequences matching to
 draft reference genomes (Table 2).
 % @CTB note that the rumen genomes may not be correct
 % @CTB also be sure to discuss why assemblies might differ (length cutoff stuff)
@@ -326,9 +313,7 @@ dataset were assembled, and only 41 in the small soil dataset.  For
 the human gut metagenome assemblies, millions of the highly connected
 sequences were incorporated into assembled contigs, comprising nearly
 4\% of all assembled sequences on Velvet contig ends (Figure 4,
-suggestion to move to supp figures -- YES CTB).
-% @CTB do we want to talk about end bins or percentile bins?  Probably fine
-% to leave as is.
+suggestion to move to supp figures -- YES @CTB).
 
 \subsubsection*{Identifying origins of highly connected sequences in known reference databases}
 
@@ -364,8 +349,6 @@ connected sequences, less than 1\% in the soils, 1.5\% in the rumen,
 and 6.4\% in the human gut metagenomes, but the position-specific
 variation of these sequences was very similar to the variation in the
 larger set of highly connected k-mers.
-% @CTB was diginorm used for abundance > 50?
-% @ACH No, diginorm was not used for anything here.  The stop tags were identified by graph traversal and then HA abundance were identified among those.
 
 To identify consistent patterns within sequences causing
 position-specific variation, we examined the abundance distribution of
@@ -405,60 +388,59 @@ conserved sequences within a single genome or between multiple genomes
 connected lump within the soil, rumen, and human gut metagenomes
 suggests that anomalous, non-biological connectivity may be present
 within these lumps.  Interestingly, in the soil metagenomes, we
-observed that the amount of connectivity nearly doubled with less than
-a 5\% increase of sequencing coverage.  When sequencing coverage
+observed that for a 5\% increase in sequencing coverage of the assembled
+contigs, the amount of connectivity nearly doubled.
+While sequencing coverage of assembled contigs
 increased slightly from 4.7 to 5.6\% in the medium and large soil
 metagenomes, the number of reads connected in the lump grew
 significantly from 15 million to 182 million.  Given the very high
 diversity and very low coverage of these soil samples, the magnitude of the
-observed increases in connectivity seemed unlikely to originate from biological
-sources, further suggesting the presence of sequencing biases within
-these datasets.
-% @CTB what does ``a 5% increase of sequencing coverage'' mean? in reads?
-% or reads mapped to assembly?  
-% @ACH - Yeah, we should be clear about the nomenclature here, I don't know what it should be but it is % of reads mapped to the assembly.
+observed increases in connectivity are unlikely to be due to increased
+coverage.  This further suggests the presence of sequencing artifacts
+that falsely increas connectivity.
 
-If sequencing biases were present within these metagenomes, we would
-expect that the metagenomic lumps would consist not only of
-artificial sequences but also sequences from reads which would be
-``preferentially attached'' \cite{Barabasi:1999p1083}.  Consider that
-there is an original set of highly connecting ``X'' sequences in a
-lump.  These sequences would recruit a number of connected ``Y'' reads
-into the lump.  These recruited ``Y'' reads would then recruit more
-``Z'' reads into the lump which would not necessarily connect to the
-original ``X'' reads.  In error-free datasets, we would observe this
-preferential attachment phenomenon as a linear increase of lump size
-with increasing sequencing coverage.  In the case of the presence of
-highly connected sequencing biases, however, we'd observe that
-preferential attachment would cause dramatic increases in the number
-of recruited ``Y'' and ``Z'' reads, as is observed in the soil
-datasets.
-% @CTB rewrite
+The superlinear increase in connectivity exhibited in these data sets
+suggests that a form of preferential attachment is occurring in the
+graphs \cite{Barabasi:1999p1083}.  This graph-theoretic phenomenon
+describes the results of a process where highly connected nodes in a
+graph preferentially acquire new edges -- colloquially known as ``the
+rich get richer.''  In assembly, any bias towards producing specific
+subsequences from shotgun sequencing would lead to a tendency to
+connect otherwise unrelated graph components; such a bias could be
+biological (due to e.g. repeat present in multiple genomes or other
+highly conserved DNA sequences), or could be non-biological, due to
+inclusion of sequencing primers in reads or a tendency to produce
+specific but random subsequences.
 
-The sequencing of metagenomes is a random
-process and consequently any position-specific variation within sequencing
-reads is unexpected and probably originates from bias in sample preparation
-or the sequencing process (cite).  For the metagenomes
-studied here, we used two approaches to examine characteristics of
-connectivity correlated to specific positions within sequencing reads.
-First, we measured the connectivity of sequences at specific positions
-within reads by calculating local graph density.  Next, we identified
-the specific k-mers which were consistently present in highly dense
-regions of the assembly graph and evaluated their location within
-sequencing reads.  When these approaches were applied to the simulated
-dataset, we observed no position-specific trends when assessing either
-local graph density (Figure 1) or highly connected k-mers (Figure 2,
-solid lines) as is consistent with the lack of sequencing errors and
-variation in this dataset.  In all real metagenomes, however, we
-identified position-specific trends in measurements of both local
-graph density and the location of highly connected sequences, clearly
-indicating the presence of artificial sequences.  Although present in
-all metagenomes, the direction of the variation varied between soil, rumen,
-and human gut datasets, especially for the position-specific presence
-of identified highly connected sequences.  It is likely that there is
-a larger presence of indirectly preferentially attached reads which
-are connected to high coverage sequences of biological origins in
-higher coverage datasets, such as the rumen and human gut.  This
+% @CTB talk about general delumping coolness; general approaches to finding
+% and characteristing graph connectivity.
+
+We believe a significant component of the high connectivity that we
+see is of non-biological origin.  Shotgun sequencing is a random
+process and consequently any position-specific variation within
+sequencing reads is unexpected and probably originates from bias in
+sample preparation or the sequencing process (cite).  For the
+metagenomes studied here, we used two approaches to examine
+characteristics of connectivity correlated to specific positions
+within sequencing reads.  First, we measured the connectivity of
+sequences at specific positions within reads by calculating local
+graph density.  Next, we identified the specific k-mers which were
+consistently present in highly dense regions of the assembly graph and
+evaluated their location within sequencing reads.  When these
+approaches were applied to the simulated dataset, we observed no
+position-specific trends when assessing either local graph density
+(Figure 1) or highly connected k-mers (Figure 2, solid lines) as is
+consistent with the lack of sequencing errors and variation in this
+dataset.  In all real metagenomes, however, we identified
+position-specific trends in measurements of both local graph density
+and the location of highly connected sequences, clearly indicating the
+presence of artificial sequences.  Although present in all
+metagenomes, the direction of the variation varied between soil,
+rumen, and human gut datasets, especially for the position-specific
+presence of identified highly connected sequences.  It is likely that
+there is a larger presence of indirectly preferentially attached reads
+which are connected to high coverage sequences of biological origins
+in higher coverage datasets, such as the rumen and human gut.  This
 preferential attachment of such reads would result in increasing the
 number of total reads and consequently the decrease the total fraction
 of highly connected k-mers (Figure 2, y-axis).  This trend is observed
@@ -522,7 +504,8 @@ etc.) to compare assemblies, but it is often beneficial to optimize
 these values to characteristics of the underlying dataset.
 Partitioning metagenomic reads based on connectivity effectively
 divides the cumulative environmental dataset into subsets representing
-fragments from different genomes.  Thus, partitioning enables
+assemblable components.
+Thus, partitioning enables
 optimization for a single population subset (rather than a community
 metagenome) for assembly and many other analyses (i.e. binning,
 annotation, SNP identification).  Additionally, because the partitions
@@ -531,8 +514,6 @@ assemblies to evaluate different assemblers and/or assembly
 parameters.  As metagenome datasets grow increasingly larger, this
 ability to efficiently analyze datasets and/or evaluate multiple
 assemblies will be increasingly important.
-% @CTB do we show that we are dividing things up into different genomes?
-% @ACH - No not here, but we do in the assembly #2 paper.  I dont know if we should put too much in here re this.
 
 \subsubsection*{Removal of highly connected sequences prior to assembly did not result in significant loss of reference genes}
 The advantages of removing highly connected sequences must be balanced
@@ -588,11 +569,6 @@ simulated dataset which would result in a small number of highly
 abundant sequences.  In contrast, within metagenomic data, we found
 that the 5-mersse are evenly distributed and random in metagenomes
 (Figure 5), making them difficult to identify and evaluate.
-Currently, we are evaluating a promising approach to improve the
-identification and removal of probable sequencing artifacts based on
-targeting high abundance sequencing.
-% @CTB this is the diginorm abundance removal, right? should we keep this in? 
-%@ACH okay with me to chuck it.
 
 \section*{Conclusion}
 
