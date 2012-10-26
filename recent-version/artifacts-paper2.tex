@@ -29,9 +29,10 @@
 \usepackage{cite}
 
 \usepackage{color}
+\usepackage{caption}
+\usepackage{subcaption}
 
 % @ACH don't know how to do this but putting this here
-\usepackage{lscape}
 % Use doublespacing - comment out for single spacing
 %\usepackage{setspace} \doublespacing
 
@@ -42,7 +43,7 @@
 
 % Bold the 'Figure #' in the caption and separate it with a period
 % Captions will be left justified
-\usepackage[labelfont=bf,labelsep=period,justification=raggedright]{caption}
+%\usepackage[labelfont=bf,labelsep=period,justification=raggedright]{caption}
 
 % Use the PLoS provided bibtex style
 \bibliographystyle{plos2009}
@@ -77,11 +78,11 @@
 \\
 Adina Chuang Howe$^{1,2}$, 
 Jason Pell$^{1}$,
-Rosangela Canino-Koning$^{1}$
-Rachel Mackelprang$^{3}$
-Susannah Tringe$^{3}$
-Janet Jansson$^{3,4}$ 
-James M. Tiedje$^{1,2}$
+Rosangela Canino-Koning$^{1}$,
+Rachel Mackelprang$^{3}$,
+Susannah Tringe$^{3}$,
+Janet Jansson$^{3,4}$ ,
+James M. Tiedje$^{1,2}$, and 
 C. Titus Brown$^{1,\ast}$
 \\
 \bf{1} Microbiology and Molecular Genetics, Michigan State University, East Lansing, MI, USA
@@ -138,15 +139,14 @@ and their associated sequencing errors and biases
 \cite{Mende:2012p1262,Pignatelli:2011p742}. Several
 metagenome-specific assemblers have been developed to deal with
 variable coverage communities, including Meta-IDBA
-\cite{Peng:2011p898}, MetaVelvet, and SOAPdenovo (cite).  These
+\cite{Peng:2011p898}, MetaVelvet \cite{Namiki:2012iq}, and SOAPdenovo \cite{Li:2010p234}.  These
 assemblers rely on analysis of local sequencing coverage to help build
 assemblies and thus are sensitive to the effects of sequencing errors
 and biases on coverage estimations of the underlying dataset. The
 effects of sequencing errors on \emph{de novo} assembly has been
 demonstrated in simulated metagenomes
 \cite{Mavromatis:2006p894,Mende:2012p1262,Pignatelli:2011p742} or
-isolate genomes \cite{Morgan:2010p740} (cite Chitsaz, pmid 21926975,
-too), but these datasets do not necessarily represent real metagenomic
+isolate genomes \cite{Morgan:2010p740,Chitsaz:2011kr}, but these datasets do not necessarily represent real metagenomic
 data. do not Specifically, these models exclude the presence of known
 non-biological sequencing biases which hinder assembly approaches
 \cite{GomezAlvarez:2009p1334,Keegan:2012p1336,Niu:2010p1333}.
@@ -181,7 +181,7 @@ metagenome based on a mixture of 112 reference genomes
 \cite{Pignatelli:2011p742}.
 
 We evaluated read connectivity by partitioning reads into disconnected
-components with a de Bruijn graph (cite Pell).  This approach
+components with a de Bruijn graph \cite{Pell:2012cq}.  This approach
 guarantees that reads in different partitions do not connect to each
 other and permits the separate assembly and analysis of each
 partition.  For each metagenome, regardless of origin, we found a
@@ -247,7 +247,7 @@ effectively break apart metagenomic lumps, and the resulting largest
 partition of connected reads in each metagenome was reduced to less
 than 7\% of the total reads in the lump.  Partitioning also had the
 effect of significantly decreasing assembly time and memory usage
-(cite Pell).
+\cite{Pell:2012cq}.
 
 \subsubsection*{Removing highly connected sequences resulted in minimal losses of reference genes}
 
@@ -259,7 +259,7 @@ sequences impacted assembly by first evaluating the effects of the
 removing these sequences from the simulated lump.  The assembly of the reads in the original,
 unfiltered simulated lump and that of the reads remaining after
 removing highly connected sequences (the filtered assembly) were
-compared for three assemblers: Velvet, Meta-IDBA, and SOAPdenovo (cite).
+compared for three assemblers: Velvet \cite{Zerbino:2008p665}, Meta-IDBA \cite{Peng:2011p898}, and SOAPdenovo \cite{Li:2010p234}.
 Based on the total assembly length of contigs greater than 300 bp,
 filtered assemblies of the simulated metagenome resulted in a loss of
 between 4 - 16\% of total assembly length (Table 2).  In general, the
@@ -409,7 +409,7 @@ We believe a significant component of the high connectivity that we
 see is of non-biological origin.  Shotgun sequencing is a random
 process and consequently any position-specific variation within
 sequencing reads is unexpected and probably originates from bias in
-sample preparation or the sequencing process (cite).  For the
+sample preparation or the sequencing process \cite{GomezAlvarez:2009p1334, Haas:2011jg, Keegan:2012p1336}.  For the
 metagenomes studied here, we used two approaches to examine
 characteristics of connectivity correlated to specific positions
 within sequencing reads.  First, we measured the connectivity of
@@ -604,12 +604,9 @@ mismatches.
 
 \subsection*{Lightweight, compressible de Bruijn graph representation}
 
-We used the probabilistic de Bruijn graph representation developed in
-Pell et al. (cite) to explore the properties of metagenome assembly
+We used the probabilistic de Bruijn graph representation previously described by \cite{Pell:2012cq}  to store and partition the metagenome assembly
 graphs.  For metagenomes in this study, we used 4 x 48e9 bit bloom
-filters (requiring 24 GB RAM) to store the assembly graphs.  We
-partitioned the graph into disconnected subsets as in Pell et
-al. (cite). Data and examples of scripts used for this analysis are
+filters (requiring 24 GB RAM) to store the assembly graphs.  Data and examples of scripts used for this analysis are
 available on the Amazon EC2 public snapshot: data-in-paper/lumps and
 method-examples/0.partitioning-into-lump.
 % @CTB we need to tag & freeze a particular khmer version.  What version?
@@ -617,15 +614,8 @@ method-examples/0.partitioning-into-lump.
 
 %\subsection*{Local graph density and identifying highly connected k-mers}
 
-Partitioning was implemented as in Pell et al. (cite).  Briefly,
-waypoints were labeled to cover the graph such that they are a minimum
-distance of L nodes apart. Originating from a waypoint, all k-mers
-(throughout the study k=32 unless otherwise stated) were
-systematically and exhaustively traversed within a region that is the
-distance N.
-
-For each node, the local graph density was calculated as the number of
-k-mer within a radius of N nodes divided by the radius.  In this
+The local graph density was calculated as the number of
+k-mers within a radius of N nodes divided by the radius within the de Bruijn graph representation.  In this
 study, N was equal to 10.  For the largest metagenomes, the human gut
 and large soil datasets, local graph density was calculated on a
 representative subset of reads due to computational limitations.
@@ -722,84 +712,93 @@ method-examples/5.hc-kmer-contigs/.
 
 \pagebreak
 
-\begin{landscape}
 \begin{table}[ht]
 \centering
-\caption{The original size and proportion of highly connective 32-mers in the largest subset of partitioned reads (``lump'') in several medium to high complexity metagenomes.  Read coverage was estimated with the number of aligned sequencing reads to Velvet-assembled contigs (K=33).  The dominant lump, or largest disconnected component of each metagenome assembly graph, was found to contain highly connecting k-mers responsible for high local graph density.}
-\begin{tabular}{lp{2cm}cp{2cm}cp{2cm}cp{2cm}cp{2cm}cp{2cm}cp{2cm}cp{2cm}cp{2cm}|}
-\hline
-& Reads	& Mapped to assembly	& Lump reads	& Highly connective & Total & Highly connective  & Density \textgreater 20  \\
-& (millions) & (percent) & (millions) & (32-mers) & (32-mers) & (percent) & (percent) \\
+\caption{The original size and proportion of highly connective 32-mers in the largest subset of partitioned reads (``lump'') in several medium to high complexity metagenomes.  Read coverage was estimated with the number of aligned sequencing reads to Velvet-assembled contigs (K=33).  The dominant lump, or largest disconnected component of each metagenome assembly graph, was found to contain highly connecting (HC) k-mers responsible for high local graph density.}
+\begin{tabular}{l c c c c c c }
 
+& Sm Soil & Med Soil & Large Soil & Rumen & Human Gut & Sim  \\
 \hline
-Small Soil 	& 50.0 	& 1.4 	& 3 .0 (7\%)	& 6,429,673 	& 84,906,521 	& 8\% 	& 50\% \\
-Medium Soil 	& 100.0 	& 4.7 	& 15.0 (15\%)	& 33,266,397 	& 326,454,473 & 10\% 	& 37\% \\ 
-Large Soil	 	& 520.3 	& 5.6 	& 182.2 (35\%)	& 230,353,299 & 2,198,140,432 & 10\% 	& 40\% \\
-Rumen 		& 50.0 	& 32.0 	& 10.3 (21\%)	& 25,400,121 	& 201,532,081 	& 13\% 	& 22\% \\
-Human Gut 	& 350.0	& 3.5 	& 263 (75\%) 	& 136,594,783	 & 860,627,857 & 16\% 	& 28\% \\
-Simulated		& 9.2		 & 14.8 	& 0.5 (5\%) 	& 364,816 	& 11,592,284 	& 3\% 	& 17\% \\
+Total Reads (millions) & 50.0 & 100.0 & 520.3 & 50.0 & 350.0 & 9.2 \\
+Mapped to assembly (percent) & 1.4 & 4.7 & 5.6 & 10.3 & 3.5 & 14.8 \\
+Reads in Lump (millions) & 3.0  & 15.0 & 182.2 & 10.3  & 263  & 0.5  \\
+Lump Fraction (\%) & 7\% & 15\% & 35\% & 21\% & 75\% & 5\%\\
+HC 32-mers (millions) & 6.4 & 33.3 & 230.4 & 25.4 & 136.6 & 0.4\\
+Total 32-mers (million) & 84.9 & 326.5 & 2,198.1 & 201.5 & 860.6 & 11.6\\
+Fraction of HC 32-mers (\%) & 8\% & 10\% & 10\% & 13\% & 16\% & 3\% \\
+High Density Nodes (\%) & 50\% & 37\% & 40\% & 22\% & 28\% & 17\% \\
+
 \hline
 \end{tabular}
 \end{table}
-\end{landscape}
 
-\begin{landscape}
+
+
+
+
+
 \begin{table}[ht]
-\caption{Comparison of unfiltered (UF) and filtered (F) assemblies of various metagenome lumps using Velvet, SOAPdenovo, and Meta-IDBA assemblers.  Assemblies were aligned to each other, and coverage was estimated (columns 1-2).  Simulated and rumen assemblies were aligned to available reference genes (RG)/genomes (columns 3-4).}
+\caption{Comparison of unfiltered (UF) and filtered (F) assemblies of various metagenome lumps using Velvet, SOAPdenovo, and Meta-IDBA assemblers.  Assemblies were aligned to each other, and coverage was estimated (columns 1-2).  Simulated and rumen assemblies were aligned to available reference genomes (RG) (columns 3-4).}
 
-\begin{tabular}{*{5}{p{3cm}}}
-Velvet Assembler  \\ 
+
+Velvet Assembler  \\
+\begin{tabular}{l c c c c}
 \hline
-& Cov. of UF by F & Cov. of F by UF  & Cov. of RG  by UF  & Cov. of RF by F \\
+& Cov. of UF by F & Cov. of F by UF  & Cov. of RG  by UF  & Cov. of RG by F \\
 \hline
-Small Soil		&74.5\%		&98.6\%		&-		&-\\
-Medium Soil	&75.4\%		&98.1\%		&-		&-\\
-Large Soil		&50.8\%		&86.3\%		&-		&-\\
-Rumen		&75.1\%		&98.3\%		&17.2\%	&14.6\%\\
-Human Gut 	&79.5\%		&88.5\%		&-		&-\\
-Simulated		&84.6\%		&98.3\%		&4.5\%	&3.9\%\\
+Small Soil		&74.7\%		&98.8\%		&-		&-\\
+Medium Soil	&75.6\%		&98.4\%		&-		&-\\
+Large Soil		&50.9\%		&86.6\%		&-		&-\\
+Rumen		&75.9\%		&98.8\%		&17.5\%	&14.8\%\\
+Human Gut 	&80.0\%		&89.1\%		&-		&-\\
+Simulated		&85.4\%		&99.4\%		&5.4\%	&4.6\%\\
 \end{tabular}
 
-\begin{tabular}{*{5}{p{3cm}}}
-Meta-IDBA Assembler  \\ 
+\medskip
+Meta-IDBA Assembler  \\
+\begin{tabular}{l c c c c}
 \hline
 & Cov. of UF by F & Cov. of F by UF  & Cov. of RG  by UF  & Cov. of RF by F \\
 \hline
-Small Soil		&75.6\%		&93.9\%		&-		&-\\
-Medium Soil	&67.5\%		&94.5\%		&-		&-\\
+Small Soil		&75.7\%		&94.2\%		&-		&-\\
+Medium Soil	&67.7\%		&94.8\%		&-		&-\\
 Large Soil		&N/A			&N/A			&-		&-\\
-Rumen		&70.4\%		&94.4\%		&15.5\%	&13.0\%\\
-Human Gut 	&74.0\%		&96.5\%		&-		&-\\
-Simulated		&86.5\%		&93.4\%		&3.8\%	&3.5\%\\
+Rumen		&70.8\%		&95.0\%		&17.5\%	&14.8\%\\
+Human Gut 	&74.4\%		&99.4\%		&-		&-\\
+Simulated		&87.4\%		&94.4\%		&4.7\%	&4.1\%\\
 \end{tabular}
 
-\begin{tabular}{*{5}{p{3cm}}}
-SOAPdenovo Assembler  \\ 
+\medskip
+SOAPdenovo Assembler \\   
+\begin{tabular}{l c c c c}
 \hline
 & Cov. of UF by F & Cov. of F by UF  & Cov. of RG  by UF  & Cov. of RF by F \\
 \hline
-Small Soil		&86.6\%		&95.8\%		&-		&-\\
-Medium Soil	&82.2\%		&95.7\%		&-		&-\\
-Large Soil		&78.7\%		&94.2\%		&-		&-\\
-Rumen		&84.7\%		&97.3\%		&14.7\%	&13.4\%\\
-Human Gut 	&84.9\%		&98.5\%		&-		&-\\
-Simulated		&93.2\%		&96.1\%		&2.5\%	&2.4\%\\
+Small Soil		&86.8\%		&96.1\%		&-		&-\\
+Medium Soil	&82.4\%		&96.0\%		&-		&-\\
+Large Soil		&78.9\%		&94.5\%		&-		&-\\
+Rumen		&85.2\%		&97.8\%		&14.7\%	&13.4\%\\
+Human Gut 	&85.4\%		&99.3\%		&-		&-\\
+Simulated		&94.0\%		&97.0\%		&3.0\%	&2.9\%\\
 \end{tabular}
 \end{table}
-\end{landscape}
 
 
-\begin{landscape}
+
+
 \begin{table}[ht]
 \caption{Total number of contigs, assembly length, and maximum contig size was estimated for metagenomic datasets with multiple assemblers, as well as memory and time requirements of unfiltered assembly.  Filtered assemblies required less than 2 GB of memory.  Velvet assemblies of the unfiltered human gut and large soil datasets (marked as *) could only be completed with K=33 due to computational limitations.  The Meta-IDBA assembly of the large soil metagenome could not be completed in less than 100 GB.}
-\begin{tabular}{*{4}{p{5cm}}}
 
+
+ 
+\begin{tabular}{l l l l}
 \hline
 &UF Assembly &F Assembly 	&UF Requirements \\
-& 	&	& Memory (GB)/Time (h)\\
+& (contigs / length / max size) 	& (contigs / length / max size) 	& Memory (GB)/Time (h)\\
+
 \hline
-Velvet Assembler  \\ 
-\hline
+
+\emph{Velvet}\\
 Small Soil 	&25,470 / 16,269,879 / 118,753	&17,636 / 10,578,908 / 13,246		&5 / 4\\
 Medium Soil	&113,613 / 81,660,678 / 57,856	&79,654 / 54,424,264 / 23,663		&18 / 21\\
 Large Soil 	&554,825 / 306,899,884 / 41,217 	&290,018 / 159,960,062 /  41,423 	&33 / 12*\\
@@ -807,10 +806,11 @@ Rumen		&92,044 / 74,813,072 / 182,003	&72,705 / 49,518,627 / 34,683		&11 / 14\\
 Human Gut	&543,331 / 234,686,983  / 85,596	&203,299 / 181,934,800 / 145,740	&76 / 8*\\
 Simulated		&11,204 / 6,506,248 / 5,151		&9,859 / 5,463,067 / 6,605		&\textless1 / \textless1\\
 \end{tabular}
-\begin{tabular}{*{4}{p{5cm}}}
-\hline
-MetaIDBA Assembler  \\ 
-\hline
+
+\medskip
+
+\begin{tabular}{l l l l}
+\emph{MetaIDBA} \\ 
 Small Soil		&15,739 / 9,133,564 / 37,738 		&12,513 / 7,012,036 / 17,048	&\textless1 / \textless 1 \\
 Medium Soil	&76,269 / 45,844,975 / 37,738	 	&52,978 / 30,040,031 / 18,882	&2 / 2\\
 Large Soil		&395,122 / 228,857,098 /  37,738	&N/A						&\textgreater116 / incomplete\\
@@ -818,10 +818,10 @@ Rumen		&60,330 / 47,984,619 / 54,407		&48,940 / 33,276,502 / 22,083		&12 / 3\\
 Human Gut 	&173,432 / 211,067,996 / 106,503	&132,614 / 142,139,101 / 85,539	&58 / 15\\
 Simulated		&8,707 / 4,698,575 / 5,113		&7,726 / 4,078,947 / 3,845		&\textless1 / \textless1\\
 \end{tabular}
-\begin{tabular}{*{4}{p{5cm}}}
-\hline
-SOAPdenovo Assembler  \\ 
-\hline
+\medskip
+
+\begin{tabular}{l l l l}
+\emph{SOAPdenovo}   \\ 
 Small Soil		&14,275 / 7,100,052 / 37,720	&12,801 / 6,343,110 / 13,246		&3 / \textless1\\
 Medium Soil	&66,640 / 33,321,411 / 28,695	&56,023 / 27,880,293 / 15,721		&10 / \textless1\\
 Large Soil		&412,059 / 215,614,765 / 32,514	&334,319 /  171,718,154 / 41,423	&48 / 11\\
@@ -830,7 +830,7 @@ Human Gut	&190,963 / 171,502,574 / 57,803	&161,795 / 139,686,630 / 56,034	&35 / 
 Simulated		&6,322 / 2,940,509 / 3,786		&6,029 / 2,821,631 / 3,764	&\textless1 / \textless1\\
 \end{tabular}
 \end{table}
-\end{landscape}
+
 
 
 \begin{table}
@@ -879,12 +879,28 @@ ChaC family protein	&3\\
 \end{table}
 
 \begin{figure}
-\center{\includegraphics[width=5in]{./Figures/figure1-density.pdf}}
+\center
+{\includegraphics[width=5in]{./Figures/figure1-density.pdf}}
 \caption{The extent to which average local graph density varies by read position is shown for the lump of various datasets.}
 \end{figure}
 
 \begin{figure}
-\center{\includegraphics[width=5in]{./Figures/figure2-hckmers.pdf}}
+\center
+\begin{subfigure}{.5\textwidth}
+\centering
+\includegraphics[width=\textwidth]{./Figures/position_read_stoptags_sim.pdf}
+\end{subfigure}
+
+\begin{subfigure}{.5\textwidth}
+\centering
+\includegraphics[width=\textwidth]{./Figures/position_read_stoptags_soils.pdf}
+\end{subfigure}
+
+\begin{subfigure}{.5\textwidth}
+\centering
+\includegraphics[width=\textwidth]{./Figures/position_read_stoptags_rumen_human_gut.pdf}
+\end{subfigure}
+
 \caption{The extent to which highly connecting k-mers (solid lines) and the subset of highly abundant (greater than 50) k-mers (dashed lines) are present at specific positions within sequencing reads for various metagenomes.}
 \end{figure}
 
