@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.6.19)  29 OCT 2012 09:27
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.6.19)  29 OCT 2012 09:33
 entering extended mode
  %&-line parsing enabled.
 **artifacts-paper2
@@ -145,12 +145,10 @@ Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: pdftex.def on input line 130.
-)
-(/usr/share/texmf-texlive/tex/latex/caption/caption.sty
-Package: caption 2009/10/09 v3.1k Customizing captions (AR)
-
-(/usr/share/texmf-texlive/tex/latex/caption/caption3.sty
-Package: caption3 2009/10/09 v3.1k caption3 kernel (AR)
+) (./caption.sty
+Package: caption 2012/02/19 v3.2f Customizing captions (AR)
+ (./caption3.sty
+Package: caption3 2012/01/12 v1.4b caption3 kernel (AR)
 \captionmargin=\dimen115
 \captionmargin@=\dimen116
 \captionwidth=\dimen117
@@ -159,12 +157,12 @@ Package: caption3 2009/10/09 v3.1k caption3 kernel (AR)
 \caption@hangindent=\dimen120
 )
 \c@ContinuedFloat=\count101
-) (./subcaption.sty
-Package: subcaption 2008/08/31 v1.0b Adding subcaptions (AR)
+)
+(./subcaption.sty
+Package: subcaption 2012/01/12 v1.1d Sub-captions (AR)
 \c@subfigure=\count102
 \c@subtable=\count103
-)
-(./artifacts-paper2.aux)
+) (./artifacts-paper2.aux)
 \openout1 = `artifacts-paper2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 71.
@@ -285,13 +283,13 @@ s_soils.pdf> <./Figures/position_read_stoptags_rumen_human_gut.pdf>] [14 <./Fig
 ures/figure3-contigs.pdf>] [15 <./Figures/figure4-contigs.pdf>] [16 <./Figures/
 figure5-5mers.pdf>] [17] [18] [19] (./artifacts-paper2.aux) ) 
 Here is how much of TeX's memory you used:
- 3326 strings out of 495061
- 46363 string characters out of 1182621
- 129743 words of memory out of 3000000
- 6457 multiletter control sequences out of 15000+50000
+ 3388 strings out of 495061
+ 47507 string characters out of 1182621
+ 125915 words of memory out of 3000000
+ 6520 multiletter control sequences out of 15000+50000
  7915 words of font info for 30 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 36i,8n,38p,621b,387s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,8n,38p,621b,391s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texmf-
 texlive/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-texlive/fon
 ts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-texlive/fonts/type1/pu
