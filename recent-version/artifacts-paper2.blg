@@ -1,0 +1,45 @@
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: artifacts-paper2.aux
+The style file: plos2009.bst
+Database file #1: artifacts-bib.bib
+You've used 24 entries,
+            2441 wiz_defined-function locations,
+            733 strings with 11388 characters,
+and the built_in function-call counts, 21401 in all, are:
+= -- 1958
+> -- 424
+< -- 0
++ -- 212
+- -- 106
+* -- 1844
+:= -- 2591
+add.period$ -- 48
+call.type$ -- 24
+change.case$ -- 24
+chr.to.int$ -- 0
+cite$ -- 48
+duplicate$ -- 2096
+empty$ -- 2178
+format.name$ -- 129
+if$ -- 4734
+int.to.chr$ -- 0
+int.to.str$ -- 24
+missing$ -- 272
+newline$ -- 135
+num.names$ -- 24
+pop$ -- 277
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 197
+stack$ -- 0
+substring$ -- 3033
+swap$ -- 542
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 177
+width$ -- 26
+write$ -- 277
