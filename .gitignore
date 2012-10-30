@@ -1,9 +1,6 @@
 *~
-.gitignore
-assembly_artifacts.aux
-assembly_artifacts.log
-assembly_artifacts.pdf
-artifacts-paper2.aux
-artifacts-paper2.blg
-artifacts-paper2.log
-artifacts-paper2.pdf
+assembly-artifacts.aux
+assembly-artifacts.blg
+assembly-artifacts.log
+assembly-artifacts.pdf
+assembly-artifacts.bbl
