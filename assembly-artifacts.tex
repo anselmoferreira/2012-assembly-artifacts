@@ -205,6 +205,7 @@ sequences with more sequencing.
 
 % @CTB check scripts to see if this is an accurate characterization.
 % @CTB put scripts in scripts/!!
+%@ACH Scripts are ready documented in the snapshot - do you want more details in the methods?
 We characterized the connectivity of sequences
 within each lump by estimating the average local graph density from
 each k-mer (k=32 unless otherwise stated) in the assembly graph (see
@@ -271,14 +272,13 @@ between 4 - 16\% of total assembly length (Table 2).  In general, the
 filtered assemblies contained fewer total contigs than unfiltered
 assemblies, while the maximum contig size increased in the Velvet
 assembly but decreased in the Meta-IDBA and SOAPdenovo assemblies.
-Direct comparisons of the unfiltered and filtered assemblies found
-that the filtered assemblies comprised on average 88\% of the
+Direct comparisons of the unfiltered and filtered simulated metagenome assemblies found
+that the filtered assemblies comprised on average 89\% of the
 unfiltered assemblies, and the unfiltered assemblies contained nearly
-all (96\%) of the filtered assembled sequences.  Despite the removal
+all (97\%) of the filtered assembled sequences.  Despite the removal
 of over 3\% of the total unique 32-mers in the simulated metagenome,
-the resulting filtered assemblies lost only 0.1 -
-0.6\% of annotated original reference genes (Tables 1 and 2).
-% @CTB fix these %ages
+the resulting filtered assemblies lost only 3-15\% of annotated original reference genes (Tables 1 and 2).
+% @CTB fix these %ages @ACH changed total percentages and lost percentages to corrrect
 % discss variable assembly due to low coverage.
 
 We next evaluated the effects of removing highly connected sequences in
@@ -286,7 +286,7 @@ real datasets.  Similar to the simulated assemblies, the
 removal of highly connected sequences for all metagenomes and
 assemblers resulted in a decrease of total number of contigs and assembly
 length (Table 2).  In general, filtered assemblies were largely
-contained within unfiltered assemblies and comprised 51-88\% of the
+contained within unfiltered assemblies and comprised 51-87\% of the
 unfiltered assembly.  The observed changes in metagenomic assemblies
 were difficult to evaluate as no reference genomes exist, 
 and a decrease in assembly length may actually be beneficial if it
@@ -295,14 +295,14 @@ To aid in this evaluation, we used the previously published set of
 rumen draft genomes from \emph{de novo} assembly efforts of high
 abundance sequences in the rumen metagenome \cite{Hess:2011p686}.
 Overall, we found that removal of highly connected sequences from the
-rumen dataset resulted in 1-3\% loss of sequences present in
+rumen dataset resulted in 9-13\% loss of sequences present in
 draft reference genomes (Table 2).
 
-% @CTB fix %ages
+% @CTB fix %ages, @ACH done.
 
 \subsubsection*{Unfiltered assemblies contained only a small fraction of highly connected sequences}
 
-% @CTB what methods section?
+% @CTB what methods section? @ACH The last paragraph in methods section?
 To further study the effects of highly connected sequences, we
 examined their incorporation into unfiltered assemblies.  Except in
 the human gut sample, fewer than 2\% of highly connected sequences
@@ -405,15 +405,12 @@ to connect otherwise unrelated graph components; such a bias could be
 biological (due to e.g. repeat present in multiple genomes or other
 highly conserved DNA sequences), or non-biological, due to inclusion
 of sequencing primers in reads or even a low-frequency trend towards
-producing specific subsequences.
+producing specific subsequences \cite{Hansen:2010if,Minoche:2011fl,Dohm:2008ky}.
 
 % @CTB talk about general delumping coolness; general approaches to finding
-% and characterizing graph connectivity.
+% and characterizing graph connectivity. 
 
-% @CTB add references for error evaluation --
-% http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2532726/
-% http://genomebiology.com/2011/12/11/R112
-% http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2896536/
+% @CTB add references for error evaluation -- @ACH DONE
 
 We believe a significant component of the high connectivity that we
 see is of non-biological origin.  Shotgun sequencing is a random
@@ -604,7 +601,7 @@ By applying partitioning to filtered metagenome data, we were able to
 reduce the maximum memory requirements of assembly (including the
 filtering stage) to well below 48 GB of RAM in all cases.  This
 enables the use of commodity ``cloud'' computing for all of our
-samples (@CTB cite pmid 22028928).  The decresed computational
+samples (\cite{Angiuoli:2011hd}).  The decresed computational
 requirements for assembly also enabled ready evaluation of different
 assemblers and assembly parameters; as metagenome datasets grow
 increasingly larger, this ability to efficiently analyze datasets and
