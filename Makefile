@@ -7,4 +7,4 @@ assembly-artifacts.pdf: assembly-artifacts.tex
 	pdflatex assembly-artifacts
 	bibtex assembly-artifacts
 	pdflatex assembly-artifacts
-#	pdflatex artifacts_paper
+	pdflatex assembly-artifacts
