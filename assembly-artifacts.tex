@@ -113,7 +113,7 @@ real metagenome.  These sequences show position-specific bias in
 shotgun reads, suggestive of sequencing artifacts, and are only
 minimally incorporated into contigs by assembly.  The removal of these
 sequences prior to assembly results in similar assembly content for
-most metagenomes, and enables the use of graph partitioning to
+most metagenomes and enables the use of graph partitioning to
 decrease assembly memory and time requirements.
 
 \section*{Introduction}
@@ -124,14 +124,13 @@ complex environments \cite{Hess:2011p686,Qin:2010p189}.  Deep
 metagenomic sequencing efforts in permafrost soil, human gut, cow
 rumen, and surface water have provided insights into the genetic and
 biochemical diversity of environmental microbial populations
-\cite{Hess:2011p686,Iverson:2012p1281,Qin:2010p189} and how they are
-involved in responding to environmental changes
+\cite{Hess:2011p686,Iverson:2012p1281,Qin:2010p189} and their involvement in responding to environmental changes
 \cite{Mackelprang:2011p1087}. These metagenomic studies have all
 leveraged \emph{de novo} metagenomic assembly of short reads for
 functional and phylogenetic analyses. \emph{De novo} assembly is an
 advantageous approach to sequence analysis as it reduces the dataset
 size by collapsing the more numerous short reads into fewer contigs
-and enables better annotation-based approaches by providing longer
+and enables improved annotation-based approaches by providing longer
 sequences \cite{Miller:2010p226,Pop:2009p798}. Furthermore, it does
 not rely on the {\em a priori} availability of reference genomes to enable
 identification of gene content or operon structure
@@ -150,9 +149,9 @@ assemblies and thus are sensitive to the effects of sequencing errors
 and biases on coverage estimations of the underlying dataset. The
 effects of sequencing errors on \emph{de novo} assembly has been
 demonstrated in simulated metagenomes
-\cite{Mavromatis:2006p894,Mende:2012p1262,Pignatelli:2011p742} or
+\cite{Mavromatis:2006p894,Mende:2012p1262,Pignatelli:2011p742} and
 isolate genomes \cite{Morgan:2010p740,Chitsaz:2011kr}, but these datasets do not necessarily represent real metagenomic
-data. do not Specifically, these models exclude the presence of known
+data. Specifically, these models exclude the presence of known
 non-biological sequencing biases which hinder assembly approaches
 \cite{GomezAlvarez:2009p1334,Keegan:2012p1336,Niu:2010p1333}.
 
@@ -166,7 +165,7 @@ datasets, we find that there exist highly connected sequences which
 partially originate from sequencing artifacts.  Moreover, these
 sequences limit approaches to divide or partition large datasets for
 further analysis, and may introduce artifacts into assemblies.  Here,
-we identify and characterize these highly connected sequences, and
+we identify and characterize these highly connected sequences and
 examine the effects of removing these sequences on downstream
 assemblies.
 
@@ -178,7 +177,7 @@ assemblies.
 We selected datasets from three medium to high diversity
 metagenomes from the human gut \cite{Qin:2010p189}, cow rumen
 \cite{Hess:2011p686}, and agricultural soil (SRX099904 and SRX099905)
-(Table 1).  To
+(Table~\ref{data-summary}).  To
 evaluate the effects of sequencing coverage, we included two subsets
 of the 520 million read soil metagenome containing 50 and 100 million
 reads.  We also included a previously published error-free simulated
@@ -186,13 +185,12 @@ metagenome based on a mixture of 112 reference genomes
 \cite{Pignatelli:2011p742}.
 
 We evaluated read connectivity by partitioning reads into disconnected
-components with a de Bruijn graph \cite{Pell:2012cq}.  This approach
+components with a de Bruijn graph representation \cite{Pell:2012cq}.  This approach
 guarantees that reads in different partitions do not connect to each
 other and permits the separate assembly and analysis of each
 partition.  For each metagenome, regardless of origin, we found a
 single dominant, highly connected set of sequencing reads which we
-henceforth refer to as the ``lump'' of the dataset (Table 1, column
-3).  This lump contained the largest subset of connected sequencing
+henceforth refer to as the ``lump'' of the dataset (Table~\ref{data-summary}).  This lump contained the largest subset of connected sequencing
 reads and varied in size among the datasets, ranging from 5\% of total
 reads in the simulated metagenome to 75\% of total reads in the human
 gut metagenome.  For the soil datasets, as sequencing coverage (e.g.,
@@ -214,9 +212,9 @@ connected reads within a fixed radius.  Sequences
 in the identified metagenomic lumps were characterized by very high
 local graph densities: between 22 to 50\% of the total nodes in
 metagenomic lump assembly graphs had average graph densities greater
-than 20 (Table 1).  This means that these nodes were in very nonlinear portions of the assembly graph and had high connectivity.  In comparison, 17\% of the total nodes in the
+than 20 (Table~\ref{data-summary}).  This indicates that these nodes were in very nonlinear portions of the assembly graph and had high connectivity.  In comparison, 17\% of the total nodes in the
 simulated lump had an average local graph density greater than 20, and
-fewer than 2\% of the nodes in the entire simulated data set had an
+fewer than 2\% of the nodes in the entire simulated data (all partitions) set had an
 average graph density higher than 20.
 
 We next assessed the extent to which graph density varied by position
@@ -224,7 +222,7 @@ along the sequencing reads.  The degree of position-specific variation of
 graph densities was estimated by calculating the average local graph
 density within ten steps of every k-mer by position in each read.  In
 all environmental metagenomic reads, we observed variation in graph
-density at the 3'-end region of reads (Figure 1).  In soil
+density at the 3'-end region of reads (Fig.~\ref{density-pos}).  In soil
 metagenomes, we observed the most dramatic variation with local graph
 density increasing in sequences located at the 3'-end of the reads.
 Notably, this trend was not present in the simulated dataset.
@@ -234,7 +232,7 @@ identified the specific sequences within dense regions of the assembly
 graph which consistently contributed to high connectivity.  We
 observed that this subset of sequences was also found to exhibit
 position-specific variation within sequencing reads, with the
-exception of these sequences in the simulated dataset (Figure 1, solid
+exception of these sequences in the simulated dataset (Fig.~\ref{pos-spec}, solid
 lines).  Similar to local density trends, position-specific trends in
 the location of these sequences also varied between metagenomes.  As
 sequencing coverage increased among metagenomes, the amount of 3'-end
@@ -262,13 +260,13 @@ effect of significantly decreasing assembly time and memory usage
 We explored the extent
 to which the identified highly connected
 sequences impacted assembly by first evaluating the effects of the
-removing these sequences from the simulated lump.  The assembly of the reads in the original,
+removal of these sequences from the simulated lump.  The assembly of the reads in the original,
 unfiltered simulated lump and that of the reads remaining after
 removing highly connected sequences (the filtered assembly) were
 compared for three assemblers: Velvet \cite{Zerbino:2008p665}, Meta-IDBA \cite{Peng:2011p898}, and SOAPdenovo \cite{Li:2010p234}.
 Based on the total assembly length of contigs greater than 300 bp,
 filtered assemblies of the simulated metagenome resulted in a loss of
-between 4 - 16\% of total assembly length (Table 2).  In general, the
+between 4 - 16\% of total assembly length (Table~\ref{assembly-stats}).  In general, the
 filtered assemblies contained fewer total contigs than unfiltered
 assemblies, while the maximum contig size increased in the Velvet
 assembly but decreased in the Meta-IDBA and SOAPdenovo assemblies.
@@ -277,7 +275,7 @@ that the filtered assemblies comprised on average 89\% of the
 unfiltered assemblies, and the unfiltered assemblies contained nearly
 all (97\%) of the filtered assembled sequences.  Despite the removal
 of over 3\% of the total unique 32-mers in the simulated metagenome,
-the resulting filtered assemblies lost only 3-15\% of annotated original reference genes (Tables 1 and 2).
+the resulting filtered assemblies lost only 3-15\% of annotated original reference genes (Table~\ref{assembly-compare}).
 % @CTB fix these %ages @ACH changed total percentages and lost percentages to corrrect
 % discss variable assembly due to low coverage.
 
@@ -285,7 +283,7 @@ We next evaluated the effects of removing highly connected sequences in
 real datasets.  Similar to the simulated assemblies, the
 removal of highly connected sequences for all metagenomes and
 assemblers resulted in a decrease of total number of contigs and assembly
-length (Table 2).  In general, filtered assemblies were largely
+length (Table~\ref{assembly-stats}).  In general, filtered assemblies were largely
 contained within unfiltered assemblies and comprised 51-87\% of the
 unfiltered assembly.  The observed changes in metagenomic assemblies
 were difficult to evaluate as no reference genomes exist, 
@@ -296,7 +294,7 @@ rumen draft genomes from \emph{de novo} assembly efforts of high
 abundance sequences in the rumen metagenome \cite{Hess:2011p686}.
 Overall, we found that removal of highly connected sequences from the
 rumen dataset resulted in 9-13\% loss of sequences present in
-draft reference genomes (Table 2).
+draft reference genomes (Table~\ref{assembly-compare}).
 
 % @CTB fix %ages, @ACH done.
 
@@ -306,43 +304,43 @@ draft reference genomes (Table 2).
 To further study the effects of highly connected sequences, we
 examined their incorporation into unfiltered assemblies.  Except in
 the human gut sample, fewer than 2\% of highly connected sequences
-were incorporated by any assembler (Table 1).  Each assembled
+were incorporated by any assembler (Table~\ref{assembly-stoptags}).  Each assembled
 contig was divided into percentile bins and examined for the
 presence of the previously identified highly connected sequences.  We
 found that contigs, especially in assemblies from Velvet and
 Meta-IDBA, incorporated a larger fraction of these sequences at their
-ends relative to other positions (Figure 3).  The SOAPdenovo
+ends relative to other positions (Fig~\ref{stoptag-contig}).  The SOAPdenovo
 assembler incorporated fewer of the highly connected sequences into
 its assembled contigs; in the simulated data set, none of these sequences
 were assembled, and in the small soil data set only 41 were assembled.  For
 the human gut metagenome assemblies, millions of the highly connected
 sequences were incorporated into assembled contigs, comprising nearly
-4\% of all assembled sequences on Velvet contig ends (Figure 4).
+4\% of all assembled sequences on Velvet contig ends (Fig~\ref{stoptag-contig}).
 
 \subsubsection*{Identifying origins of highly connected sequences in known reference databases}
 
 For the simulated metagenome, we could identify the source of highly
 connected k-mers using available reference genomes. Reference genes
 with multiple perfect alignments to highly connected k-mers present in
-the dataset a minimum of 50 times were identified (Table 4).  Many of
+the dataset a minimum of 50 times were identified (Table~\ref{sim-stoptags}).  Many of
 these sequences were from well-conserved housekeeping genes involved
 in protein synthesis, cell transport, and signaling.  To determine
 possible biological sources of highly connected sequences within real
 metagenomes, we compared the sequences shared between the soil, rumen,
-and human gut metagenomes (a total of 241 million 32-mers).  For these 7,586 shared sequences, we identified the closest reference
+and human gut metagenomes (a total of 241 million 32-mers).  Among these 7,586 shared sequences, we identified the closest reference
 protein from the NCBI-nr database requiring complete sequence
 identity.  Only 1,018 sequences (13\%) matched existing reference
 proteins, and many of the annotated sequences matched to
-genes conserved across multiple genomes.  The five most abundant
-proteins conserved in greater than 3 genomes are shown in Table 4, and
+genes conserved across multiple genomes.  The most abundant
+proteins conserved in greater than 3 genomes are shown in (Table~\ref{meta-stoptags}), and
 largely encode for genes involved in protein biosynthesis, DNA
-metabolism, and biochemical cofactors (Table 5).
+metabolism, and biochemical cofactors.
 
 One potential cause of artificial high connectivity within metagenomes
 is the presence of high abundance subsequences.  Thus, we identified the
 subset of highly connected k-mers which were also present with an
 abundance of greater than 50 within each metagenome and their location
-in sequencing reads (Figure 2, dotted lines).  These high abundance
+in sequencing reads (Fig~\ref{pos-spec}, dotted lines).  These high abundance
 k-mers comprised a very small proportion of the identified highly
 connected sequences, less than 1\% in the soils, 1.5\% in the rumen,
 and 6.4\% in the human gut metagenomes, but the position-specific
@@ -360,7 +358,7 @@ abundant unique k-mers made up 75\% of the total 5-mers; in contrast,
 in the metagenomes, k-mers were more evenly distributed: the top ten
 most abundant 5-mers comprised less than 10\% of the total 5-mers.
 The cumulative abundance distribution of the ranked 5-mers shown in
-Figure 5 shows this even distribution in all of the real metagenomes.
+Fig.~\ref{five-mer} shows this even distribution in all of the real metagenomes.
 This suggests that there is no single, easily-identifiable set of
 sequences at the root of the highly connected component observed in
 real metagenomes.
@@ -375,11 +373,11 @@ connected together within an assembly graph, which we refer to as
 the ``lump.''
 The total number of reads in
 metagenomic lumps (7-75\% of reads) was significantly larger than that
-of simulated dataset (5\% of reads) (Table 1).  In the simulated data,
+of simulated dataset (5\% of reads) (Table~\ref{data-summary}).  In the simulated data,
 this component consists
 of reads connected by
 sequences conserved between multiple genomes
-(identified in Table 4).  The larger size of this component
+(Table~\ref{sim-stoptags}). The larger size of this component
 within the soil, rumen, and human gut metagenomes
 suggests that anomalous, non-biological connectivity may be present
 within these lumps.  Moreover, in the soil metagenomes, we
@@ -402,10 +400,10 @@ graph preferentially acquire new edges -- colloquially known as ``the
 rich get richer.''  In assembly, any systematic bias towards producing
 specific subsequences from shotgun sequencing would lead to a tendency
 to connect otherwise unrelated graph components; such a bias could be
-biological (due to e.g. repeat present in multiple genomes or other
-highly conserved DNA sequences), or non-biological, due to inclusion
+biological (e.g. repeat present in multiple genomes or other
+highly conserved DNA sequences), or non-biological (e.g., inclusion
 of sequencing primers in reads or even a low-frequency trend towards
-producing specific subsequences \cite{Hansen:2010if,Minoche:2011fl,Dohm:2008ky}.
+producing specific subsequences \cite{Hansen:2010if,Minoche:2011fl,Dohm:2008ky}).
 
 % @CTB talk about general delumping coolness; general approaches to finding
 % and characterizing graph connectivity. 
@@ -426,7 +424,7 @@ consistently present in highly dense regions of the assembly graph and
 evaluated their location within sequencing reads.  When these
 approaches were applied to the simulated dataset, we observed no
 position-specific trends when assessing either local graph density
-(Figure 1) or highly connected k-mers (Figure 2, solid lines) as is
+(Fig~\ref{density-pos}) or highly connected k-mers (Fig~\ref{pos-spec}) as is
 consistent with the lack of sequencing errors and variation in this
 dataset.  In all real metagenomes, however, we identified
 position-specific trends in reads for measurements of both local graph density
@@ -440,11 +438,11 @@ which are connected to high coverage sequences of biological origins
 in higher coverage datasets, such as the rumen and human gut.  This
 preferential attachment of such reads would result in increasing the
 number of total reads and consequently the decrease the total fraction
-of highly connected k-mers (Figure 2, y-axis).  This trend is observed
+of highly connected k-mers (Fig~\ref{pos-spec}, y-axis).  This trend is observed
 in the decreasing fractions of highly connected sequences at the 3'
 end of reads as sequencing coverage increased in the small, medium, to
 large soil metagenomes and in the soil, rumen, to human gut
-metagenomes (Figure 2).
+metagenomes (Fig~\ref{pos-spec}).
 % @CTB is this last bit bullshit or not?  Speculate on ligation efficiency
 % etc. :)  Also discuss different trimming.
 
@@ -455,7 +453,7 @@ connected sequences.  Among the highly connected sequences in the
 simulated dataset and those shared by all metagenomes, we identified
 only a small fraction (13\% in simulated and less than 7\% in
 metagenomes) which matched reference genes associated with core
-biological functions (Tables 4 and 5).  This suggests that the
+biological functions (Table~\ref{sim-stoptags} and ~\ref{meta-stoptags}).  This suggests that the
 remaining sequences are either not present in known reference genes
 (i.e., repetitive or conserved non-coding regions) or originate from non-biological
 sources.  This supports the removal of these sequences for typical
@@ -466,7 +464,7 @@ Speculating that many of the highly connected sequences originated
 from high abundance reads, we examined the most abundant subsequences.
 We found that these subsequences (present greater than 50x) displayed
 similar trends for position-specific variation compared to their
-respective sets of highly connected subsequences (Figure 2),
+respective sets of highly connected subsequences (Fig~\ref{pos-spec}),
 indicating that they contribute significantly to position-specific
 variation.  We attempted to identify signatures in the the abundant,
 highly connected sequences of the simulated and metagenomic datasets.
@@ -478,7 +476,7 @@ biological motifs in the simulated dataset which would result in a
 small number of highly abundant sequences; it would also be consistent
 with the inclusion of sequencing primers in the data.  In contrast, within
 metagenomic data, we found that the 5-mers are evenly distributed and
-exhibit no specific sequence properties (Figure 5), making them
+exhibit no specific sequence properties (Fig~\ref{five-mer}), making them
 difficult to identify and evaluate.  Most importantly, we were unable
 to identify any characteristics that would explain their origin.  Our
 current working hypothesis is that a low rate of false connections are
@@ -498,9 +496,9 @@ graph regions, and so even the real sequences would be
 underrepresented in the assembly.
 
 Indeed, very few highly connected sequences with abundances greater
-than 50 were incorporated into contigs (Table 3). Moreover, those
+than 50 were incorporated into contigs (Table~\ref{assembly-stoptags}). Moreover, those
 which were assembled were often disproportionately placed at the ends
-of contigs (Figure 3), demonstrating that they terminated contig
+of contigs (Fig~\ref{stoptag-contig}), demonstrating that they terminated contig
 assembly.  Although this trend was observed for all three assemblers,
 it was more prevalent in the Velvet and Meta-IDBA assemblers,
 highlighting differences in assembler heuristics.
@@ -522,12 +520,12 @@ against consequences to resulting assemblies.  We compared several
 metagenome assemblies before and after the removal of these sequences.
 In comparing the simulated dataset's assemblies, the removal of highly
 connected sequences resulted in very little loss of annotated
-reference genes (less than 1\%) and some loss of assembled contigs
+reference genes (less than 1\% total) and some loss of assembled contigs
 ($\sim$ 15\% of the final assembly).  For the rumen metagenome, we
 performed a partial evaluation of the assemblies using available draft
 reference genomes.  Similar to the simulated assemblies, we observed
-only a small loss (less than 3\%) of rumen reference genomes assembled
-(Table 2).  In general, for all metagenomes, we observed $\sim$ 25\%
+only a small loss (less than 3\% total) of rumen reference genomes assembled
+(Table~\ref{assembly-compare}). In general, for all metagenomes, we observed $\sim$ 25\%
 loss in assembly after removing highly connected sequences, much more
 than observed in assemblies of reference genes and genomes in the
 simulated and rumen datasets.  Some of this loss could be beneficial,
@@ -553,7 +551,7 @@ We compared the combined assembly of the partitioned sets of filtered
 reads to the original lump dataset, for several assemblers.  For the
 partitioned reads, we were able to assemble subsets of reads in
 parallel, resulting in significantly reduced time and memory
-requirements for assembly (Table 2).  In the case of the largest soil
+requirements for assembly (Table~\ref{assembly-stats}).  In the case of the largest soil
 metagenome (containing over 500 million reads), we could not complete
 the Meta-IDBA assembly of the unfiltered reads in even 100 GB of
 memory, but after removing highly connected sequences and
@@ -582,7 +580,7 @@ than the original assemblies.  The original unfiltered assemblies
 contain the majority of the filtered assemblies, while the filtered
 assemblies generally contain 70-94\% of the unfiltered assemblies.
 The variability in these statistics between the different assemblers
-(Table 2) demonstrates that the assemblers have at least as large an
+(Table~\ref{assembly-stats}) demonstrates that the assemblers have at least as large an
 affect on the content of the assemblies as our filtering procedure!
 
 We cannot reach strong conclusions about the impact of these highly
@@ -596,12 +594,12 @@ assembly with high frequency.
 
 Our original motivation in exploring metagenome connectivity was to
 enable partitioning, an approach that leads to substantially greater
-scalability of the assembly procedure.  In this we were successful.
+scalability of the assembly procedure.  In this respect, we were successful.
 By applying partitioning to filtered metagenome data, we were able to
 reduce the maximum memory requirements of assembly (including the
 filtering stage) to well below 48 GB of RAM in all cases.  This
 enables the use of commodity ``cloud'' computing for all of our
-samples (\cite{Angiuoli:2011hd}).  The decresed computational
+samples (\cite{Angiuoli:2011hd}).  The decreased computational
 requirements for assembly also enabled ready evaluation of different
 assemblers and assembly parameters; as metagenome datasets grow
 increasingly larger, this ability to efficiently analyze datasets and
@@ -623,13 +621,13 @@ forward.
 \subsection*{Metagenomic datasets}
 All datasets, with the exception of the agricultural soil metagenome,
 originate from previously published datasets. Rumen-associated
-sequences (Illumina) were randomly selected from the rumen metagenome
+sequences (Illumina) were randomly selected from the rumen metagenome (read length 36 - 125 bp)
 available at ftp://ftp.jgi-psf.org/pub/rnd2/Cow\_Rumen
 \cite{Hess:2011p686}. Human-gut associated sequences (Illumina) of
-samples MH0001 through MH0010 were obtained from
-ftp://public.genomics.org.cn/BGI/gutmeta/ Raw\_Reads
-\cite{Qin:2010p189}.  The simulated high complexity, high coverage
-dataset was previously published \cite{Pignatelli:2011p742}.  All
+samples MH0001 through MH0010 were obtained from 
+\\*ftp://public.genomics.org.cn/BGI/gutmeta/ Raw\_Reads
+\cite{Qin:2010p189} (read length ~44 bp).  The simulated high complexity, high coverage
+dataset was previously published \cite{Pignatelli:2011p742}.  Soil metagenomes (read lengths 76-113 bp) are in the SRA (SRX099904 and SRX099905). All
 reads used in this study, with the exception of those from the simulated
 metagenome, were quality-trimmed for Illumina's read segment quality
 control indicator, where a quality score of 2 indicates that all
@@ -641,7 +639,7 @@ Amazon EC2 snapshot (snap-ab88dfdb).  The sequencing coverage of each
 metagenome was estimated as the fraction of reads which could be
 aligned to assembled contigs with lengths greater than 500 bp.  For
 the coverage estimates, an assembly of each metagenome was performed
-using Velvet (v1.1.05) with the following parameters: K=33, exp
+using Velvet (v1.1.02) with the following parameters: K=33, exp
 cov=auto, cov cutoff=0, no scaffolding.  Reads were aligned to
 assembled contigs with Bowtie (v0.12.7), allowing for a maximum of two
 mismatches.
@@ -667,7 +665,7 @@ representative subset of reads due to computational limitations.
 To identify specific highly connected sequences within the lump
 assembly graphs, graph traversal to a distance of 40 nodes was
 attempted from marked waypoints.  If more than 200 k-mers were found
-within this traversal were identified (i.e. a graph density $> 5$, all
+within this traversal were identified (i.e. a graph density $> 5$), all
 k-mers within this traversal were marked. If the same k-mers were consistently identified
 in other graph traversals, up to five times, the k-mer was flagged as
 a highly connected sequence.  Aligning these k-mers to original
@@ -701,7 +699,7 @@ non-redundant database.  Each identified 32-mer was broken up into
 shorter 5-mers, and the frequency of each unique 5-mer was calculated.
 Next, each unique 5-mer was ranked based on its abundance, from high
 to low, and the cumulative percentage of total 5-mers is shown in the
-resulting rank-abundance plot (Figure 5).
+resulting rank-abundance plot (Fig~\ref{five-mer}).
   
 \subsection*{\emph{De novo} metagenomic assembly}
 
@@ -720,7 +718,7 @@ dereplicated to remove contigs with 99\% similarity using CD-HIT (v
 Minimus (Amos v3.1.0, \cite{Sommer:2007p1253}).  For the largest soil
 and human gut metagenomes, assemblies were performed at only K=33 due
 to the size of the datasets and memory limitations.  Additional
-assemblies were performed with meta-IDBA (v0.18) \cite{Peng:2011p898}
+assemblies were performed with Meta-IDBA (v0.18) \cite{Peng:2011p898}
 : --mink 25 --maxk 50 --minCount 0 and with SOAPdenovo: -K 31 -p 8
 max\_rd\_len=200 asm\_flags=1 reverse\_seq=0.  After removal of highly
 connected k-mers in metagenomic lumps, each filtered lump was
@@ -756,11 +754,10 @@ method-examples/5.hc-kmer-contigs/.
 
 \pagebreak
 
-\begin{table}[ht]
+\begin{table}[h]
 \centering
-\caption{The original size and proportion of highly connective 32-mers in the largest subset of partitioned reads (``lump'') in several medium to high complexity metagenomes.  Read coverage was estimated with the number of aligned sequencing reads to Velvet-assembled contigs (K=33).  The dominant lump, or largest component of each metagenome assembly graph, was found to contain highly connecting (HC) k-mers responsible for high local graph density.}
+\caption{The original size and proportion of highly connective 32-mers in the largest subset of partitioned reads (``lump'') in several medium to high complexity metagenomes.  Read coverage was estimated with the number of aligned sequencing reads to Velvet-assembled contigs (K=33).  The dominant lump, or largest component of each metagenome assembly graph, was found to contain highly connecting (HC) k-mers responsible for high local graph density.  High density nodes refer to nodes with graph density greater than 20.}
 \begin{tabular}{l c c c c c c }
-
 & Sm Soil & Med Soil & Large Soil & Rumen & Human Gut & Sim  \\
 \hline
 Total Reads (millions) & 50.0 & 100.0 & 520.3 & 50.0 & 350.0 & 9.2 \\
@@ -771,20 +768,52 @@ HC 32-mers (millions) & 6.4 & 33.3 & 230.4 & 25.4 & 136.6 & 0.4\\
 Total 32-mers (million) & 84.9 & 326.5 & 2,198.1 & 201.5 & 860.6 & 11.6\\
 Fraction of HC 32-mers (\%) & 8\% & 10\% & 10\% & 13\% & 16\% & 3\% \\
 High Density Nodes (\%) & 50\% & 37\% & 40\% & 22\% & 28\% & 17\% \\
-
 \hline
 \end{tabular}
+\label{data-summary}
+\end{table}
+
+\begin{table}[h]
+\caption{Total number of contigs, assembly length, and maximum contig size was estimated for metagenomic datasets with multiple assemblers, as well as memory and time requirements of unfiltered read assembly (UF).  Filtered reads (F) were processed in 24 GB of memory, and after filtering required less than 2 GB of memory to assemble.  Velvet assemblies of the unfiltered human gut and large soil datasets (marked as *) could only be completed with K=33 due to computational limitations.  The Meta-IDBA assembly of the large soil metagenome could not be completed in less than 100 GB.}
+\begin{tabular}{l l l l}
+\hline
+&UF Assembly &F Assembly 	&UF Requirements \\
+& (contigs / length / max size) 	& (contigs / length / max size) 	& Memory (GB)/Time (h)\\
+\hline
+\emph{Velvet}\\
+Small Soil 	&25,470 / 16,269,879 / 118,753	&17,636 / 10,578,908 / 13,246		&5 / 4\\
+Medium Soil	&113,613 / 81,660,678 / 57,856	&79,654 / 54,424,264 / 23,663		&18 / 21\\
+Large Soil 	&554,825 / 306,899,884 / 41,217 	&290,018 / 159,960,062 /  41,423 	&33 / 12*\\
+Rumen		&92,044 / 74,813,072 / 182,003	&72,705 / 49,518,627 / 34,683		&11 / 14\\
+Human Gut	&543,331 / 234,686,983  / 85,596	&203,299 / 181,934,800 / 145,740	&76 / 8*\\
+Simulated		&11,204 / 6,506,248 / 5,151		&9,859 / 5,463,067 / 6,605		&\textless1 / \textless1\\
+\end{tabular}
+\medskip
+\begin{tabular}{l l l l}
+\emph{MetaIDBA} \\ 
+Small Soil		&15,739 / 9,133,564 / 37,738 		&12,513 / 7,012,036 / 17,048	&\textless1 / \textless 1 \\
+Medium Soil	&76,269 / 45,844,975 / 37,738	 	&52,978 / 30,040,031 / 18,882	&2 / 2\\
+Large Soil		&395,122 / 228,857,098 /  37,738	&N/A						&\textgreater116 / incomplete\\
+Rumen		&60,330 / 47,984,619 / 54,407		&48,940 / 33,276,502 / 22,083		&12 / 3\\
+Human Gut 	&173,432 / 211,067,996 / 106,503	&132,614 / 142,139,101 / 85,539	&58 / 15\\
+Simulated		&8,707 / 4,698,575 / 5,113		&7,726 / 4,078,947 / 3,845		&\textless1 / \textless1\\
+\end{tabular}
+\medskip
+\begin{tabular}{l l l l}
+\emph{SOAPdenovo}   \\ 
+Small Soil		&14,275 / 7,100,052 / 37,720	&12,801 / 6,343,110 / 13,246		&3 / \textless1\\
+Medium Soil	&66,640 / 33,321,411 / 28,695	&56,023 / 27,880,293 / 15,721		&10 / \textless1\\
+Large Soil		&412,059 / 215,614,765 / 32,514	&334,319 /  171,718,154 / 41,423	&48 / 11\\
+Rumen		&62,896 / 40,792,029 / 22,875		&55,975 / 34,540,861 / 19,044	&5 / \textless 1\\
+Human Gut	&190,963 / 171,502,574 / 57,803	&161,795 / 139,686,630 / 56,034	&35 / 5\\
+Simulated		&6,322 / 2,940,509 / 3,786		&6,029 / 2,821,631 / 3,764	&\textless1 / \textless1\\
+\end{tabular}
+\label{assembly-stats}
 \end{table}
 
 
-
-
-
-
-\begin{table}[ht]
+\begin{table}[h]
 \caption{Comparison of unfiltered (UF) and filtered (F) assemblies of various metagenome lumps using Velvet, SOAPdenovo, and Meta-IDBA assemblers.  Assemblies were aligned to each other, and coverage was estimated (columns 1-2).  Simulated and rumen assemblies were aligned to available reference genomes (RG) (columns 3-4).}
-
-
 Velvet Assembler  \\
 \begin{tabular}{l c c c c}
 \hline
@@ -797,7 +826,6 @@ Large Soil		&50.9\%		&86.6\%		&-		&-\\
 Rumen		&75.9\%		&98.8\%		&17.5\%	&14.8\%\\
 Human Gut 	&80.0\%		&89.1\%		&-		&-\\
 \end{tabular}
-
 \medskip
 Meta-IDBA Assembler  \\
 \begin{tabular}{l c c c c}
@@ -811,7 +839,6 @@ Large Soil		&N/A			&N/A			&-		&-\\
 Rumen		&70.8\%		&95.0\%		&17.5\%	&14.8\%\\
 Human Gut 	&74.4\%		&99.4\%		&-		&-\\
 \end{tabular}
-
 \medskip
 SOAPdenovo Assembler \\   
 \begin{tabular}{l c c c c}
@@ -825,63 +852,31 @@ Large Soil		&78.9\%		&94.5\%		&-		&-\\
 Rumen		&85.2\%		&97.8\%		&14.9\%	&13.6\%\\
 Human Gut 	&85.4\%		&99.3\%		&-		&-\\
 \end{tabular}
+\label{assembly-compare}
 \end{table}
 
 
-
-
-\begin{table}[ht]
-\caption{Total number of contigs, assembly length, and maximum contig size was estimated for metagenomic datasets with multiple assemblers, as well as memory and time requirements of unfiltered read assembly (UF).  Filtered reads (F) were processed in 24 GB of memory, and after filtering required less than 2 GB of memory to assemble.  Velvet assemblies of the unfiltered human gut and large soil datasets (marked as *) could only be completed with K=33 due to computational limitations.  The Meta-IDBA assembly of the large soil metagenome could not be completed in less than 100 GB.}
-
-
- 
-\begin{tabular}{l l l l}
+\begin{table}[h]
+\caption{Total number of abundant (greater than 50x), highly connective sequences incorporated into unfiltered assemblies}
+\begin{tabular}{l c c c}
+ & Velvet & SOAPdenovo & MetaIDBA  \\
 \hline
-&UF Assembly &F Assembly 	&UF Requirements \\
-& (contigs / length / max size) 	& (contigs / length / max size) 	& Memory (GB)/Time (h)\\
-
+Small Soil & 0 (0.0\%) & 41 (0.0\%) & 8,717 (0.1\%) \\
+Medium Soil &  32,328 (0.1\%) & 852 (0.0\%) & 23,881 (0.1\%) \\
+Large Soil & 643,071 (0.3\%) & 279,519 (0.1\%) & N/A \\
+Rumen & 45,721 (0.2\%) & 14,858 (0.1\%) & 33,046 (0.1\%) \\
+Human Gut & 4,661,447 (3.4\%) & 1,749,347 (1.3\%) & 5,528,054 (4.0\%) \\
+Simulated & 5,118 (1.4\%) & 0 (0.0\%) & 5,480 (1.5\%) \\
 \hline
-
-\emph{Velvet}\\
-Small Soil 	&25,470 / 16,269,879 / 118,753	&17,636 / 10,578,908 / 13,246		&5 / 4\\
-Medium Soil	&113,613 / 81,660,678 / 57,856	&79,654 / 54,424,264 / 23,663		&18 / 21\\
-Large Soil 	&554,825 / 306,899,884 / 41,217 	&290,018 / 159,960,062 /  41,423 	&33 / 12*\\
-Rumen		&92,044 / 74,813,072 / 182,003	&72,705 / 49,518,627 / 34,683		&11 / 14\\
-Human Gut	&543,331 / 234,686,983  / 85,596	&203,299 / 181,934,800 / 145,740	&76 / 8*\\
-Simulated		&11,204 / 6,506,248 / 5,151		&9,859 / 5,463,067 / 6,605		&\textless1 / \textless1\\
 \end{tabular}
-
-\medskip
-
-\begin{tabular}{l l l l}
-\emph{MetaIDBA} \\ 
-Small Soil		&15,739 / 9,133,564 / 37,738 		&12,513 / 7,012,036 / 17,048	&\textless1 / \textless 1 \\
-Medium Soil	&76,269 / 45,844,975 / 37,738	 	&52,978 / 30,040,031 / 18,882	&2 / 2\\
-Large Soil		&395,122 / 228,857,098 /  37,738	&N/A						&\textgreater116 / incomplete\\
-Rumen		&60,330 / 47,984,619 / 54,407		&48,940 / 33,276,502 / 22,083		&12 / 3\\
-Human Gut 	&173,432 / 211,067,996 / 106,503	&132,614 / 142,139,101 / 85,539	&58 / 15\\
-Simulated		&8,707 / 4,698,575 / 5,113		&7,726 / 4,078,947 / 3,845		&\textless1 / \textless1\\
-\end{tabular}
-\medskip
-
-\begin{tabular}{l l l l}
-\emph{SOAPdenovo}   \\ 
-Small Soil		&14,275 / 7,100,052 / 37,720	&12,801 / 6,343,110 / 13,246		&3 / \textless1\\
-Medium Soil	&66,640 / 33,321,411 / 28,695	&56,023 / 27,880,293 / 15,721		&10 / \textless1\\
-Large Soil		&412,059 / 215,614,765 / 32,514	&334,319 /  171,718,154 / 41,423	&48 / 11\\
-Rumen		&62,896 / 40,792,029 / 22,875		&55,975 / 34,540,861 / 19,044	&5 / \textless 1\\
-Human Gut	&190,963 / 171,502,574 / 57,803	&161,795 / 139,686,630 / 56,034	&35 / 5\\
-Simulated		&6,322 / 2,940,509 / 3,786		&6,029 / 2,821,631 / 3,764	&\textless1 / \textless1\\
-\end{tabular}
+\label{assembly-stoptags}
 \end{table}
-
-
 
 \begin{table}
-\caption{Total number of abundant (greater than 50x), highly connective sequences incorporated into unfiltered assemblies (percentage of total highly connective sequences).}
-\begin{tabular}{lc c}
+\caption{Annotations (against 112 reference genomes) of highly-connecting (HC) sequences identified in the simulated metagenome.}
+\begin{tabular}{l c}
 \hline
-& Number of Reference Genomes\\
+& Number of HC sequences with annotation\\
 \hline
 ABC transporter-like protein	&306\\
 Methyl-accepting chemotaxis sensory transducer	&210\\
@@ -898,13 +893,14 @@ S-adenosylmethionine synthetase	&34\\
 Elongation factor G	&34\\
 ABC transporter ATPase	&33\\
 \end{tabular}
+\label{sim-stoptags}
 \end{table}
 
 \begin{table}
-\caption{Annotation of highly-connecting sequences to conserved nucleotide sequences originating from 3 or more reference genomes.  Shown are protein annotations whose nucleotide sequences matched 3 or more highly-connecting sequences shared in the three soil, rumen, and human gut metagenomes.}
-\begin{tabular}{lc c}
+\caption{Annotations (against NCBI-nr database) of highly-connecting (HC) sequences identified in thee three soil, rumen, and human gut metagenomes.}
+\begin{tabular}{l c}
 \hline
-& Number of NCBI Genomes \\
+& Number of HC sequences with annotation \\
 \hline
 Translation elongation factor/GTP-binding protein LepA	&11\\
 S-adenosylmethionine synthetase	&8\\
@@ -912,7 +908,7 @@ Aspartyl-tRNA synthetase	 &8\\
 Malate dehydrogenase	&7\\
 V-type H(+)-translocating pyrophosphatase	&6\\
 Acyl-CoA synthetase	&6\\
-NAD synthetase / Glutamine amidotransferase chain of NAD synthetase	&5\\
+NAD synthetase 	&5\\
 Ribonucleotide reductase of class II	&4\\
 Ribityllumazine synthase	&4\\
 Heavy metal translocating P-type ATPase, copA	&3\\
@@ -920,47 +916,49 @@ GyrB	 &3\\
 Glutamine amidotransferase chain of NAD synthetase	&3\\
 ChaC family protein	&3\\
 \end{tabular}
+\label{meta-stoptags}
 \end{table}
 
-\begin{figure}
+\begin{figure}[h]
 \center
 {\includegraphics[width=5in]{./figures/figure1-density.pdf}}
 \caption{The extent to which average local graph density varies by read position is shown for the lump of various datasets.}
+\label{density-pos}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[h]
 \center
 \begin{subfigure}{.5\textwidth}
 \centering
 \includegraphics[width=\textwidth]{./figures/position_read_stoptags_sim.pdf}
 \end{subfigure}
-
 \begin{subfigure}{.5\textwidth}
 \centering
 \includegraphics[width=\textwidth]{./figures/position_read_stoptags_soils.pdf}
 \end{subfigure}
-
 \begin{subfigure}{.5\textwidth}
 \centering
 \includegraphics[width=\textwidth]{./figures/position_read_stoptags_rumen_human_gut.pdf}
 \end{subfigure}
-
 \caption{The extent to which highly connecting k-mers (solid lines) and the subset of highly abundant (greater than 50) k-mers (dashed lines) are present at specific positions within sequencing reads for various metagenomes.}
+\label{pos-spec}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[h]
 \center{\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{./figures/figure3-contigs.pdf}}
 \caption{When incorporated into an assembly, abundant (greater than 50 times), highly connecting sequences (k-mers) were disproportionately present at the ends of contigs.  The total fraction of highly connecting k-mers which are incorporated into each contig binned region.}
+\label{stoptag-contig}
 \end{figure}
 
-\begin{figure}
-\center{\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{./figures/figure4-contigs.pdf}}
-\caption{When incorporated into an assembly, abundant (greater than 50 times), highly connecting sequences (k-mers) were disproportionately present at the ends of contigs.  We show the total fraction of all k-mers which are identified as high abundance/high connectivity sequences and incorporated into each contig.}
-\end{figure}
+%\begin{figure}
+%\center{\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{./figures/figure4-contigs.pdf}}
+%\caption{When incorporated into an assembly, abundant (greater than 50 times), highly connecting sequences (k-mers) were disproportionately present at the ends of contigs.  We show the total fraction of all k-mers which are identified as high abundance/high connectivity sequences and incorporated into each contig.}
+%\end{figure}
 
-\begin{figure}
+\begin{figure}[h]
 \center{\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{./figures/figure5-5mers.pdf}}
 \caption{Rank abundance plot of 5-mers present in abundant, highly connected sequences in various datasets.}
+\label{five-mer}
 \end{figure}
 \end{document}
 
