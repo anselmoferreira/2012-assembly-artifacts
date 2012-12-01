@@ -241,7 +241,7 @@ graph which consistently contributed to high connectivity.  We
 observed that this subset of sequences was also found to exhibit
 position-specific variation within sequencing reads, with the
 exception of these sequences in the simulated dataset (Fig.~\ref{pos-spec}, solid
-lines).  Similar to local density trends, position-specific trends in
+lines).  As with local density trends, position-specific trends in
 the location of these sequences also varied between metagenomes.  As
 sequencing coverage increased among metagenomes, the amount of 3'-end
 variation appeared to decrease (e.g., the soils) or increase (e.g.,
@@ -284,7 +284,6 @@ unfiltered assemblies, and the unfiltered assemblies contained nearly
 all (97\%) of the filtered assembled sequences.  Despite the removal
 of over 3\% of the total unique 32-mers in the simulated metagenome,
 the resulting filtered assemblies lost only 3-15\% of annotated original reference genes (Table~\ref{assembly-compare}).
-% @CTB fix these %ages @ACH changed total percentages and lost percentages to corrrect
 % discss variable assembly due to low coverage.
 
 We next evaluated the effects of removing highly connected sequences in
@@ -304,11 +303,8 @@ Overall, we found that removal of highly connected sequences from the
 rumen dataset resulted in 9-13\% loss of sequences present in
 draft reference genomes (Table~\ref{assembly-compare}).
 
-% @CTB fix %ages, @ACH done.
-
 \subsubsection*{Unfiltered assemblies contained only a small fraction of highly connected sequences}
 
-% @CTB what methods section? @ACH The last paragraph in methods section?
 To further study the effects of highly connected sequences, we
 examined their incorporation into unfiltered assemblies.  Except in
 the human gut sample, fewer than 2\% of highly connected sequences
@@ -416,13 +412,13 @@ producing specific subsequences \cite{Hansen:2010if,Minoche:2011fl,Dohm:2008ky})
 % @CTB talk about general delumping coolness; general approaches to finding
 % and characterizing graph connectivity. 
 
-% @CTB add references for error evaluation -- @ACH DONE
-
 We believe a significant component of the high connectivity that we
 see is of non-biological origin.  Shotgun sequencing is a random
 process and consequently any position-specific variation within
 sequencing reads is unexpected and probably originates from bias in
-sample preparation or the sequencing process \cite{GomezAlvarez:2009p1334, Haas:2011jg, Keegan:2012p1336} (@CTB I have an additional ref too).  For the
+sample preparation or the sequencing process \cite{GomezAlvarez:2009p1334, Haas:2011jg, Keegan:2012p1336}.
+% @CTB I have an additional ref too -- can't find it tho :(
+For the
 metagenomes studied here, we used two approaches to examine
 characteristics of connectivity correlated to specific positions
 within sequencing reads.  First, we measured the connectivity of
@@ -454,43 +450,67 @@ metagenomes (Fig~\ref{pos-spec}).
 % @CTB is this last bit bullshit or not?  Speculate on ligation efficiency
 % etc. :)  Also discuss different trimming.
 
-\subsection*{Highly connected sequences do not match known reference sequences}
+\subsection*{Highly connected sequences are of unknown non-biological origin}
 
 We attempted to identify biological characteristics of highly
 connected sequences.  Among the highly connected sequences in the
 simulated dataset and those shared by all metagenomes, we identified
 only a small fraction (13\% in simulated and less than 7\% in
 metagenomes) which matched reference genes associated with core
-biological functions (Table~\ref{sim-stoptags} and ~\ref{meta-stoptags}).  This suggests that the
-remaining sequences are either not present in known reference genes
-(i.e., repetitive or conserved non-coding regions) or originate from non-biological
+biological functions (Table~\ref{sim-stoptags} and
+~\ref{meta-stoptags}).  This suggests that the remaining sequences are
+either not present in known reference genes (i.e., repetitive or
+conserved non-coding regions) or originate from non-biological
 sources.  This supports the removal of these sequences for typical
 assembly and annotation pipelines, where assembly is often followed by
 the identification of protein coding regions.
 
 Speculating that many of the highly connected sequences originated
 from high abundance reads, we examined the most abundant subsequences.
-We found that these subsequences (present greater than 50x) displayed
+We found that these subsequences (k-mers present more than 50x in the data set) displayed
 similar trends for position-specific variation compared to their
 respective sets of highly connected subsequences (Fig~\ref{pos-spec}),
 indicating that they contribute significantly to position-specific
-variation.  We attempted to identify signatures in the the abundant,
-highly connected sequences of the simulated and metagenomic datasets.
+variation.  We attempted to identify signatures in these abundant,
+highly connected sequences from the simulated and metagenomic datasets by
+looking at shorter k-mer profiles.
 In the simulated dataset, we found that the total number of unique
-5-mers was significantly lower than that in metagenomes and that the
+5-mers was significantly lower than in metagenomes and that the
 most abundant of these 5-mers comprised the large majority of the
 total.  This result is consistent with the presence of conserved
 biological motifs in the simulated dataset which would result in a
 small number of highly abundant sequences; it would also be consistent
-with the inclusion of sequencing primers in the data.  In contrast, within
-metagenomic data, we found that the 5-mers are evenly distributed and
-exhibit no specific sequence properties (Fig~\ref{five-mer}), making them
-difficult to identify and evaluate.  Most importantly, we were unable
-to identify any characteristics that would explain their origin.  Our
-current working hypothesis is that a low rate of false connections are
-created by a low-frequency tendency towards producing certain k-mers
-in the Illumina base calling software, but we cannot verify this
-without access to the Illumina software or source code.
+with the inclusion of sequencing primers in the data, were this a real
+data set.
+
+In contrast, within real metagenomic data, we found that the 5-mers
+are evenly distributed and exhibit no specific sequence properties
+(Fig~\ref{five-mer}), making them difficult to identify and evaluate.
+Most importantly, we were unable to identify any characteristics that
+would explain their origin.  In addition, a G-C content analysis of
+the highly connective k-mers did not reveal any systematic differences
+between the highly connected k-mers and the background k-mer
+distribution.
+
+When we reviewed the literature on random and systematic sequencing
+errors in Illumina sequencing, we found many different types of
+sequencing errors: PCR amplification errors prior to and during
+cluster generation; random sequencing errors e.g. from miscalls of
+bases; sequencing errors triggered by specific sequence motifs
+\cite{Meacham:2011}; adaptor contamination; and post-adaptor read
+through.  Of these errors, only random sequencing errors and adaptor
+contamination and readthrough would be biased towards the 3' end of
+the read.  However, random sequencing error does not contribute to
+aberrant de Bruijn graph connectivity \cite{Pell:2012cq}, while
+adaptor contamination and readthrough would yield a sharply biased
+5-mer distribution.  The observed artifactual sequences thus do not match
+any known set of random or systematic errors in Illumina sequencing.
+
+Our current working hypothesis is that a low rate of false connections
+are created by a low-frequency tendency towards producing certain
+k-mers in the Illumina base calling software, as signal intensities
+decline.  We cannot verify this without access to the Illumina
+software or source code.
 
 \subsection*{Highly connected sequences are difficult to assemble}
 
@@ -568,7 +588,7 @@ memory.  Using partitioned sets of reads for all metagenomes, we were
 also able to efficiently complete multiple k-mer length assemblies
 (demonstrated with Velvet) and subsequently merge resulting assembled
 contigs.  For unfiltered datasets, this was either impossible (due to
-memory requirements) or impractical (due to time).
+memory limitations) or impractical (due to excessive processing time).
 
 
 \section*{Conclusion}
@@ -607,7 +627,7 @@ By applying partitioning to filtered metagenome data, we were able to
 reduce the maximum memory requirements of assembly (including the
 filtering stage) to well below 48 GB of RAM in all cases.  This
 enables the use of commodity ``cloud'' computing for all of our
-samples (\cite{Angiuoli:2011hd}).  The decreased computational
+samples \cite{Angiuoli:2011hd}.  The decreased computational
 requirements for assembly also enabled ready evaluation of different
 assemblers and assembly parameters; as metagenome datasets grow
 increasingly larger, this ability to efficiently analyze datasets and
@@ -621,8 +641,8 @@ data sets.  Moreover, there are likely to be additional sources of
 sequencing artifacts lurking within large sequencing data sets,
 suggesting that more and better computational filtering and validation
 approaches need to be developed as environmental metagenomics moves
-forward.
-% @CTB also emphasize computational development of approaches like ours.
+forward.  Evaluating the assembly graph connectivity created by reads
+will be a useful approach in the future.
 
 \section*{Methods}
 
@@ -652,23 +672,24 @@ cov=auto, cov cutoff=0, no scaffolding.  Reads were aligned to
 assembled contigs with Bowtie (v0.12.7), allowing for a maximum of two
 mismatches.
 
-\subsection*{Lightweight, compressible de Bruijn graph representation}
+\subsection*{de Bruijn graph analysis and partitioning software}
 
 We used the probabilistic de Bruijn graph representation previously described by \cite{Pell:2012cq}  to store and partition the metagenome assembly
-graphs.  For metagenomes in this study, we used 4 x 48e9 bit bloom
-filters (requiring 24 GB RAM) to store the assembly graphs.  Data and examples of scripts used for this analysis are
-available on the Amazon EC2 public snapshot: data-in-paper/lumps and
+graphs.  The khmer and screed software packages are required for the analysis,
+and the versions used for this publication are available at {\sf https://github.com/ged-lab/khmer/tree/2012-assembly-artifacts} and {\sf https://github.com/ged-lab/screed/tree/2012-assembly-artifacts}.
+
+For metagenomes in this study, we used 4 x 48e9 bit bloom
+filters (requiring 24 GB RAM) to store the assembly graphs.  The data processing
+pipeline used for this analysis is available for public use on the Amazon Web Services public EBS snapshot snap-ab88dfdb: data-in-paper/lumps and
 method-examples/0.partitioning-into-lump.
-% @CTB we need to tag & freeze a particular khmer version.  What version?
-%@ACH - The most recent one should be fine to freeze. commit 22674158d57dabe7d3f7ef480c713ade1daf6f84
 
 %\subsection*{Local graph density and identifying highly connected k-mers}
 
 The local graph density was calculated as the number of
-k-mers within a radius of N nodes divided by the radius within the de Bruijn graph representation.  In this
+k-mers within a distance of N nodes divided by N. In this
 study, N was equal to 10.  For the largest metagenomes, the human gut
 and large soil datasets, local graph density was calculated on a
-representative subset of reads due to computational limitations.
+randomly chosen subset of reads because of computational limitations.
 
 To identify specific highly connected sequences within the lump
 assembly graphs, graph traversal to a distance of 40 nodes was
@@ -865,7 +886,7 @@ Human Gut 	&85.4\%		&99.3\%		&-		&-\\
 
 
 \begin{table}[h]
-\caption{Total number of abundant (greater than 50x), highly connective sequences incorporated into unfiltered assemblies}
+\caption{Total number of abundant (greater than 50x) highly connective sequences incorporated into unfiltered assemblies}
 \begin{tabular}{l c c c}
  & Velvet & SOAPdenovo & MetaIDBA  \\
 \hline
