@@ -11,7 +11,6 @@ assembly-artifacts.pdf: assembly-artifacts.tex
 
 arxiv-tar:
 	tar czf assembly-artifacts.tar.gz assembly-artifacts.tex \
-		artifacts-bib.bib \
 		assembly_comparison.pdf \
 		contig_pos_stoptags.pdf \
 		density_pos.pdf \
@@ -36,4 +35,5 @@ arxiv-tar:
 		newfloat.sty \
 		setspace.sty \
 		subcaption.sty \
-		plos2009.bst
+		plos2009.bst \
+		assembly-artifacts.bbl
