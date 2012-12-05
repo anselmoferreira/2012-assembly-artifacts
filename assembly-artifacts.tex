@@ -764,6 +764,7 @@ the paper.
 
 
 \pagebreak
+\section*{Tables}
 
 \begin{table}[h]
 \centering
@@ -784,6 +785,7 @@ High Density Nodes (\%) & 50\% & 37\% & 40\% & 22\% & 28\% & 17\% \\
 \label{data-summary}
 \end{table}
 
+\pagebreak
 \begin{table}[h]
 \caption{Total number of contigs, assembly length, and maximum contig size was estimated for metagenomic datasets with multiple assemblers, as well as memory and time requirements of unfiltered read assembly (UF).  Filtered reads (F) were processed in 24 GB of memory, and after filtering required less than 2 GB of memory to assemble.  Velvet assemblies of the unfiltered human gut and large soil datasets (marked as *) could only be completed with K=33 due to computational limitations.  The Meta-IDBA assembly of the large soil metagenome could not be completed in less than 100 GB.}
 \begin{tabular}{l l l l}
@@ -822,7 +824,7 @@ Simulated		&6,322 / 2,940,509 / 3,786		&6,029 / 2,821,631 / 3,764	&\textless1 / 
 \label{assembly-stats}
 \end{table}
 
-
+\pagebreak
 \begin{table}[h]
 \caption{Comparison of unfiltered (UF) and filtered (F) assemblies of various metagenome lumps using Velvet, SOAPdenovo, and Meta-IDBA assemblers.  Assemblies were aligned to each other, and coverage was estimated (columns 1-2).  Simulated and rumen assemblies were aligned to available reference genomes (RG) (columns 3-4).}
 Velvet Assembler  \\
@@ -866,7 +868,7 @@ Human Gut 	&85.4\%		&99.3\%		&-		&-\\
 \label{assembly-compare}
 \end{table}
 
-
+\pagebreak
 \begin{table}[h]
 \caption{Total number of abundant (greater than 50x) highly connective sequences incorporated into unfiltered assemblies}
 \begin{tabular}{l c c c}
@@ -883,7 +885,8 @@ Simulated & 5,118 (1.4\%) & 0 (0.0\%) & 5,480 (1.5\%) \\
 \label{assembly-stoptags}
 \end{table}
 
-\begin{table}
+\pagebreak
+\begin{table}[h]
 \caption{Annotations (against 112 reference genomes) of highly-connecting (HC) sequences identified in the simulated metagenome.}
 \begin{tabular}{l c}
 \hline
@@ -906,6 +909,8 @@ ABC transporter ATPase	&33\\
 \end{tabular}
 \label{sim-stoptags}
 \end{table}
+
+\pagebreak
 
 \begin{table}
 \caption{Annotations (against NCBI-nr database) of highly-connecting (HC) sequences identified in thee three soil, rumen, and human gut metagenomes.}
@@ -930,9 +935,15 @@ ChaC family protein	&3\\
 \label{meta-stoptags}
 \end{table}
 
+\pagebreak
+
+\pagebreak
+
+\section*{Figure Legends}
+
 \begin{figure}[h]
-\center
-{\includegraphics[width=5in]{./figure1-density.pdf}}
+%\center
+%{\includegraphics[width=5in]{./figure1-density.pdf}}
 \caption{The extent to which average local graph density varies by read position is shown for the lump of various datasets.}
 \label{density-pos}
 \end{figure}
@@ -940,23 +951,23 @@ ChaC family protein	&3\\
 \begin{figure}[h]
 \center
 \begin{subfigure}{.5\textwidth}
-\centering
-\includegraphics[width=\textwidth]{./position_read_stoptags_sim.pdf}
+%\centering
+%\includegraphics[width=\textwidth]{./position_read_stoptags_sim.pdf}
 \end{subfigure}
 \begin{subfigure}{.5\textwidth}
-\centering
-\includegraphics[width=\textwidth]{./position_read_stoptags_soils.pdf}
+%\centering
+%\includegraphics[width=\textwidth]{./position_read_stoptags_soils.pdf}
 \end{subfigure}
 \begin{subfigure}{.5\textwidth}
-\centering
-\includegraphics[width=\textwidth]{./position_read_stoptags_rumen_human_gut.pdf}
+%\centering
+%\includegraphics[width=\textwidth]{./position_read_stoptags_rumen_human_gut.pdf}
 \end{subfigure}
 \caption{The extent to which highly connecting k-mers (solid lines) and the subset of highly abundant (greater than 50) k-mers (dashed lines) are present at specific positions within sequencing reads for various metagenomes.}
 \label{pos-spec}
 \end{figure}
 
-\begin{figure}[h]
-\center{\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{./figure3-contigs.pdf}}
+\begin{figure}
+%\center{\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{./figure3-contigs.pdf}}
 \caption{When incorporated into an assembly, abundant (greater than 50 times), highly connecting sequences (k-mers) were disproportionately present at the ends of contigs.  The total fraction of highly connecting k-mers which are incorporated into each contig binned region.}
 \label{stoptag-contig}
 \end{figure}
@@ -966,8 +977,8 @@ ChaC family protein	&3\\
 %\caption{When incorporated into an assembly, abundant (greater than 50 times), highly connecting sequences (k-mers) were disproportionately present at the ends of contigs.  We show the total fraction of all k-mers which are identified as high abundance/high connectivity sequences and incorporated into each contig.}
 %\end{figure}
 
-\begin{figure}[h]
-\center{\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{./figure5-5mers.pdf}}
+\begin{figure}
+%\center{\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{./figure5-5mers.pdf}}
 \caption{Rank abundance plot of 5-mers present in abundant, highly connected sequences in various datasets.}
 \label{five-mer}
 \end{figure}
